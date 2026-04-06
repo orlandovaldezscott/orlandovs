@@ -2,17 +2,16 @@
 title: "Building Taciturn — What I've Learned Building an Algo Trading System From Scratch"
 date: 2026-03-28
 draft: false
-tags: ["trading", "python", "reflection"]
-description: "Three weeks in, thousands of trades, and a lot of hard lessons about building autonomous systems."
+tags: ["trading","python","reflection"]
 ---
 
 ## Where It Started
 
-It started with a Trading212 account and a simple ambition: make money faster than manually clicking buy and sell. I was trading CFDs — leveraged, volatile, unforgiving — and my results were inconsistent in the way that most manual trading is inconsistent. Good instincts, bad discipline, no system.
+Taciturn started whilst I was starting out trading, the idea came in the vision of a terminal that could give me financial insights on what the market of my choice was doing, whether it was near the daily high or daily low, and after coding a trend manager i could receive financial call outs via this terminal, telling me to buy or sell there was alot of other infomation which id look at usually whilst trading such as session deltas, yesterdays highs and lows, data id usually look at manually this was about 700 lines of code no broker integration no execution 
 
-The obvious next step was to build one.
+the next version was to put this on a gui which would scan for patterns using candlesticks, then would give me an outlook based on strong buy, buy, sell or strong sell, given the bias an hourly breifing would occur telling me what ive missed, this was during the time i was busy with work and would often miss market movmements due to other commitments.
 
-I wanted something that could either call out entry and exit points, or act on them automatically. The latter was more appealing. So I started teaching myself Python, scanning Yahoo Finance for daily peaks and troughs, and building scripts that would tell me when to buy or sell based on price movement thresholds. That was version one — around 700 lines of code, no broker integration, no execution.
+Taciturn which was previously called 'SPS' for silver processing system, was getting really good at predicting market movements, I would start acting accordingly to what the system has prompted, which lead to many sucessful trades so much so I wanted to automate it, however this was a much bigger task than I thought it would be after having no prior coding knowledge. 
 
 ## How It Evolved
 
