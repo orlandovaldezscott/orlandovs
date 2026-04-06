@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Writing — Orlando Valdes-Scott</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{--cream:#f5f0e8;--ink:#1a1612;--gold:#b8965a;--rust:#8b3a2a;--mid:#6b6259;--border:rgba(26,22,18,0.1);--nav-bg:rgba(245,240,232,0.92)}
+[data-theme="dark"]{--cream:#111009;--ink:#e8e2d8;--gold:#c9a96e;--rust:#c4614a;--mid:#8a8078;--border:rgba(232,226,216,0.1);--nav-bg:rgba(17,16,9,0.92)}
+html{font-size:16px;scroll-behavior:smooth}
+body{background:var(--cream);color:var(--ink);font-family:'Cormorant Garamond',Georgia,serif;min-height:100vh;transition:background 0.3s,color 0.3s}
+nav{position:fixed;top:0;left:0;right:0;padding:1.8rem 4rem;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;z-index:100;background:var(--nav-bg);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+.nav-left{display:flex;gap:3rem;justify-content:flex-start;align-items:center}
+.nav-centre{font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-weight:400;letter-spacing:0.08em;color:var(--ink);white-space:nowrap;text-decoration:none}
+.nav-right{display:flex;gap:3rem;justify-content:flex-end;align-items:center}
+.nav-left a,.nav-right a{font-size:0.78rem;font-family:'DM Mono',monospace;font-weight:300;letter-spacing:0.12em;text-transform:uppercase;color:var(--mid);text-decoration:none;transition:color 0.2s}
+.nav-left a:hover,.nav-right a:hover,.nav-left a.active{color:var(--ink)}
+.theme-btn{background:none;border:1px solid var(--border);color:var(--mid);font-family:'DM Mono',monospace;font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;padding:0.35rem 0.7rem;cursor:pointer;transition:all 0.2s;border-radius:2px}
+.theme-btn:hover{color:var(--ink);border-color:var(--gold)}
+.page-header{padding:8rem 4rem 4rem;text-align:center;border-bottom:1px solid var(--border)}
+.page-overline{font-family:'DM Mono',monospace;font-size:0.68rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:1.5rem}
+.page-title{font-size:clamp(2.5rem,5vw,4rem);font-weight:300;letter-spacing:-0.02em;line-height:1.1}
+.posts-list{display:flex;flex-direction:column}
+.post-row{display:grid;grid-template-columns:12rem 1fr;gap:4rem;align-items:baseline;padding:3rem 4rem;border-bottom:1px solid var(--border);text-decoration:none;color:var(--ink);transition:background 0.2s}
+.post-row:hover{background:rgba(184,150,90,0.04)}
+.post-date{font-family:'DM Mono',monospace;font-size:0.68rem;letter-spacing:0.1em;color:var(--gold)}
+.post-info h2{font-size:1.5rem;font-weight:400;letter-spacing:-0.01em;margin-bottom:0.6rem;transition:color 0.2s}
+.post-row:hover .post-info h2{color:var(--gold)}
+.post-info p{font-size:0.95rem;font-weight:300;color:var(--mid);line-height:1.7}
+footer{padding:3rem 4rem;border-top:1px solid var(--border);display:flex;justify-content:center;align-items:center;gap:5rem}
+.footer-copy{font-size:0.78rem;font-family:'DM Mono',monospace;letter-spacing:0.08em;color:var(--mid)}
+.footer-links{display:flex;gap:3rem}
+.footer-links a{font-family:'DM Mono',monospace;font-size:0.75rem;letter-spacing:0.08em;color:var(--mid);text-decoration:none;transition:color 0.2s}
+.footer-links a:hover{color:var(--gold)}
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+.page-header>*{animation:fadeUp 0.8s ease both}
+.page-overline{animation-delay:0.1s}.page-title{animation-delay:0.2s}
+@media(max-width:768px){nav{padding:1.2rem 1.5rem;grid-template-columns:1fr auto}.nav-left{display:none}.nav-centre{font-size:0.95rem}.theme-btn{font-size:0.65rem;padding:0.3rem 0.55rem}.hero-top{padding:3rem 1.5rem 2.5rem}.hero-bio{font-size:1.1rem}.projects{grid-template-columns:1fr}.project-item{padding:2rem 1.5rem;border-right:none;border-bottom:1px solid var(--border)}.project-item:last-child{border-bottom:none}.section{padding:3rem 1.5rem}.posts-grid{grid-template-columns:1fr}.post-item{border-right:none;border-bottom:1px solid var(--border)}.post-item:last-child{border-bottom:none}footer{gap:1.5rem;flex-direction:column;text-align:center;padding:2rem 1.5rem}.footer-links{justify-content:center}.page-header{padding:6rem 1.5rem 3rem!important;grid-template-columns:1fr!important;gap:2rem!important}.project-row{grid-template-columns:3rem 1fr;gap:1rem;padding:2rem 1.5rem}.project-row .project-desc,.project-row .project-tag{display:none}.post-row{grid-template-columns:1fr;gap:0.5rem;padding:2rem 1.5rem}.content{padding:3rem 1.5rem}.content-grid{grid-template-columns:1fr}.content-col{padding:2rem 1.5rem}.content-col:first-child{border-right:none;border-bottom:1px solid var(--border)}.working-grid{grid-template-columns:1fr}.work-item{border-right:none;border-bottom:1px solid var(--border)}.work-item:last-child{border-bottom:none}.page-title{font-size:2.2rem!important}}</style>
+</head>
+<body>
+<nav>
+  <div class="nav-left"><a href="/projects/">Projects</a><a href="/posts/" class="active">Writing</a></div>
+  <a href="/" class="nav-centre">Orlando Valdes-Scott</a>
+  <div class="nav-right"><a href="/about/">About</a><button class="theme-btn" onclick="toggleTheme()">◐ Theme</button></div>
+</nav>
+<div class="page-header">
+  <div class="page-overline">Essays & notes</div>
+  <h1 class="page-title">Writing</h1>
+</div>
+<div class="posts-list">
+  {{ range .Pages }}
+  <a href="{{ .Permalink }}" class="post-row">
+    <span class="post-date">{{ .Date.Format "2 January 2006" }}</span>
+    <div class="post-info"><h2>{{ .Title }}</h2><p>{{ .Description }}</p></div>
+  </a>
+  {{ end }}
+</div>
+<footer>
+  <div class="footer-links"><a href="https://github.com/orlandovaldezscott">GitHub</a><a href="https://www.linkedin.com/feed/update/urn:li:activity:7440132280007741440/?originTrackingId=KLwMhyKm4OeU%2FMlsZ6nnGg%3D%3D">LinkedIn</a><a href="/about/">About</a></div>
+  <span class="footer-copy">© 2026 Orlando Valdes-Scott</span>
+  <div class="footer-links"><a href="/posts/">Writing</a><a href="/projects/">Projects</a></div>
+</footer>
+<script>
+function toggleTheme(){const h=document.documentElement;const t=h.getAttribute('data-theme')==='dark'?'light':'dark';h.setAttribute('data-theme',t);localStorage.setItem('theme',t)}
+(function(){const t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t)})();
+</script>
+</body>
+</html>

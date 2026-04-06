@@ -1,8 +1,8 @@
-baseURL: "https://orlandovs.pages.dev/"
+baseURL: "https://taciturn.uk/"
 languageCode: "en-gb"
 title: "Orlando Valdes-Scott"
 theme: "PaperMod"
-paginate: 5
+paginate: 10
 
 enableRobotsTXT: true
 buildDrafts: false
@@ -16,7 +16,7 @@ minify:
 params:
   env: production
   title: Orlando Valdes-Scott
-  description: "Algorithmic trading, tech, and projects."
+  description: "Research, projects, and systems — algorithmic trading, materials science, and everything in between."
   author: Orlando Valdes-Scott
   DateFormat: "2 January 2006"
   defaultTheme: dark
@@ -27,32 +27,34 @@ params:
   ShowBreadCrumbs: true
   ShowCodeCopyButtons: true
   ShowWordCount: false
-  ShowRssButtonInSectionTermList: true
+  ShowRssButtonInSectionTermList: false
   UseHugoToc: true
   disableSpecial1stPost: false
   disableScrollToTop: false
   comments: false
   hidemeta: false
   hideSummary: false
-  showtoc: false
+  showtoc: true
   tocopen: false
 
   assets:
-    disableHLJS: true
+    disableHLJS: false
 
   homeInfoParams:
-    Title: "Hi, I'm Orlando 👋"
+    Title: "Orlando Valdes-Scott"
     Content: >
-      Building algorithmic trading systems, exploring tech, and writing about it here.
+      Building systems at the intersection of code, markets, and science.
+      Currently developing Taciturn — an autonomous algorithmic trading engine —
+      and researching carbon nanotube applications. Based in Coventry, UK.
 
   socialIcons:
     - name: github
-      url: "https://github.com/orlandovs"
+      url: "https://github.com/orlandovaldezscott"
 
   cover:
-    hidden: true
-    hiddenInList: true
-    hiddenInSingle: true
+    hidden: false
+    hiddenInList: false
+    hiddenInSingle: false
 
   editPost:
     URL: ""
@@ -71,18 +73,22 @@ params:
 
 menu:
   main:
-    - identifier: posts
-      name: Posts
-      url: /posts/
+    - identifier: projects
+      name: Projects
+      url: /projects/
       weight: 10
+    - identifier: posts
+      name: Writing
+      url: /posts/
+      weight: 20
     - identifier: about
       name: About
       url: /about/
-      weight: 20
+      weight: 30
     - identifier: search
       name: Search
       url: /search/
-      weight: 30
+      weight: 40
 
 outputs:
   home:
