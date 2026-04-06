@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Site CMS</title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family: 'Courier New', monospace; background:#0d0d0d; color:#e0e0e0; display:flex; height:100vh; }
+  .sidebar { width:260px; background:#111; border-right:1px solid #222; display:flex; flex-direction:column; }
+  .sidebar h2 { padding:16px; font-size:11px; letter-spacing:3px; color:#666; border-bottom:1px solid #222; text-transform:uppercase; }
+  .file-list { flex:1; overflow-y:auto; }
+  .file-item { padding:10px 16px; cursor:pointer; font-size:12px; color:#aaa; border-bottom:1px solid #1a1a1a; transition:background .15s; }
+  .file-item:hover { background:#1a1a1a; color:#fff; }
+  .file-item.active { background:#1e2a1e; color:#4caf50; }
+  .file-item .path { font-size:9px; color:#444; margin-top:2px; }
+  .add-btn { margin:12px; padding:8px; background:#1a1a1a; border:1px solid #333; color:#aaa; font-size:11px; letter-spacing:2px; cursor:pointer; text-transform:uppercase; }
+  .add-btn:hover { border-color:#4caf50; color:#4caf50; }
+  .main { flex:1; display:flex; flex-direction:column; }
+  .toolbar { padding:12px 16px; background:#111; border-bottom:1px solid #222; display:flex; align-items:center; gap:12px; }
+  .toolbar input { background:#0d0d0d; border:1px solid #333; color:#fff; padding:6px 10px; font-size:12px; font-family:inherit; flex:1; }
+  .toolbar input:focus { outline:none; border-color:#4caf50; }
+  .btn { padding:7px 16px; font-size:11px; letter-spacing:2px; text-transform:uppercase; cursor:pointer; border:none; font-family:inherit; }
+  .btn-save { background:#1e2a1e; color:#4caf50; border:1px solid #4caf50; }
+  .btn-save:hover { background:#4caf50; color:#000; }
+  .btn-publish { background:#2a1e1e; color:#ff6b6b; border:1px solid #ff6b6b; }
+  .btn-publish:hover { background:#ff6b6b; color:#000; }
+  .btn-preview { background:#1a1a1a; color:#aaa; border:1px solid #333; }
+  .btn-preview:hover { border-color:#aaa; color:#fff; }
+  .editor-wrap { flex:1; display:flex; }
+  textarea { flex:1; background:#0d0d0d; color:#e0e0e0; border:none; padding:20px; font-size:13px; font-family:'Courier New',monospace; line-height:1.7; resize:none; outline:none; }
+  .preview-pane { flex:1; padding:20px; overflow-y:auto; border-left:1px solid #222; display:none; font-family:Georgia,serif; line-height:1.7; }
+  .preview-pane h1,h2,h3 { margin:1em 0 .5em; }
+  .status { padding:6px 16px; background:#0a0a0a; font-size:10px; color:#555; border-top:1px solid #111; letter-spacing:1px; }
+  .status.ok { color:#4caf50; }
+  .status.err { color:#ff6b6b; }
+  .frontmatter { background:#111; border-bottom:1px solid #222; padding:12px 16px; display:grid; grid-template-columns:1fr 1fr 1fr; gap:8px; }
+  .fm-field { display:flex; flex-direction:column; gap:3px; }
+  .fm-label { font-size:9px; color:#555; letter-spacing:2px; text-transform:uppercase; }
+  .fm-input { background:#0d0d0d; border:1px solid #222; color:#aaa; padding:5px 8px; font-size:11px; font-family:inherit; }
+  .fm-input:focus { outline:none; border-color:#4caf50; color:#fff; }
+</style>
+</head>
+<body>
+
+<div class="sidebar">
+  <h2>Pages</h2>
+  <div class="file-list" id="fileList"></div>
+  <button class="add-btn" onclick="newPost()">+ New Post</button>
+</div>
+
+<div class="main">
+  <div class="toolbar">
+    <input type="text" id="filename" placeholder="filename.md" />
+    <button class="btn btn-preview" onclick="togglePreview()">Preview</button>
+    <button class="btn btn-save" onclick="saveFile()">Save</button>
+    <button class="btn btn-publish" onclick="publish()">⬆ Publish</button>
+  </div>
+  <div class="frontmatter" id="fmBar">
+    <div class="fm-field"><span class="fm-label">Title</span><input class="fm-input" id="fm-title" placeholder="Post title" /></div>
+    <div class="fm-field"><span class="fm-label">Date</span><input class="fm-input" id="fm-date" type="date" /></div>
+    <div class="fm-field"><span class="fm-label">Tags (comma separated)</span><input class="fm-input" id="fm-tags" placeholder="trading, tech" /></div>
+  </div>
+  <div class="editor-wrap">
+    <textarea id="editor" placeholder="Write in Markdown..."></textarea>
+    <div class="preview-pane" id="preview"></div>
+  </div>
+  <div class="status" id="status">Ready</div>
+</div>
+
+<script>
+const API = 'http://localhost:3131';
+let currentFile = null;
+let showingPreview = false;
+
+async function loadFiles() {
+  try {
+    const r = await fetch(`${API}/files`);
+    const files = await r.json();
+    const list = document.getElementById('fileList');
+    list.innerHTML = files.map(f => `
+      <div class="file-item ${currentFile===f.path?'active':''}" onclick="openFile('${f.path}')">
+        ${f.name}
+        <div class="path">${f.path.replace('/Users/orlandovaldes-scott/orlandovs/','')}</div>
+      </div>`).join('');
+  } catch(e) { setStatus('CMS server not running — run: node cms-server.js', true); }
+}
+
+async function openFile(path) {
+  currentFile = path;
+  const r = await fetch(`${API}/file?path=${encodeURIComponent(path)}`);
+  const data = await r.json();
+  document.getElementById('filename').value = path.split('/').pop();
+  // Parse frontmatter
+  const raw = data.content;
+  const fmMatch = raw.match(/^---\n([\s\S]*?)\n---\n([\s\S]*)$/);
+  if (fmMatch) {
+    const fm = fmMatch[1];
+    document.getElementById('editor').value = fmMatch[2].trim();
+    document.getElementById('fm-title').value = (fm.match(/title:\s*"?([^"\n]+)"?/)||[])[1]||'';
+    document.getElementById('fm-date').value = (fm.match(/date:\s*(.+)/)||[])[1]||'';
+    document.getElementById('fm-tags').value = ((fm.match(/tags:\s*\[([^\]]*)\]/)||[])[1]||'').replace(/"/g,'').replace(/'/g,'');
+  } else {
+    document.getElementById('editor').value = raw;
+  }
+  loadFiles();
+  setStatus(`Opened: ${path.split('/').pop()}`);
+}
+
+async function saveFile() {
+  const title = document.getElementById('fm-title').value;
+  const date = document.getElementById('fm-date').value || new Date().toISOString().split('T')[0];
+  const tags = document.getElementById('fm-tags').value;
+  const body = document.getElementById('editor').value;
+  const tagsArr = tags ? `["${tags.split(',').map(t=>t.trim()).join('","')}"]` : '[]';
+  const content = `---\ntitle: "${title}"\ndate: ${date}\ndraft: false\ntags: ${tagsArr}\n---\n\n${body}`;
+  const fname = document.getElementById('filename').value;
+  const path = currentFile || `/Users/orlandovaldes-scott/orlandovs/content/posts/${fname}`;
+  await fetch(`${API}/save`, {method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({path, content})});
+  currentFile = path;
+  setStatus(`Saved ✓`);
+  loadFiles();
+}
+
+async function publish() {
+  setStatus('Publishing...');
+  const r = await fetch(`${API}/publish`, {method:'POST'});
+  const d = await r.json();
+  setStatus(d.ok ? 'Published ✓ — live on Cloudflare' : 'Error: ' + d.error, !d.ok);
+}
+
+function newPost() {
+  currentFile = null;
+  document.getElementById('filename').value = 'new-post.md';
+  document.getElementById('fm-title').value = '';
+  document.getElementById('fm-date').value = new Date().toISOString().split('T')[0];
+  document.getElementById('fm-tags').value = '';
+  document.getElementById('editor').value = '';
+  setStatus('New post');
+}
+
+function togglePreview() {
+  showingPreview = !showingPreview;
+  const p = document.getElementById('preview');
+  p.style.display = showingPreview ? 'block' : 'none';
+  if (showingPreview) {
+    const md = document.getElementById('editor').value;
+    p.innerHTML = md.replace(/^### (.+)$/mg,'<h3>$1</h3>').replace(/^## (.+)$/mg,'<h2>$1</h2>').replace(/^# (.+)$/mg,'<h1>$1</h1>').replace(/\*\*(.+?)\*\*/g,'<b>$1</b>').replace(/\*(.+?)\*/g,'<i>$1</i>').replace(/\n\n/g,'<br><br>');
+  }
+}
+
+function setStatus(msg, err=false) {
+  const s = document.getElementById('status');
+  s.textContent = msg;
+  s.className = 'status ' + (err ? 'err' : 'ok');
+}
+
+loadFiles();
+</script>
+</body>
+</html>
