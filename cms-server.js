@@ -63,7 +63,7 @@ const server = http.createServer((req, res) => {
 
   if (url.pathname === '/publish' && req.method === 'POST') {
     try {
-      execSync('cd /Users/orlandovaldes-scott/orlandovs && /opt/homebrew/bin/hugo && git add -A && git commit -m "CMS publish" && git push', {timeout:30000});
+      execSync('cd /Users/orlandovaldes-scott/orlandovs && /opt/homebrew/bin/hugo && git add -A && git diff --cached --quiet || git commit -m "CMS publish" && git push', {timeout:30000});
       json(res, {ok:true});
     } catch(e) {
       json(res, {ok:false, error: e.stderr?.toString() || e.message});
