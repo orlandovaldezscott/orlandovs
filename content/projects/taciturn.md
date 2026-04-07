@@ -5,9 +5,9 @@ draft: false
 tags: ["trading","python","finance","algorithms"]
 ---
 
-## What It Is
+## What Is It
 
-Taciturn is a autonomous algorithmic trading engine I built from scratch in Python. It trades XAU/USD (gold) and XAG/USD (silver) spot forex via the OANDA v20 REST API on a GBP-denominated account, running continuously and managing every aspect of the trade lifecycle without manual intervention.
+Taciturn is an autonomous algorithmic trading engine I built from scratch in Python. It trades XAU/USD (gold) and XAG/USD (silver) spot forex via the OANDA v20 REST API on a GBP-denominated account, running continuously and managing every aspect of the trade lifecycle without manual intervention.
 
 It started as a simple price-scanning script and has evolved into a production-grade system with a web dashboard, risk management engine, multi-signal detection, and real-time notifications.
 
