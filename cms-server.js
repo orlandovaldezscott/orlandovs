@@ -51,26 +51,43 @@ const server = http.createServer((req, res) => {
     return json(res, {content: fs.readFileSync(p, 'utf8')});
   }
 
+  if (url.pathname.startsWith('/images/')) {
+    const fname = path.basename(url.pathname);
+    const fpath = path.join(STATIC_DIR, fname);
+    if (fs.existsSync(fpath)) {
+      const ext = path.extname(fname).toLowerCase();
+      const mime = {'.jpg':'image/jpeg','.jpeg':'image/jpeg','.png':'image/png','.gif':'image/gif','.webp':'image/webp'}[ext] || 'application/octet-stream';
+      cors(res); res.writeHead(200, {'Content-Type': mime});
+      res.end(fs.readFileSync(fpath));
+    } else { res.writeHead(404); res.end('Not found'); }
+    return;
+  }
+
   if (url.pathname === '/upload' && req.method === 'POST') {
-    const ct = req.headers['content-type'] || '';
-    const boundary = ct.split('boundary=')[1];
-    if (!boundary) return json(res, {error:'No boundary'}, 400);
-    let body = Buffer.alloc(0);
-    req.on('data', d => body = Buffer.concat([body, d]));
+    let body = [];
+    req.on('data', chunk => body.push(chunk));
     req.on('end', () => {
-      const bnd = Buffer.from('--' + boundary);
-      let start = body.indexOf(bnd) + bnd.length + 2;
-      const headerEnd = body.indexOf('\r\n\r\n', start);
-      const header = body.slice(start, headerEnd).toString();
-      const nameMatch = header.match(/filename="([^"]+)"/);
-      if (!nameMatch) return json(res, {error:'No filename'}, 400);
-      const fname = nameMatch[1].replace(/[^a-zA-Z0-9._-]/g, '_');
-      const dataStart = headerEnd + 4;
-      const dataEnd = body.lastIndexOf('\r\n--' + boundary);
-      const fileData = body.slice(dataStart, dataEnd);
-      const outPath = path.join(STATIC_DIR, fname);
-      fs.writeFileSync(outPath, fileData);
-      json(res, { ok: true, url: `/images/${fname}`, markdown: `![${fname}](/images/${fname})` });
+      try {
+        const buf = Buffer.concat(body);
+        const ct = req.headers['content-type'] || '';
+        const boundary = '--' + ct.split('boundary=')[1].trim();
+        const boundaryBuf = Buffer.from('\r\n' + boundary);
+        const start = buf.indexOf(Buffer.from(boundary)) + boundary.length + 2;
+        const headerEnd = buf.indexOf(Buffer.from('\r\n\r\n'), start);
+        const header = buf.slice(start, headerEnd).toString();
+        const nameMatch = header.match(/filename="([^"]+)"/);
+        if (!nameMatch) return json(res, {error:'No filename'}, 400);
+        const fname = nameMatch[1].replace(/[^a-zA-Z0-9._-]/g, '_');
+        const dataStart = headerEnd + 4;
+        const dataEnd = buf.indexOf(Buffer.from('\r\n' + boundary), dataStart);
+        const fileData = buf.slice(dataStart, dataEnd < 0 ? undefined : dataEnd);
+        const outPath = path.join(STATIC_DIR, fname);
+        fs.writeFileSync(outPath, fileData);
+        json(res, { ok: true, url: `/images/${fname}`, markdown: `![${fname}](/images/${fname})` });
+      } catch(e) {
+        console.error('Upload error:', e.message);
+        json(res, {error: e.message}, 500);
+      }
     });
     return;
   }
