@@ -16,6 +16,14 @@
   .drop-zone { border:1px dashed #333; padding:10px 16px; font-size:10px; color:#555; letter-spacing:2px; text-align:center; cursor:pointer; transition:all .2s; text-transform:uppercase; margin:0 12px 8px; }
   .drop-zone.drag { border-color:#4caf50; color:#4caf50; background:#0a1a0a; }
   .drop-zone input { display:none; }
+  .img-preview { display:none; margin:0 12px 8px; border:1px solid #222; padding:8px; }
+  .img-preview img { max-width:100%; display:block; margin-bottom:6px; }
+  .img-preview-controls { display:flex; align-items:center; gap:6px; margin-bottom:6px; }
+  .img-preview-controls label { font-size:9px; color:#555; letter-spacing:1px; text-transform:uppercase; }
+  .img-preview-controls input[type=range] { flex:1; accent-color:#4caf50; }
+  .img-preview-controls span { font-size:10px; color:#aaa; width:36px; text-align:right; }
+  .btn-insert { width:100%; background:#1e2a1e; color:#4caf50; border:1px solid #4caf50; font-size:10px; padding:5px; cursor:pointer; font-family:inherit; letter-spacing:2px; text-transform:uppercase; }
+  .btn-insert:hover { background:#4caf50; color:#000; }
   .add-btn:hover { border-color:#4caf50; color:#4caf50; }
   .main { flex:1; display:flex; flex-direction:column; }
   .toolbar { padding:12px 16px; background:#111; border-bottom:1px solid #222; display:flex; align-items:center; gap:12px; }
@@ -50,6 +58,15 @@
   <div class="drop-zone" id="dropZone" onclick="document.getElementById('imgInput').click()" ondragover="event.preventDefault();this.classList.add('drag')" ondragleave="this.classList.remove('drag')" ondrop="handleDrop(event)">
     Drop image here or click to upload
     <input type="file" id="imgInput" accept="image/*" onchange="uploadFile(this.files[0])">
+  </div>
+  <div class="img-preview" id="imgPreview">
+    <img id="previewImg" src="" alt="preview">
+    <div class="img-preview-controls">
+      <label>Width</label>
+      <input type="range" id="imgWidth" min="10" max="100" value="100" oninput="updatePreviewWidth(this.value)">
+      <span id="widthVal">100%</span>
+    </div>
+    <button class="btn-insert" onclick="insertImage()">Insert into post</button>
   </div>
   <button class="add-btn" onclick="newPost()">+ New Post</button>
 </div>
@@ -167,6 +184,8 @@ function handleDrop(e) {
   if (file && file.type.startsWith('image/')) uploadFile(file);
 }
 
+let _lastUpload = null;
+
 async function uploadFile(file) {
   if (!file) return;
   setStatus('Uploading ' + file.name + '...');
@@ -175,14 +194,35 @@ async function uploadFile(file) {
   const r = await fetch(`${API}/upload`, {method:'POST', body: fd});
   const d = await r.json();
   if (d.ok) {
-    const ta = document.getElementById('editor');
-    const pos = ta.selectionStart;
-    const val = ta.value;
-    ta.value = val.slice(0, pos) + '\n' + d.markdown + '\n' + val.slice(pos);
-    setStatus('Uploaded ✓ — ' + d.url);
+    _lastUpload = d;
+    document.getElementById('previewImg').src = d.url;
+    document.getElementById('imgWidth').value = 100;
+    document.getElementById('widthVal').textContent = '100%';
+    document.getElementById('imgPreview').style.display = 'block';
+    document.getElementById('previewImg').style.width = '100%';
+    setStatus('Uploaded ✓ — set width then click Insert');
   } else {
     setStatus('Upload failed: ' + d.error, true);
   }
+}
+
+function updatePreviewWidth(val) {
+  document.getElementById('widthVal').textContent = val + '%';
+  document.getElementById('previewImg').style.width = val + '%';
+}
+
+function insertImage() {
+  if (!_lastUpload) return;
+  const width = document.getElementById('imgWidth').value;
+  const md = width == 100
+    ? `\n${_lastUpload.markdown}\n`
+    : `\n<img src="${_lastUpload.url}" style="width:${width}%" />\n`;
+  const ta = document.getElementById('editor');
+  const pos = ta.selectionStart || ta.value.length;
+  ta.value = ta.value.slice(0, pos) + md + ta.value.slice(pos);
+  document.getElementById('imgPreview').style.display = 'none';
+  _lastUpload = null;
+  setStatus('Image inserted ✓');
 }
 
 loadFiles();
