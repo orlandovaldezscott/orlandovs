@@ -5,7 +5,10 @@ const { execSync } = require('child_process');
 
 const PORT = 3131;
 const CONTENT_DIR = '/Users/orlandovaldes-scott/orlandovs/content';
+const STATIC_DIR = '/Users/orlandovaldes-scott/orlandovs/static/images';
 const SITE_DIR = '/Users/orlandovaldes-scott/orlandovs';
+
+fs.mkdirSync(STATIC_DIR, { recursive: true });
 
 function cors(res) {
   res.setHeader('Access-Control-Allow-Origin', '*');
@@ -46,6 +49,30 @@ const server = http.createServer((req, res) => {
     const p = url.searchParams.get('path');
     if (!p || !p.startsWith(CONTENT_DIR)) return json(res, {error:'Invalid path'}, 400);
     return json(res, {content: fs.readFileSync(p, 'utf8')});
+  }
+
+  if (url.pathname === '/upload' && req.method === 'POST') {
+    const ct = req.headers['content-type'] || '';
+    const boundary = ct.split('boundary=')[1];
+    if (!boundary) return json(res, {error:'No boundary'}, 400);
+    let body = Buffer.alloc(0);
+    req.on('data', d => body = Buffer.concat([body, d]));
+    req.on('end', () => {
+      const bnd = Buffer.from('--' + boundary);
+      let start = body.indexOf(bnd) + bnd.length + 2;
+      const headerEnd = body.indexOf('\r\n\r\n', start);
+      const header = body.slice(start, headerEnd).toString();
+      const nameMatch = header.match(/filename="([^"]+)"/);
+      if (!nameMatch) return json(res, {error:'No filename'}, 400);
+      const fname = nameMatch[1].replace(/[^a-zA-Z0-9._-]/g, '_');
+      const dataStart = headerEnd + 4;
+      const dataEnd = body.lastIndexOf('\r\n--' + boundary);
+      const fileData = body.slice(dataStart, dataEnd);
+      const outPath = path.join(STATIC_DIR, fname);
+      fs.writeFileSync(outPath, fileData);
+      json(res, { ok: true, url: `/images/${fname}`, markdown: `![${fname}](/images/${fname})` });
+    });
+    return;
   }
 
   if (url.pathname === '/save' && req.method === 'POST') {
