@@ -10,10 +10,14 @@ tags: ["trading","python","reflection"]
 Taciturn started whilst I was starting out trading, the idea came in the vision of a terminal that could give me financial insights on what the market of my choice was doing, whether it was near the daily high or daily low, and after coding a trend manager i could receive financial call outs via this terminal, telling me to buy or sell there was alot of other infomation which id look at usually whilst trading such as session deltas, yesterdays highs and lows, data id usually look at manually this was about 700 lines of code no broker integration no execution 
 
 
-<img src="/images/Screenshot_2026-02-16_at_20.38.47.png" style="width:75%" />
+<img src="/images/Screenshot_2026-02-16_at_20.38.47.png" style="max-width:75%" />
 
 
 the next version was to put this on a gui which would scan for patterns using candlesticks, then would give me an outlook based on strong buy, buy, sell or strong sell, given the bias an hourly breifing would occur telling me what ive missed, this was during the time i was busy with work and would often miss market movmements due to other commitments.
+
+
+<img src="/images/Screenshot_2026-03-03_at_22.04.51.png" style="width:67%" />
+
 
 Taciturn which was previously called 'SPS' for silver processing system, was getting really good at predicting market movements, I would start acting accordingly to what the system has prompted, which lead to many sucessful trades so much so I wanted to automate it, however this was a much bigger task than I thought it would be after having no prior coding knowledge. 
 
