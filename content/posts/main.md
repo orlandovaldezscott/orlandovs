@@ -13,7 +13,7 @@ Taciturn started whilst I was starting out trading, the idea came in the vision 
 <img src="/images/Screenshot_2026-02-16_at_20.38.47.png" style="max-width:75%" />
 
 
-the next version was to put this on a gui which would scan for patterns using candlesticks, then would give me an outlook based on strong buy, buy, sell or strong sell, given the bias an hourly breifing would occur telling me what ive missed, this was during the time i was busy with work and would often miss market movmements due to other commitments.
+The next version was to put this on a gui which would scan for patterns using candlesticks, then would give me an outlook based on strong buy, buy, sell or strong sell, given the bias an hourly breifing would occur telling me what ive missed, this was during the time i was busy with work and would often miss market movmements due to other commitments.
 
 
 <img src="/images/Screenshot_2026-03-03_at_22.04.51.png" style="width:67%" />
@@ -30,6 +30,13 @@ The project grew in phases. Each one introduced a new broker, a new strategy, or
 **v4 (OANDA, spot forex)** — Migrated entirely to OANDA for XAU/USD and XAG/USD spot forex. Rebuilt the signal stack around indicator-based approaches: volume-weighted momentum crossovers, MACD histogram signals, pure indicator models. Added a trend filter that checks the hourly EMA slope before every trade — if the trend is flat or against you, it blocks entry.
 
 **v5 (current)** — Multiple signals running in parallel, risk management with broker-level stop losses on every order, a full web dashboard, and Pushover notifications. The system runs continuously, manages its own cooldowns, and halts itself if daily losses exceed a threshold.
+
+
+
+<img src="/images/Screenshot_2026-03-08_at_15.59.51.png" style="width:68%" />
+The most up to date gui, in the early days of development 
+
+
 
 ## What I'd Do Differently
 
