@@ -54,10 +54,12 @@ The system is standing around £4,400 all-time after three weeks of live demo tr
 
 The target was 85% profitable trades. That's not realistic for most strategies — but 60–70% with a good risk/reward ratio is, and that's what the current signal stack is being tuned toward.
 
-However, as of april 9th for the past few days weve had over 80% with highs of 96% win rate on one day 
+However, as of april 9th for the past few days weve had well over 80% with highs of 96% win rate on one day and achieveing ~90% win rate on following days, this win rate is something i believe will hopefully continue in the coming days and weeks, as opposed to a few good days.
 
 
 <img src="/images/Screenshot_2026-04-02_at_22.44.36.png" style="width:67%" />
+
+
 
 
 More updates to follow.
