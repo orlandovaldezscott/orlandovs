@@ -63,12 +63,29 @@ footer{padding:3rem 4rem;border-top:1px solid var(--border);display:flex;justify
 </div>
 <div class="content">{{ .Content }}</div>
 <div class="lightbox" id="lightbox"><img id="lightbox-img" src="" alt=""></div>
+
+<!-- Listen Button -->
+<div id="listen-bar" style="position:fixed;bottom:2rem;right:2rem;z-index:200;display:flex;align-items:center;gap:0.6rem;">
+  <button id="listen-btn" onclick="toggleSpeech()" style="background:var(--ink);color:var(--cream);border:none;font-family:'DM Mono',monospace;font-size:0.7rem;letter-spacing:0.12em;text-transform:uppercase;padding:0.6rem 1.1rem;cursor:pointer;border-radius:2px;transition:all 0.2s;">▶ Listen</button>
+</div>
 <footer>
   <div class="footer-links"><a href="https://github.com/orlandovaldezscott">GitHub</a><a href="https://www.linkedin.com/feed/update/urn:li:activity:7440132280007741440/?originTrackingId=KLwMhyKm4OeU%2FMlsZ6nnGg%3D%3D">LinkedIn</a><a href="/about/">About</a></div>
   <span class="footer-copy">© 2026 Orlando Valdes-Scott</span>
   <div class="footer-links"><a href="/posts/">Writing</a><a href="/projects/">Projects</a></div>
 </footer>
 <script>
+let synth=window.speechSynthesis,utterance=null,speaking=false;
+function toggleSpeech(){
+  if(speaking){synth.cancel();speaking=false;document.getElementById('listen-btn').textContent='▶ Listen';return;}
+  const text=document.querySelector('.content').innerText;
+  utterance=new SpeechSynthesisUtterance(text);
+  utterance.rate=0.95;utterance.pitch=1;utterance.volume=1;
+  const voices=synth.getVoices();
+  const pref=voices.find(v=>v.lang.startsWith('en-GB'))||voices.find(v=>v.lang.startsWith('en'))||voices[0];
+  if(pref)utterance.voice=pref;
+  utterance.onend=()=>{speaking=false;document.getElementById('listen-btn').textContent='▶ Listen'};
+  synth.speak(utterance);speaking=true;document.getElementById('listen-btn').textContent='◼ Stop';
+}
 function toggleTheme(){const h=document.documentElement;const t=h.getAttribute('data-theme')==='dark'?'light':'dark';h.setAttribute('data-theme',t);localStorage.setItem('theme',t)}
 (function(){const t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t)})();
 const lb=document.getElementById('lightbox'),lbImg=document.getElementById('lightbox-img');
