@@ -52,6 +52,12 @@ A lot. In rough order of importance:
 
 The system is standing around £4,400 all-time after three weeks of live demo trading. The goal is consistent profitability before deploying real capital — and a migration to a dedicated Mac Mini for permanent 24/7 operation.
 
+Currently executing trades perfectly with an incredibly high win rate which is perfect, the profit ratio is something we need to work on which can be adjusted and finetuned with the order quantity and stop loss, which is currently set at -£75 and the take profit is +£10, so one trade going badly will wipe out 7 trades, so out of the 2 trades that went badly from the most recent 50 gold trades that leaves only 36 profitable trades, this is something I am actively working to fix.
+
+
+<img src="/images/Screenshot_2026-04-09_at_01.24.29.png" style="width:74%" />
+
+
 The target was 85% profitable trades. That's not realistic for most strategies — but 60–70% with a good risk/reward ratio is, and that's what the current signal stack is being tuned toward.
 
 However, as of april 9th for the past few days weve had well over 80% with highs of 96% win rate on one day and achieveing ~90% win rate on following days, this win rate is something i believe will hopefully continue in the coming days and weeks, as opposed to a few good days.
