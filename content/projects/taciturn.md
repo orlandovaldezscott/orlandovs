@@ -69,3 +69,17 @@ However, as of april 9th for the past few days weve had well over 80% with highs
 
 
 More updates to follow.
+
+---
+
+## Live Dashboard
+
+<div style="margin:2rem 0;padding:1.5rem 2rem;border:1px solid rgba(26,22,18,0.15);border-radius:4px;display:inline-block;width:100%;box-sizing:border-box">
+  <p style="font-family:'DM Mono',monospace;font-size:0.72rem;letter-spacing:0.18em;text-transform:uppercase;margin-bottom:1rem;color:#b8965a">Visitor Access</p>
+  <p style="margin-bottom:0.75rem">You can view the Taciturn dashboard live. Use the credentials below — click to copy.</p>
+  <div style="display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:1.2rem">
+    <span onclick="navigator.clipboard.writeText('visitor');this.textContent='✓ Copied';setTimeout(()=>this.textContent='visitor',1500)" style="font-family:'DM Mono',monospace;font-size:0.8rem;padding:0.4rem 0.8rem;border:1px solid rgba(26,22,18,0.2);border-radius:2px;cursor:pointer;user-select:none" title="Click to copy username">visitor</span>
+    <span onclick="navigator.clipboard.writeText('v');this.textContent='✓ Copied';setTimeout(()=>this.textContent='v',1500)" style="font-family:'DM Mono',monospace;font-size:0.8rem;padding:0.4rem 0.8rem;border:1px solid rgba(26,22,18,0.2);border-radius:2px;cursor:pointer;user-select:none" title="Click to copy password">v</span>
+  </div>
+  <a href="https://dashboard.taciturn.uk/login" target="_blank" style="font-family:'DM Mono',monospace;font-size:0.72rem;letter-spacing:0.12em;text-transform:uppercase;color:#b8965a;text-decoration:none">→ Open Dashboard</a>
+</div>
