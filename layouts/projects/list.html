@@ -31,6 +31,8 @@ nav{position:fixed;top:0;left:0;right:0;padding:1.8rem 4rem;display:grid;grid-te
 .project-sub{font-size:0.8rem;font-family:'DM Mono',monospace;font-weight:300;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold)}
 .project-desc{font-size:1rem;font-weight:300;color:var(--mid);line-height:1.75}
 .project-tag{font-family:'DM Mono',monospace;font-size:0.62rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--rust);border:1px solid var(--rust);padding:0.25rem 0.65rem;width:fit-content;white-space:nowrap;margin-top:0.3rem}
+.section-divider{padding:2rem 4rem 1rem;border-bottom:1px solid var(--border)}
+.section-label{font-family:'DM Mono',monospace;font-size:0.68rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold)}
 footer{padding:3rem 4rem;border-top:1px solid var(--border);display:flex;justify-content:center;align-items:center;gap:5rem}
 .footer-copy{font-size:0.78rem;font-family:'DM Mono',monospace;letter-spacing:0.08em;color:var(--mid)}
 .footer-links{display:flex;gap:3rem}
@@ -52,9 +54,10 @@ footer{padding:3rem 4rem;border-top:1px solid var(--border);display:flex;justify
 <div class="page-header">
   <div class="page-overline">Selected work — 2026</div>
   <h1 class="page-title">Projects</h1>
-  <p class="page-desc">Two active projects — one in finance, one in materials science. Different domains, same approach.</p>
+  <p class="page-desc">Two active projects — one in finance, one in materials science. Plus a couple of mini projects along the way.</p>
 </div>
 <div class="projects-list">
+  <div class="section-divider"><span class="section-label">Projects</span></div>
   <a href="/projects/taciturn/" class="project-row">
     <span class="project-index">01</span>
     <div><h2 class="project-name">Taciturn</h2><div class="project-sub">Algorithmic Trading</div></div>
@@ -67,11 +70,18 @@ footer{padding:3rem 4rem;border-top:1px solid var(--border);display:flex;justify
     <p class="project-desc">Independent research into CNT applications in medicine — production scaling challenges and gene delivery comparisons with nanoparticle approaches.</p>
     <span class="project-tag">Research</span>
   </a>
+  <div class="section-divider"><span class="section-label">Mini Projects</span></div>
+  <a href="/projects/news-centre/" class="project-row">
+    <span class="project-index">01</span>
+    <div><h2 class="project-name">News Terminal</h2><div class="project-sub">News · Taciturn</div></div>
+    <p class="project-desc">Real-time geopolitical intelligence dashboard self-hosted at news.taciturn.uk. Aggregates RSS feeds, auto-tags stories by commodity relevance, and pushes Pushover alerts to support Taciturn trading decisions.</p>
+    <span class="project-tag">Mini Project</span>
+  </a>
   <a href="/projects/portfolio/" class="project-row">
-    <span class="project-index">03</span>
+    <span class="project-index">02</span>
     <div><h2 class="project-name">This Portfolio</h2><div class="project-sub">Web</div></div>
     <p class="project-desc">Custom-designed static site built with Hugo, deployed on Cloudflare Pages. Bespoke layouts, dark mode, fully responsive. Runs 24/7 for free.</p>
-    <span class="project-tag">Live</span>
+    <span class="project-tag">Mini Project</span>
   </a>
 </div>
 <footer>

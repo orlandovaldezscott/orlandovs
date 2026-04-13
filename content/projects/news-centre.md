@@ -12,7 +12,7 @@ tags: ["news","taciturn","miniproject"]
 The News Terminal is a real-time geopolitical intelligence dashboard I built and self-hosted at news.taciturn.uk. It was designed to give me a single place to monitor the news events most relevant to my algorithmic trading system, Taciturn specifically anything affecting oil prices, gold, silver, and global market sentiment.
 
 
-<img src="/images/Screenshot_2026-04-13_at_02.24.28.png" style="width:65%" />
+<div style="text-align:center"><img src="/images/Screenshot_2026-04-13_at_02.24.28.png" style="width:65%" /></div>
 
 
 ## How it works
@@ -28,3 +28,6 @@ Most news sites are noisy. I needed to know quickly whether something happening 
 ## Tech stack
 
 The app runs locally on my MacBook Air M2 and is served publicly via a Cloudflare Tunnel — no port forwarding, no server required. A macOS LaunchAgent ensures it starts automatically whenever my laptop is on. The frontend is pure HTML/CSS/JS — no frameworks — using JetBrains Mono and Bebas Neue to match the Taciturn aesthetic.
+
+link to mini project
+https://news.taciturn.uk/

@@ -33,6 +33,11 @@ nav{position:fixed;top:0;left:0;right:0;padding:1.8rem 4rem;display:grid;grid-te
 .content ul,.content ol{padding-left:1.5rem;margin-bottom:1.5rem}
 .content li{font-size:1.05rem;font-weight:300;line-height:1.85;color:var(--mid);margin-bottom:0.5rem}
 .content hr{border:none;border-top:1px solid var(--border);margin:3rem 0}
+.content img{cursor:zoom-in;transition:opacity 0.2s}
+.content img:hover{opacity:0.85}
+.lightbox{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.92);z-index:999;align-items:center;justify-content:center;cursor:zoom-out}
+.lightbox.active{display:flex}
+.lightbox img{max-width:95vw;max-height:95vh;object-fit:contain}
 footer{padding:3rem 4rem;border-top:1px solid var(--border);display:flex;justify-content:center;align-items:center;gap:5rem}
 .footer-copy{font-size:0.78rem;font-family:'DM Mono',monospace;letter-spacing:0.08em;color:var(--mid)}
 .footer-links{display:flex;gap:3rem}
@@ -62,9 +67,12 @@ footer{padding:3rem 4rem;border-top:1px solid var(--border);display:flex;justify
   <span class="footer-copy">© 2026 Orlando Valdes-Scott</span>
   <div class="footer-links"><a href="/posts/">Writing</a><a href="/projects/">Projects</a></div>
 </footer>
+<div class="lightbox" id="lightbox"><img id="lightbox-img" src="" /></div>
 <script>
 function toggleTheme(){const h=document.documentElement;const t=h.getAttribute('data-theme')==='dark'?'light':'dark';h.setAttribute('data-theme',t);localStorage.setItem('theme',t)}
 (function(){const t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t)})();
+document.querySelectorAll('.content img').forEach(img=>{img.addEventListener('click',()=>{document.getElementById('lightbox-img').src=img.src;document.getElementById('lightbox').classList.add('active')})});
+document.getElementById('lightbox').addEventListener('click',()=>document.getElementById('lightbox').classList.remove('active'));
 </script>
 </body>
 </html>

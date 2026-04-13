@@ -74,6 +74,10 @@
 <div class="main">
   <div class="toolbar">
     <input type="text" id="filename" placeholder="filename.md" />
+    <select id="section" style="background:#111;color:#ccc;border:1px solid #333;padding:4px 8px;font-size:12px;border-radius:3px;">
+      <option value="posts">posts</option>
+      <option value="projects">projects</option>
+    </select>
     <button class="btn btn-preview" onclick="togglePreview()">Preview</button>
     <button class="btn btn-save" onclick="saveFile()">Save</button>
     <button class="btn btn-publish" onclick="publish()">⬆ Publish</button>
@@ -113,6 +117,8 @@ async function openFile(path) {
   const r = await fetch(`${API}/file?path=${encodeURIComponent(path)}`);
   const data = await r.json();
   document.getElementById('filename').value = path.split('/').pop();
+  const section = path.includes('/projects/') ? 'projects' : 'posts';
+  document.getElementById('section').value = section;
   // Parse frontmatter
   const raw = data.content;
   const fmMatch = raw.match(/^---\n([\s\S]*?)\n---\n([\s\S]*)$/);
@@ -137,7 +143,8 @@ async function saveFile() {
   const tagsArr = tags ? `["${tags.split(',').map(t=>t.trim()).join('","')}"]` : '[]';
   const content = `---\ntitle: "${title}"\ndate: ${date}\ndraft: false\ntags: ${tagsArr}\n---\n\n${body}`;
   const fname = document.getElementById('filename').value;
-  const path = currentFile || `/Users/orlandovaldes-scott/orlandovs/content/posts/${fname}`;
+  const section = document.getElementById('section').value;
+  const path = currentFile || `/Users/orlandovaldes-scott/orlandovs/content/${section}/${fname}`;
   await fetch(`${API}/save`, {method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({path, content})});
   currentFile = path;
   setStatus(`Saved ✓`);
