@@ -11,11 +11,9 @@ Neural Link is a project memory system I built that lets me query all my project
 
 It lives at brain.taciturn.uk.
 
-<div style="text-align:center"><img src="/images/neural_link_screenshot.png" style="width:75%" /></div>
-
 ## Why I built it
 
-Every time I start a new chat with an AI assistant, I have to re-explain the entire context of whatever project I'm working on. What Taciturn is, how the signals work, what the infrastructure looks like, what I tried and what failed. It was taking longer to explain the context than to actually solve the problem.
+The main reason as to why I built it was so that i could have a library of infomation about the projects ive developed, this means i can quickly scour for previous bugs and solutions aswell as finding data and lines of code which come in handy, from small things to restarting every project at once, the rag system saves me a huge amount of time and acts like an ai personal assistant 
 
 I wanted a system where that context just existed — permanently — and could be queried at the start of any session. Something that's read all my Obsidian notes, all my project files, all my handoff documents, and can tell me what I need to know immediately.
 
