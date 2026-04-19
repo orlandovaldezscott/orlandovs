@@ -31,6 +31,7 @@ The project grew in phases. Each one introduced a new broker, a new strategy, or
 
 **v5 (current)** — Multiple signals running in parallel, risk management with broker-level stop losses on every order, a full web dashboard, and Pushover notifications. The system runs continuously, manages its own cooldowns, and halts itself if daily losses exceed a threshold.
 
+in short, we switched broker, so we changed who handelled the finances, added a new trading strategy usually risky but optimised prior to adding to the system, now trading gold and silver hoping to expand to crude soon using volitility indicators.
 
 
 <img src="/images/Screenshot_2026-03-08_at_15.59.51.png" style="width:68%" />
