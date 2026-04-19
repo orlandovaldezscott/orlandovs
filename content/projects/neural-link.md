@@ -9,6 +9,11 @@ tags: ["AI","python","miniproject","taciturn"]
 
 Neural Link is a project memory system I built that lets me query all my project notes, documentation, and context using natural language — and get accurate, specific answers back. It runs entirely on my MacBook Air M2, no cloud, no subscriptions. Think of it like a search engine that actually understands what you're asking, but trained only on my own notes.
 
+
+
+
+<img src="/images/Screenshot_2026-04-19_at_03.09.32.png" style="width:79%" />
+
 It lives at brain.taciturn.uk.
 
 ## Why I built it
