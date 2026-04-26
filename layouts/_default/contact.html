@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Orlando Valdes-Scott</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{--cream:#f5f0e8;--ink:#1a1612;--gold:#b8965a;--rust:#8b3a2a;--mid:#6b6259;--border:rgba(26,22,18,0.1);--nav-bg:rgba(245,240,232,0.92)}
+[data-theme="dark"]{--cream:#111009;--ink:#e8e2d8;--gold:#c9a96e;--rust:#c4614a;--mid:#8a8078;--border:rgba(232,226,216,0.1);--nav-bg:rgba(17,16,9,0.92)}
+html{font-size:16px;scroll-behavior:smooth}
+body{background:var(--cream);color:var(--ink);font-family:'Cormorant Garamond',Georgia,serif;min-height:100vh;overflow-x:hidden;transition:background 0.3s,color 0.3s}
+nav{position:fixed;top:0;left:0;right:0;padding:1.8rem 4rem;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;z-index:100;background:var(--nav-bg);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+.nav-left{display:flex;gap:3rem;justify-content:flex-start;align-items:center}
+.nav-centre{font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-weight:400;letter-spacing:0.08em;color:var(--ink);white-space:nowrap;text-decoration:none}
+.nav-right{display:flex;gap:3rem;justify-content:flex-end;align-items:center}
+.nav-left a,.nav-right a{font-size:0.78rem;font-family:'DM Mono',monospace;font-weight:300;letter-spacing:0.12em;text-transform:uppercase;color:var(--mid);text-decoration:none;transition:color 0.2s}
+.nav-left a:hover,.nav-right a:hover,.nav-right a.active{color:var(--ink)}
+.theme-btn{background:none;border:1px solid var(--border);color:var(--mid);font-family:'DM Mono',monospace;font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;padding:0.35rem 0.7rem;cursor:pointer;transition:all 0.2s;border-radius:2px}
+.theme-btn:hover{color:var(--ink);border-color:var(--gold)}
+.page-header{padding:8rem 4rem 5rem;display:grid;grid-template-columns:1fr 1fr;gap:6rem;border-bottom:1px solid var(--border);align-items:end}
+.page-overline{font-family:'DM Mono',monospace;font-size:0.68rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:1.5rem}
+.page-title{font-size:clamp(3rem,6vw,5rem);font-weight:300;letter-spacing:-0.02em;line-height:1.0}
+.page-title em{font-style:italic;color:var(--mid)}
+.header-right{font-size:1.15rem;font-weight:300;font-style:italic;line-height:1.8;color:var(--mid)}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--border)}
+.contact-col{padding:4rem}
+.contact-col:first-child{border-right:1px solid var(--border)}
+.contact-col h2{font-family:'DM Mono',monospace;font-size:0.68rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:2rem}
+.contact-col p{font-size:1.05rem;font-weight:300;line-height:1.85;color:var(--mid);margin-bottom:1.5rem}
+.contact-col p:last-child{margin-bottom:0}
+.contact-list{list-style:none;display:flex;flex-direction:column;gap:0}
+.contact-item{display:flex;justify-content:space-between;align-items:baseline;padding:1rem 0;border-bottom:1px solid var(--border);font-size:0.95rem;font-weight:300;color:var(--mid)}
+.contact-item:first-child{padding-top:0}
+.contact-item:last-child{border-bottom:none}
+.contact-label{font-family:'DM Mono',monospace;font-size:0.65rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold)}
+.contact-item a{color:var(--mid);text-decoration:none;transition:color 0.2s}
+.contact-item a:hover{color:var(--gold)}
+footer{padding:3rem 4rem;border-top:1px solid var(--border);display:flex;justify-content:center;align-items:center;gap:5rem}
+.footer-copy{font-size:0.78rem;font-family:'DM Mono',monospace;letter-spacing:0.08em;color:var(--mid)}
+.footer-links{display:flex;gap:3rem}
+.footer-links a{font-family:'DM Mono',monospace;font-size:0.75rem;letter-spacing:0.08em;color:var(--mid);text-decoration:none;transition:color 0.2s}
+.footer-links a:hover{color:var(--gold)}
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+.page-header>*{animation:fadeUp 0.8s ease both}
+.header-left{animation-delay:0.1s}.header-right{animation-delay:0.25s}
+.contact-grid{animation:fadeUp 0.8s ease 0.3s both}
+@media(max-width:768px){nav{padding:1.2rem 1.5rem;grid-template-columns:1fr auto}.nav-left{display:none}.page-header{padding:6rem 1.5rem 3rem;grid-template-columns:1fr;gap:2rem}.contact-grid{grid-template-columns:1fr}.contact-col{padding:2rem 1.5rem}.contact-col:first-child{border-right:none;border-bottom:1px solid var(--border)}footer{flex-direction:column;gap:1.5rem;text-align:center;padding:2rem 1.5rem}.footer-links{justify-content:center}.page-title{font-size:2.5rem!important}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-left"><a href="/projects/">Projects</a><a href="/posts/">Writing</a></div>
+  <a href="/" class="nav-centre">Orlando Valdes-Scott</a>
+  <div class="nav-right"><a href="/about/">About</a><a href="/contact/" class="active">Contact</a><button class="theme-btn" onclick="toggleTheme()">◐ Theme</button></div>
+</nav>
+<div class="page-header">
+  <div class="header-left">
+    <div class="page-overline">Contact</div>
+    <h1 class="page-title">Get in<br><em>touch.</em></h1>
+  </div>
+  <div class="header-right">
+    Open to conversations about algorithmic trading, materials science research, and technical collaboration. Based in London.
+  </div>
+</div>
+<div class="contact-grid">
+  <div class="contact-col">
+    <h2>Direct</h2>
+    <ul class="contact-list">
+      <li class="contact-item"><a href="https://github.com/orlandovaldezscott">github.com/orlandovaldezscott</a><span class="contact-label">GitHub</span></li>
+      <li class="contact-item"><a href="https://www.linkedin.com/in/orlandovaldezscott">LinkedIn</a><span class="contact-label">LinkedIn</span></li>
+    </ul>
+  </div>
+  <div class="contact-col">
+    <h2>About me</h2>
+    <p>I'm a 17-year-old developer based in London, building autonomous trading systems and conducting independent research. Always interested in hearing from people working in markets, software, or science.</p>
+  </div>
+</div>
+<footer>
+  <div class="footer-links"><a href="https://github.com/orlandovaldezscott">GitHub</a><a href="/about/">About</a></div>
+  <span class="footer-copy">© 2026 Orlando Valdes-Scott</span>
+  <div class="footer-links"><a href="/posts/">Writing</a><a href="/projects/">Projects</a></div>
+</footer>
+<script>
+function toggleTheme(){const h=document.documentElement;const t=h.getAttribute('data-theme')==='dark'?'light':'dark';h.setAttribute('data-theme',t);localStorage.setItem('theme',t)}
+(function(){const t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t)})();
+</script>
+</body>
+</html>
