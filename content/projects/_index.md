@@ -1,8 +1,8 @@
 ---
 title: "Projects"
-date: 2026-03-28
+date: 2026-05-22
 draft: false
 tags: []
 ---
 
-Two active projects — one in finance, one in materials science. Different domains, same approach: understand the problem deeply, build something real many more problems to solve many projects to complete.
+Three active projects — algorithmic trading, materials research, and a personal OS that replaced 20+ apps. Plus a few tools built along the way.
