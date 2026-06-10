@@ -50,25 +50,13 @@ A lot. In rough order of importance:
 
 ## Where It Is Now
 
-The system is standing around £4,400 all-time after three weeks of live demo trading. The goal is consistent profitability before deploying real capital — and a migration to a dedicated Mac Mini for permanent 24/7 operation.
+As of June 2026, Taciturn runs 24/7 on a DigitalOcean VPS in London — no longer dependent on the laptop being open. All-time P&L stands at approximately £7,166 across 889 closed trades since February 2025.
 
-Currently executing trades perfectly with an incredibly high win rate which is perfect, the profit ratio is something we need to work on which can be adjusted and finetuned with the order quantity and stop loss, which is currently set at -£75 and the take profit is +£10, so one trade going badly will wipe out 7 trades, so out of the 2 trades that went badly from the most recent 50 gold trades that leaves only 36 profitable trades, this is something I am actively working to fix.
+The active signal stack uses volume-weighted momentum crossovers (vol_momentum_bull/bear) gated through an H1 EMA trend filter, alongside MACD histogram signals and several candlestick-based patterns. The volume threshold requires 1.2x average volume to confirm a signal, filtering out low-conviction moves. Settings-based SL/TP override all ATR calculations — whatever is set in the dashboard is final on every order.
 
+The infrastructure now includes a real-time web dashboard, a geopolitical news terminal, a Neural Link RAG memory system, and an analytics layer — all exposed via Cloudflare Tunnel at taciturn.uk.
 
-<img src="/images/Screenshot_2026-04-09_at_01.24.29.png" style="width:74%" />
-
-
-The target was 85% profitable trades. That's not realistic for most strategies — but 60–70% with a good risk/reward ratio is, and that's what the current signal stack is being tuned toward.
-
-However, as of april 9th for the past few days weve had well over 80% with highs of 96% win rate on one day and achieveing ~90% win rate on following days, this win rate is something i believe will hopefully continue in the coming days and weeks, as opposed to a few good days.
-
-
-<img src="/images/Screenshot_2026-04-02_at_22.44.36.png" style="width:67%" />
-
-
-
-
-More updates to follow.
+The goal remains consistent demo profitability before deploying real capital.
 
 ---
 
@@ -79,7 +67,7 @@ More updates to follow.
   <p style="margin-bottom:0.75rem">You can view the Taciturn dashboard live. Use the credentials below — click to copy.</p>
   <div style="display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:1.2rem">
     <span onclick="navigator.clipboard.writeText('visitor');this.textContent='✓ Copied';setTimeout(()=>this.textContent='visitor',1500)" style="font-family:'DM Mono',monospace;font-size:0.8rem;padding:0.4rem 0.8rem;border:1px solid rgba(26,22,18,0.2);border-radius:2px;cursor:pointer;user-select:none" title="Click to copy username">visitor</span>
-    <span onclick="navigator.clipboard.writeText('v');this.textContent='✓ Copied';setTimeout(()=>this.textContent='v',1500)" style="font-family:'DM Mono',monospace;font-size:0.8rem;padding:0.4rem 0.8rem;border:1px solid rgba(26,22,18,0.2);border-radius:2px;cursor:pointer;user-select:none" title="Click to copy password">v</span>
+    <span onclick="navigator.clipboard.writeText('pecan26');this.textContent='✓ Copied';setTimeout(()=>this.textContent='pecan26',1500)" style="font-family:'DM Mono',monospace;font-size:0.8rem;padding:0.4rem 0.8rem;border:1px solid rgba(26,22,18,0.2);border-radius:2px;cursor:pointer;user-select:none" title="Click to copy password">pecan26</span>
   </div>
   <a href="https://dashboard.taciturn.uk/login" target="_blank" style="font-family:'DM Mono',monospace;font-size:0.72rem;letter-spacing:0.12em;text-transform:uppercase;color:#b8965a;text-decoration:none">→ Open Dashboard</a>
 </div>
