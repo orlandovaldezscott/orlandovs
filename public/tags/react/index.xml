@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>React on Orlando Valdes-Scott</title>
+    <link>https://orlandovs.pages.dev/tags/react/</link>
+    <description>Recent content in React on Orlando Valdes-Scott</description>
+    <generator>Hugo</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Fri, 22 May 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://orlandovs.pages.dev/tags/react/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Daedelus — Building a Personal OS</title>
+      <link>https://orlandovs.pages.dev/projects/daedelus/</link>
+      <pubDate>Fri, 22 May 2026 00:00:00 +0000</pubDate>
+      <guid>https://orlandovs.pages.dev/projects/daedelus/</guid>
+      <description>A native Mac and iPhone app that replaces 20+ apps — trading dashboard, T212 portfolio, fitness tracker, CRM mind map, and more. All on a self-hosted VPS.</description>
+    </item>
+  </channel>
+</rss>

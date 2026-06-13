@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Fintech on Orlando Valdes-Scott</title>
+    <link>https://orlandovs.pages.dev/tags/fintech/</link>
+    <description>Recent content in Fintech on Orlando Valdes-Scott</description>
+    <generator>Hugo</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Sat, 13 Jun 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://orlandovs.pages.dev/tags/fintech/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Atlas</title>
+      <link>https://orlandovs.pages.dev/projects/atlas/</link>
+      <pubDate>Sat, 13 Jun 2026 00:00:00 +0000</pubDate>
+      <guid>https://orlandovs.pages.dev/projects/atlas/</guid>
+      <description>A fully customisable iOS life dashboard — finance, health, habits and focus in one native app. Built to be the only app you open.</description>
+    </item>
+  </channel>
+</rss>

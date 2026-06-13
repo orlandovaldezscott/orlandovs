@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Posts on Orlando Valdes-Scott</title>
+    <link>https://orlandovs.pages.dev/posts/</link>
+    <description>Recent content in Posts on Orlando Valdes-Scott</description>
+    <generator>Hugo</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Sat, 28 Mar 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://orlandovs.pages.dev/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Building Taciturn — What I&#39;ve Learned Building an Algo Trading System From Scratch</title>
+      <link>https://orlandovs.pages.dev/posts/main/</link>
+      <pubDate>Sat, 28 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>https://orlandovs.pages.dev/posts/main/</guid>
+      <description>&lt;h2 id=&#34;where-it-started&#34;&gt;Where It Started&lt;/h2&gt;
+&lt;p&gt;Taciturn started whilst I was starting out trading, the idea came in the vision of a terminal that could give me financial insights on what the market of my choice was doing, whether it was near the daily high or daily low, and after coding a trend manager i could receive financial call outs via this terminal, telling me to buy or sell there was alot of other infomation which id look at usually whilst trading such as session deltas, yesterdays highs and lows, data id usually look at manually this was about 700 lines of code no broker integration no execution&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Miniproject on Orlando Valdes-Scott</title>
+    <link>https://orlandovs.pages.dev/tags/miniproject/</link>
+    <description>Recent content in Miniproject on Orlando Valdes-Scott</description>
+    <generator>Hugo</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Sun, 19 Apr 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://orlandovs.pages.dev/tags/miniproject/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Neural Link — A RAG Memory System for Project Knowledge</title>
+      <link>https://orlandovs.pages.dev/projects/neural-link/</link>
+      <pubDate>Sun, 19 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://orlandovs.pages.dev/projects/neural-link/</guid>
+      <description>&lt;h2 id=&#34;what-is-it&#34;&gt;What is it?&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;For the non-specialist:&lt;/strong&gt; Neural Link is a private AI assistant that has read all of my project notes. You can ask it anything about how Taciturn works, what signals it uses, how the infrastructure is set up, or what decisions were made and why — and it gives you a specific, accurate answer drawn directly from my documentation. It lives at brain.taciturn.uk. Think of it as a search engine that understands meaning rather than keywords, trained entirely on my own notes.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>News Centre </title>
+      <link>https://orlandovs.pages.dev/projects/news-centre/</link>
+      <pubDate>Mon, 13 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://orlandovs.pages.dev/projects/news-centre/</guid>
+      <description>&lt;h1 id=&#34;news-terminal--portfolio-write-up&#34;&gt;News Terminal — Portfolio Write-up&lt;/h1&gt;
+&lt;h2 id=&#34;what-is-it&#34;&gt;What is it?&lt;/h2&gt;
+&lt;p&gt;The News Terminal is a real-time geopolitical intelligence dashboard I built and self-hosted at news.taciturn.uk. It was designed to give me a single place to monitor the news events most relevant to my algorithmic trading system, Taciturn specifically anything affecting oil prices, gold, silver, and global market sentiment.&lt;/p&gt;
+&lt;div style=&#34;text-align:center&#34;&gt;&lt;img src=&#34;https://orlandovs.pages.dev/images/Screenshot_2026-04-13_at_02.24.28.png&#34; style=&#34;width:65%&#34; /&gt;&lt;/div&gt;
+&lt;h2 id=&#34;how-it-works&#34;&gt;How it works&lt;/h2&gt;
+&lt;p&gt;The backend is a Python Flask app that pulls from a curated set of RSS feeds every five minutes, including Al Jazeera, Reuters, BBC World, BBC Politics, OilPrice.com, and The Guardian US. Every article is automatically scanned for keywords and tagged — OIL, GOLD, SILVER, GEOPOLITICAL, TRUMP — so the most relevant stories surface immediately. Urgent articles trigger a push notification to my phone via Pushover.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Cryptography on Orlando Valdes-Scott</title>
+    <link>https://orlandovs.pages.dev/tags/cryptography/</link>
+    <description>Recent content in Cryptography on Orlando Valdes-Scott</description>
+    <generator>Hugo</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Fri, 01 May 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://orlandovs.pages.dev/tags/cryptography/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Muriel — Building a Passport System for AI Agents</title>
+      <link>https://orlandovs.pages.dev/projects/muriel/</link>
+      <pubDate>Fri, 01 May 2026 00:00:00 +0000</pubDate>
+      <guid>https://orlandovs.pages.dev/projects/muriel/</guid>
+      <description>&lt;h2 id=&#34;the-problem&#34;&gt;The Problem&lt;/h2&gt;
+&lt;p&gt;AI agents are everywhere now. They book flights, make purchases, send emails — all without a human touching a keyboard. But there&amp;rsquo;s a problem nobody has solved yet: how does Skyscanner know the agent booking a flight is legitimate? How does any API know who the agent is, who owns it, and what it&amp;rsquo;s actually allowed to do?&lt;/p&gt;
+&lt;p&gt;Right now it doesn&amp;rsquo;t. There&amp;rsquo;s no standard. No identity layer. No audit trail. If an agent spends £50,000 on plane tickets instead of £5,000, nobody knows who&amp;rsquo;s responsible and nobody can prove what happened.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

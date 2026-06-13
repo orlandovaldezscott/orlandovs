@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Projects on Orlando Valdes-Scott</title>
+    <link>https://orlandovs.pages.dev/projects/</link>
+    <description>Recent content in Projects on Orlando Valdes-Scott</description>
+    <generator>Hugo</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Sat, 13 Jun 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://orlandovs.pages.dev/projects/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Atlas</title>
+      <link>https://orlandovs.pages.dev/projects/atlas/</link>
+      <pubDate>Sat, 13 Jun 2026 00:00:00 +0000</pubDate>
+      <guid>https://orlandovs.pages.dev/projects/atlas/</guid>
+      <description>A fully customisable iOS life dashboard — finance, health, habits and focus in one native app. Built to be the only app you open.</description>
+    </item>
+    <item>
+      <title>Carbon Nanotubes</title>
+      <link>https://orlandovs.pages.dev/projects/carbon-nanotubes/</link>
+      <pubDate>Sun, 29 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>https://orlandovs.pages.dev/projects/carbon-nanotubes/</guid>
+      <description>Research into carbon nanotube applications in medicine — production challenges, therapeutic delivery, and comparison with nanoparticle approaches.</description>
+    </item>
+    <item>
+      <title>This Portfolio</title>
+      <link>https://orlandovs.pages.dev/projects/portfolio/</link>
+      <pubDate>Tue, 31 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>https://orlandovs.pages.dev/projects/portfolio/</guid>
+      <description>A custom-designed static portfolio site built with Hugo and deployed on Cloudflare Pages.</description>
+    </item>
+    <item>
+      <title>Daedelus — Building a Personal OS</title>
+      <link>https://orlandovs.pages.dev/projects/daedelus/</link>
+      <pubDate>Fri, 22 May 2026 00:00:00 +0000</pubDate>
+      <guid>https://orlandovs.pages.dev/projects/daedelus/</guid>
+      <description>A native Mac and iPhone app that replaces 20+ apps — trading dashboard, T212 portfolio, fitness tracker, CRM mind map, and more. All on a self-hosted VPS.</description>
+    </item>
+    <item>
+      <title>Muriel — Building a Passport System for AI Agents</title>
+      <link>https://orlandovs.pages.dev/projects/muriel/</link>
+      <pubDate>Fri, 01 May 2026 00:00:00 +0000</pubDate>
+      <guid>https://orlandovs.pages.dev/projects/muriel/</guid>
+      <description>&lt;h2 id=&#34;the-problem&#34;&gt;The Problem&lt;/h2&gt;
+&lt;p&gt;AI agents are everywhere now. They book flights, make purchases, send emails — all without a human touching a keyboard. But there&amp;rsquo;s a problem nobody has solved yet: how does Skyscanner know the agent booking a flight is legitimate? How does any API know who the agent is, who owns it, and what it&amp;rsquo;s actually allowed to do?&lt;/p&gt;
+&lt;p&gt;Right now it doesn&amp;rsquo;t. There&amp;rsquo;s no standard. No identity layer. No audit trail. If an agent spends £50,000 on plane tickets instead of £5,000, nobody knows who&amp;rsquo;s responsible and nobody can prove what happened.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Neural Link — A RAG Memory System for Project Knowledge</title>
+      <link>https://orlandovs.pages.dev/projects/neural-link/</link>
+      <pubDate>Sun, 19 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://orlandovs.pages.dev/projects/neural-link/</guid>
+      <description>&lt;h2 id=&#34;what-is-it&#34;&gt;What is it?&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;For the non-specialist:&lt;/strong&gt; Neural Link is a private AI assistant that has read all of my project notes. You can ask it anything about how Taciturn works, what signals it uses, how the infrastructure is set up, or what decisions were made and why — and it gives you a specific, accurate answer drawn directly from my documentation. It lives at brain.taciturn.uk. Think of it as a search engine that understands meaning rather than keywords, trained entirely on my own notes.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>News Centre </title>
+      <link>https://orlandovs.pages.dev/projects/news-centre/</link>
+      <pubDate>Mon, 13 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://orlandovs.pages.dev/projects/news-centre/</guid>
+      <description>&lt;h1 id=&#34;news-terminal--portfolio-write-up&#34;&gt;News Terminal — Portfolio Write-up&lt;/h1&gt;
+&lt;h2 id=&#34;what-is-it&#34;&gt;What is it?&lt;/h2&gt;
+&lt;p&gt;The News Terminal is a real-time geopolitical intelligence dashboard I built and self-hosted at news.taciturn.uk. It was designed to give me a single place to monitor the news events most relevant to my algorithmic trading system, Taciturn specifically anything affecting oil prices, gold, silver, and global market sentiment.&lt;/p&gt;
+&lt;div style=&#34;text-align:center&#34;&gt;&lt;img src=&#34;https://orlandovs.pages.dev/images/Screenshot_2026-04-13_at_02.24.28.png&#34; style=&#34;width:65%&#34; /&gt;&lt;/div&gt;
+&lt;h2 id=&#34;how-it-works&#34;&gt;How it works&lt;/h2&gt;
+&lt;p&gt;The backend is a Python Flask app that pulls from a curated set of RSS feeds every five minutes, including Al Jazeera, Reuters, BBC World, BBC Politics, OilPrice.com, and The Guardian US. Every article is automatically scanned for keywords and tagged — OIL, GOLD, SILVER, GEOPOLITICAL, TRUMP — so the most relevant stories surface immediately. Urgent articles trigger a push notification to my phone via Pushover.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Building Taciturn — What I&#39;ve Learned Building an Algo Trading System From Scratch</title>
+      <link>https://orlandovs.pages.dev/projects/taciturn/</link>
+      <pubDate>Sat, 28 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>https://orlandovs.pages.dev/projects/taciturn/</guid>
+      <description>&lt;h2 id=&#34;where-it-started&#34;&gt;Where It Started&lt;/h2&gt;
+&lt;p&gt;Taciturn started whilst I was starting out trading, the idea came in the vision of a terminal that could give me financial insights on what the market of my choice was doing, whether it was near the daily high or daily low, and after coding a trend manager i could receive financial call outs via this terminal, telling me to buy or sell there was alot of other infomation which id look at usually whilst trading such as session deltas, yesterdays highs and lows, data id usually look at manually this was about 700 lines of code no broker integration no execution&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
