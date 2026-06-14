@@ -6,7 +6,7 @@
     <description>Recent content on Orlando Valdes-Scott</description>
     <generator>Hugo</generator>
     <language>en-gb</language>
-    <lastBuildDate>Sat, 13 Jun 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 14 Jun 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://orlandovs.pages.dev/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Atlas</title>
@@ -28,6 +28,24 @@
       <pubDate>Tue, 31 Mar 2026 00:00:00 +0000</pubDate>
       <guid>https://orlandovs.pages.dev/projects/portfolio/</guid>
       <description>A custom-designed static portfolio site built with Hugo and deployed on Cloudflare Pages.</description>
+    </item>
+    <item>
+      <title>Privacy Policy — Atlas</title>
+      <link>https://orlandovs.pages.dev/privacy/</link>
+      <pubDate>Sun, 14 Jun 2026 00:00:00 +0000</pubDate>
+      <guid>https://orlandovs.pages.dev/privacy/</guid>
+      <description>&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
+&lt;p&gt;Atlas is a personal life dashboard built on one principle: your data belongs to you. Everything you enter into Atlas stays on your device. We do not collect, store, or transmit your personal data to any server we operate.&lt;/p&gt;
+&lt;h2 id=&#34;what-data-atlas-uses&#34;&gt;What Data Atlas Uses&lt;/h2&gt;
+&lt;p&gt;With your explicit permission, Atlas may access the following — only on your device:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Health data&lt;/strong&gt; (steps, heart rate, sleep, calories) — read from Apple Health, never sent anywhere&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Location&lt;/strong&gt; — used only for local weather via Open-Meteo. Not stored or tracked.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Camera&lt;/strong&gt; — only when you scan a meal for macro analysis&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Face ID&lt;/strong&gt; — only to unlock the in-app password vault, via Apple&amp;rsquo;s secure APIs&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Photo library&lt;/strong&gt; — only when you choose to analyse a meal photo&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;None of this data is collected by Atlas or its developer.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Daedelus — Building a Personal OS</title>
