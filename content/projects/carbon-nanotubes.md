@@ -9,6 +9,27 @@ weight: 2
 
 ## Overview
 
+The project involving Carbon Nanotubes whilst still in its infancy is very much in development, currently I am exploring alternatives to carbon nanotubes to find out why CNTS are such a good long term investment and could be the solution to materialistic science and aerospace technology  
+
+First off we will delve into the world of material science which will give a grasp to the uneducated, material science is the study and application of various materials such as polymers metals ceramics and plenty of other composites, it involves understanding how different materials interact with the environment around it including temperature pressure light and other external factors which can influence the behaviour of the target material. 
+
+To understand the starting blocks of material science we must understand the 3 different building blocks of material science, atoms molecules and crystals, atoms being the smallest consisting of protons neutrons and electrons, molecules are groups of atoms bonded together and crystals are repeating patterns of atoms around a specific structure 
+
+Crystals being the most complicated have multiple different structures and properties, the arrangement of atoms which form in a crystal lattice which is a regular arrangement of atoms in a 3d space, this determines its properties which include things like mechanical strength thermal  and electrical conductivity aswell as optical properties.
+
+Materials can be classified into 4 different categories, metals ceramics polymers and composites, each of these have base rules which they must follow to fit into those categories, metals which are good conductors of electricity and heat are often used in electrical wiring and electronics
+Ceramics are resistant to high temperatures these are often used in cookware and pottery and industrial application
+Polymers are organic materials made from long chains of molecules these are often used in textiles plastics and adhesives 
+Composites, these are materials composed of multiple components such as fibre, these can be tailored to specific properties 
+
+
+
+
+
+
+
+
+
 This project is currently in development. The research focuses on two primary questions around carbon nanotube applications in medicine, with supporting sub-questions. Work in progress.
 
 ---
@@ -46,4 +67,4 @@ This project is currently in development. The research focuses on two primary qu
 
 ---
 
-*Last updated: April 5th 2026*
+*Last updated: 19th July 2026*
