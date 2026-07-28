@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Atlas — Your life, on one screen</title>
+<meta name="description" content="A private personal dashboard for iPhone. Money, health, training, spending and time in one place. Everything stays on your device.">
+<meta property="og:title" content="Atlas — Your life, on one screen">
+<meta property="og:description" content="A private personal dashboard for iPhone. Everything stays on your device.">
+<meta name="theme-color" content="#0B0B0B">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0B0B0B; --paper:#F2F0EA; --acid:#C8FF2E; --mute:#6B6B66;
+  --red:#FF5C47; --hair:rgba(242,240,234,.12); --lift:rgba(242,240,234,.06);
+  --serif:'Instrument Serif',Georgia,serif;
+  --mono:ui-monospace,'SF Mono',Menlo,Consolas,monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--ink);color:var(--paper);font-family:var(--mono);
+     -webkit-font-smoothing:antialiased;line-height:1.6;overflow-x:hidden}
+.wrap{max-width:1000px;margin:0 auto;padding:0 28px}
+.serif{font-family:var(--serif);font-weight:400;line-height:.94}
+.num{font-variant-numeric:tabular-nums}
+a{color:var(--acid);text-decoration:none}
+
+/* nav */
+nav{position:sticky;top:0;z-index:50;background:rgba(11,11,11,.88);
+    backdrop-filter:blur(14px);border-bottom:1px solid var(--hair)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;padding-top:16px;padding-bottom:16px}
+nav .logo{font-size:11px;letter-spacing:2px;text-transform:uppercase}
+nav .links{display:flex;gap:22px;font-size:10px;letter-spacing:1.2px;text-transform:uppercase}
+nav .links a{color:var(--mute)}
+nav .links a:hover{color:var(--paper)}
+
+/* hero */
+header{padding:96px 0 72px;border-bottom:1px solid var(--hair)}
+.kicker{font-size:10px;letter-spacing:1.6px;text-transform:uppercase;color:var(--mute);margin-bottom:26px}
+h1{font-size:clamp(52px,9vw,104px)}
+h1 em{font-style:normal;color:var(--acid)}
+.lede{font-size:14px;color:rgba(242,240,234,.72);max-width:52ch;margin-top:26px;line-height:1.7}
+.cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:38px;align-items:center}
+.btn{background:var(--acid);color:var(--ink);padding:15px 26px;font-size:10px;
+     letter-spacing:1.6px;text-transform:uppercase;font-weight:600;border-radius:14px}
+.btn.ghost{background:transparent;color:var(--paper);border:1px solid var(--hair);font-weight:400}
+.price{font-size:10px;color:var(--mute);letter-spacing:.8px}
+
+/* sections */
+section{padding:80px 0;border-bottom:1px solid var(--hair)}
+.label{font-size:10px;letter-spacing:1.4px;text-transform:uppercase;color:var(--mute);margin-bottom:26px}
+h2{font-family:var(--serif);font-weight:400;font-size:clamp(34px,5vw,54px);line-height:1;margin-bottom:20px}
+h2 em{font-style:normal;color:var(--acid)}
+.body{font-size:13px;color:rgba(242,240,234,.72);max-width:56ch;line-height:1.8}
+
+/* privacy panel */
+.panel{border:1px solid rgba(200,255,46,.45);padding:34px;margin-top:8px}
+.panel .big{font-family:var(--serif);font-size:clamp(30px,4.5vw,46px);color:var(--acid);line-height:1.05}
+.panel p{font-size:13px;color:rgba(242,240,234,.75);margin-top:14px;max-width:56ch;line-height:1.8}
+
+/* feature grid */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1px;
+      background:var(--hair);border:1px solid var(--hair);margin-top:34px}
+.cell{background:var(--ink);padding:26px 22px}
+.cell .n{font-size:9px;letter-spacing:1.2px;color:var(--mute)}
+.cell h3{font-family:var(--serif);font-weight:400;font-size:23px;margin:10px 0 8px}
+.cell p{font-size:11.5px;color:rgba(242,240,234,.62);line-height:1.7}
+
+/* stats strip */
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:26px;margin-top:34px}
+.stat .v{font-family:var(--serif);font-size:46px;color:var(--acid);line-height:1}
+.stat .l{font-size:9px;letter-spacing:1.1px;color:var(--mute);margin-top:8px;text-transform:uppercase}
+
+/* pricing */
+.tiers{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;margin-top:34px}
+.tier{border:1px solid var(--hair);padding:30px}
+.tier.pro{border-color:rgba(200,255,46,.45)}
+.tier .name{font-family:var(--serif);font-size:30px;margin-bottom:4px}
+.tier.pro .name{color:var(--acid)}
+.tier .cost{font-size:11px;color:var(--mute);letter-spacing:.8px;margin-bottom:20px}
+.tier ul{list-style:none}
+.tier li{font-size:12px;color:rgba(242,240,234,.72);padding:7px 0;padding-left:18px;position:relative;line-height:1.6}
+.tier li:before{content:"—";position:absolute;left:0;color:var(--mute)}
+.tier.pro li:before{color:var(--acid)}
+
+/* footer */
+footer{padding:56px 0 72px}
+.flinks{display:flex;gap:24px;flex-wrap:wrap;margin-bottom:20px;
+        font-size:10px;letter-spacing:1.2px;text-transform:uppercase}
+.flinks a{color:var(--mute)}
+.flinks a:hover{color:var(--paper)}
+.fine{font-size:10.5px;color:rgba(242,240,234,.4);max-width:62ch;line-height:1.8}
+
+@media(max-width:600px){
+  header{padding:64px 0 52px}
+  section{padding:56px 0}
+  nav .links{gap:14px}
+  .panel{padding:24px}
+}
+</style>
+</head>
+<body>
+
+<nav><div class="wrap">
+  <div class="logo">Atlas</div>
+  <div class="links">
+    <a href="#what">What it does</a>
+    <a href="#privacy">Privacy</a>
+    <a href="#pricing">Pricing</a>
+    <a href="/support/">Support</a>
+  </div>
+</div></nav>
+
+<header><div class="wrap">
+  <div class="kicker">For iPhone</div>
+  <h1 class="serif">Your life,<br>on <em>one screen.</em></h1>
+  <p class="lede">
+    Money, health, training, food, spending, parcels and time — assembled from
+    the services you already use, arranged into pages you build yourself.
+    Everything stays on your device.
+  </p>
+  <div class="cta">
+    <a class="btn" href="#pricing">Coming to the App Store</a>
+    <a class="btn ghost" href="#what">See what it does</a>
+    <span class="price">Free · Pro unlock £4.99 one-off</span>
+  </div>
+</div></header>
+
+<section id="privacy"><div class="wrap">
+  <div class="label">01 — The principle</div>
+  <div class="panel">
+    <div class="big serif">Atlas collects nothing.</div>
+    <p>
+      No accounts. No analytics. No tracking. No servers we operate. Every request
+      goes straight from your phone to the service it's asking, using a key you
+      supply. Your data never passes through us, because there is no us to pass
+      through.
+    </p>
+  </div>
+  <div class="stats">
+    <div class="stat"><div class="v num">0</div><div class="l">Accounts required</div></div>
+    <div class="stat"><div class="v num">0</div><div class="l">Trackers</div></div>
+    <div class="stat"><div class="v num">40+</div><div class="l">Widgets</div></div>
+    <div class="stat"><div class="v num">18</div><div class="l">Themes</div></div>
+  </div>
+</div></section>
+
+<section id="what"><div class="wrap">
+  <div class="label">02 — What it does</div>
+  <h2>Ten apps,<br><em>one screen.</em></h2>
+  <p class="body">
+    Build pages from over forty widgets. Put your portfolio next to your training
+    diary, or your parcels next to the weather. It's your dashboard, so it's
+    arranged your way.
+  </p>
+
+  <div class="grid">
+    <div class="cell">
+      <div class="n">01</div><h3>Money</h3>
+      <p>Live portfolio and positions, net worth across accounts, statement analysis, and spending you log by voice — geotagged onto a map, deducted from the right pot.</p>
+    </div>
+    <div class="cell">
+      <div class="n">02</div><h3>Health</h3>
+      <p>Apple Health rings, WHOOP recovery, and training sessions logged with perceived exertion and how they actually felt, kept as a diary.</p>
+    </div>
+    <div class="cell">
+      <div class="n">03</div><h3>Food</h3>
+      <p>Say a whole day — "porridge for breakfast, katsu curry for dinner" — and it estimates macros against targets worked out from your own numbers.</p>
+    </div>
+    <div class="cell">
+      <div class="n">04</div><h3>Research</h3>
+      <p>Nightly, from official SEC filings: which holdings report soon, how their fundamentals are trending, and an analyst you can question.</p>
+    </div>
+    <div class="cell">
+      <div class="n">05</div><h3>The Logger</h3>
+      <p>Press your Action Button and talk. Atlas works out whether it was a purchase, a meal, a workout or a note, and files it accordingly.</p>
+    </div>
+    <div class="cell">
+      <div class="n">06</div><h3>Everything else</h3>
+      <p>Parcels, trains, aircraft overhead, server uptime, infrastructure costs, hour-by-hour weather, calendar, tasks, notes, habits — and three games.</p>
+    </div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="label">03 — Built differently</div>
+  <h2>Bring your <em>own keys.</em></h2>
+  <p class="body">
+    Atlas reads from Trading 212, WHOOP, 17TRACK and others using credentials you
+    provide. That means no subscription funding a middleman, no company sitting
+    between you and your own data, and nothing to breach. It also means Atlas
+    keeps working exactly as well whether one person uses it or a million do.
+  </p>
+</div></section>
+
+<section id="pricing"><div class="wrap">
+  <div class="label">04 — Pricing</div>
+  <h2>Free, mostly.<br><em>Paid once, never again.</em></h2>
+
+  <div class="tiers">
+    <div class="tier">
+      <div class="name serif">Free</div>
+      <div class="cost">Forever</div>
+      <ul>
+        <li>Every widget except the four below</li>
+        <li>Full portfolio, health and spending</li>
+        <li>Statement analysis and net worth</li>
+        <li>Parcels, trains, aircraft, weather</li>
+        <li>Calendar, tasks, notes, habits</li>
+        <li>Three themes and all three games</li>
+        <li>No page limit, no nagging</li>
+      </ul>
+    </div>
+    <div class="tier pro">
+      <div class="name serif">Atlas Pro</div>
+      <div class="cost">£4.99 once — not a subscription</div>
+      <ul>
+        <li>Earnings Radar and the analyst</li>
+        <li>AI daily briefing</li>
+        <li>All 18 themes and 24 accent colours</li>
+        <li>Four typography styles</li>
+        <li>Layout density and text size</li>
+        <li>Push notifications</li>
+        <li>Restores on every device you own</li>
+      </ul>
+    </div>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <div class="flinks">
+    <a href="/">Orlando Valdes-Scott</a>
+    <a href="/support/">Support</a>
+    <a href="/privacy/">Privacy</a>
+    <a href="mailto:orlandovs1@hotmail.com">Contact</a>
+  </div>
+  <p class="fine">
+    © 2026 Orlando Valdes-Scott. Atlas is an independent app and is not affiliated
+    with Trading 212, WHOOP, 17TRACK, Apple or any other service it can connect to.
+    Market and company data is provided by third parties and may be delayed or
+    inaccurate. Information only — not financial, medical or legal advice.
+  </p>
+</div></footer>
+
+</body>
+</html>
