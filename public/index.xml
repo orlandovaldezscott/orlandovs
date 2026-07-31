@@ -30,28 +30,28 @@
       <description>A custom-designed static portfolio site built with Hugo and deployed on Cloudflare Pages.</description>
     </item>
     <item>
-      <title>Support — Atlas</title>
+      <title>Support — Kestra</title>
       <link>https://orlandovs.pages.dev/support/</link>
       <pubDate>Sat, 25 Jul 2026 00:00:00 +0000</pubDate>
       <guid>https://orlandovs.pages.dev/support/</guid>
       <description>&lt;h2 id=&#34;getting-help&#34;&gt;Getting Help&lt;/h2&gt;
-&lt;p&gt;Atlas is made by one person. There&amp;rsquo;s no support team, no ticketing system and no chatbot — emails come straight to me.&lt;/p&gt;
+&lt;p&gt;Kestra is made by one person. There&amp;rsquo;s no support team, no ticketing system and no chatbot — emails come straight to me.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;&lt;a href=&#34;mailto:orlandovs1@hotmail.com&#34;&gt;orlandovs1@hotmail.com&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Please include your iPhone model, your iOS version, and the Atlas version from &lt;strong&gt;Settings → Changelog&lt;/strong&gt;. It makes problems far quicker to find. Expect a reply within a few days.&lt;/p&gt;
+&lt;p&gt;Please include your iPhone model, your iOS version, and the Kestra version from &lt;strong&gt;Settings → Changelog&lt;/strong&gt;. It makes problems far quicker to find. Expect a reply within a few days.&lt;/p&gt;
 &lt;h2 id=&#34;common-questions&#34;&gt;Common Questions&lt;/h2&gt;
 &lt;h3 id=&#34;where-is-my-data-stored&#34;&gt;Where is my data stored?&lt;/h3&gt;
-&lt;p&gt;On your iPhone. Atlas has no accounts and no servers of mine — nothing is uploaded, and no analytics or tracking of any kind is collected. API keys are held in the iOS Keychain, encrypted by the system. See the &lt;a href=&#34;https://orlandovs.pages.dev/privacy/&#34;&gt;privacy policy&lt;/a&gt; for detail.&lt;/p&gt;</description>
+&lt;p&gt;On your iPhone. Kestra has no accounts and no servers of mine — nothing is uploaded, and no analytics or tracking of any kind is collected. API keys are held in the iOS Keychain, encrypted by the system. See the &lt;a href=&#34;https://orlandovs.pages.dev/privacy/&#34;&gt;privacy policy&lt;/a&gt; for detail.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Privacy Policy — Atlas</title>
+      <title>Privacy Policy — Kestra</title>
       <link>https://orlandovs.pages.dev/privacy/</link>
       <pubDate>Sun, 14 Jun 2026 00:00:00 +0000</pubDate>
       <guid>https://orlandovs.pages.dev/privacy/</guid>
       <description>&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
-&lt;p&gt;Atlas is a personal life dashboard built on one principle: your data belongs to you. Everything you enter into Atlas stays on your device. We do not collect, store, or transmit your personal data to any server we operate.&lt;/p&gt;
+&lt;p&gt;Kestra is a personal life dashboard built on one principle: your data belongs to you. Everything you enter into Kestra stays on your device. We do not collect, store, or transmit your personal data to any server we operate.&lt;/p&gt;
 &lt;p&gt;There are no accounts, no analytics, no crash reporting, no advertising identifiers and no tracking of any kind. The developer receives no data about you or your usage.&lt;/p&gt;
-&lt;h2 id=&#34;what-data-atlas-uses&#34;&gt;What Data Atlas Uses&lt;/h2&gt;
-&lt;p&gt;With your explicit permission, Atlas may access the following — only on your device:&lt;/p&gt;</description>
+&lt;h2 id=&#34;what-data-kestra-uses&#34;&gt;What Data Kestra Uses&lt;/h2&gt;
+&lt;p&gt;With your explicit permission, Kestra may access the following — only on your device:&lt;/p&gt;</description>
     </item>
     <item>
       <title>Daedelus — Building a Personal OS</title>
