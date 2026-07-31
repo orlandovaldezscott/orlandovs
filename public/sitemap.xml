@@ -2,8 +2,8 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://orlandovs.pages.dev/projects/atlas/</loc>
-    <lastmod>2026-06-13T00:00:00+00:00</lastmod>
+    <loc>https://orlandovs.pages.dev/projects/kestra/</loc>
+    <lastmod>2026-07-31T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://orlandovs.pages.dev/projects/carbon-nanotubes/</loc>
     <lastmod>2026-03-29T00:00:00+00:00</lastmod>
@@ -11,32 +11,35 @@
     <loc>https://orlandovs.pages.dev/projects/portfolio/</loc>
     <lastmod>2026-03-31T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://orlandovs.pages.dev/tags/app/</loc>
+    <lastmod>2026-07-31T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://orlandovs.pages.dev/tags/fintech/</loc>
+    <lastmod>2026-07-31T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://orlandovs.pages.dev/tags/ios/</loc>
+    <lastmod>2026-07-31T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://orlandovs.pages.dev/</loc>
-    <lastmod>2026-07-25T00:00:00+00:00</lastmod>
+    <lastmod>2026-07-31T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://orlandovs.pages.dev/tags/privacy/</loc>
+    <lastmod>2026-07-31T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://orlandovs.pages.dev/tags/productivity/</loc>
+    <lastmod>2026-07-31T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://orlandovs.pages.dev/tags/swift/</loc>
+    <lastmod>2026-07-31T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://orlandovs.pages.dev/tags/</loc>
+    <lastmod>2026-07-31T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://orlandovs.pages.dev/support/</loc>
     <lastmod>2026-07-25T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://orlandovs.pages.dev/privacy/</loc>
     <lastmod>2026-07-25T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://orlandovs.pages.dev/tags/app/</loc>
-    <lastmod>2026-06-13T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://orlandovs.pages.dev/tags/fintech/</loc>
-    <lastmod>2026-06-13T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://orlandovs.pages.dev/tags/ios/</loc>
-    <lastmod>2026-06-13T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://orlandovs.pages.dev/tags/productivity/</loc>
-    <lastmod>2026-06-13T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://orlandovs.pages.dev/tags/swift/</loc>
-    <lastmod>2026-06-13T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://orlandovs.pages.dev/tags/</loc>
-    <lastmod>2026-06-13T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://orlandovs.pages.dev/projects/daedelus/</loc>
     <lastmod>2026-05-22T00:00:00+00:00</lastmod>

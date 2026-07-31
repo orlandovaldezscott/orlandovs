@@ -6,14 +6,14 @@
     <description>Recent content in Productivity on Orlando Valdes-Scott</description>
     <generator>Hugo</generator>
     <language>en-gb</language>
-    <lastBuildDate>Sat, 13 Jun 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 31 Jul 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://orlandovs.pages.dev/tags/productivity/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Atlas</title>
-      <link>https://orlandovs.pages.dev/projects/atlas/</link>
-      <pubDate>Sat, 13 Jun 2026 00:00:00 +0000</pubDate>
-      <guid>https://orlandovs.pages.dev/projects/atlas/</guid>
-      <description>A fully customisable iOS life dashboard — finance, health, habits and focus in one native app. Built to be the only app you open.</description>
+      <title>Kestra</title>
+      <link>https://orlandovs.pages.dev/projects/kestra/</link>
+      <pubDate>Fri, 31 Jul 2026 00:00:00 +0000</pubDate>
+      <guid>https://orlandovs.pages.dev/projects/kestra/</guid>
+      <description>A private personal dashboard for iPhone — money, health, training, spending and time on one screen. Local-first, no accounts, no tracking.</description>
     </item>
   </channel>
 </rss>
