@@ -4,7 +4,6 @@ date: 2026-07-31
 draft: false
 tags: ["ios", "swift", "app", "productivity", "fintech", "privacy"]
 description: "A private personal dashboard for iPhone — money, health, training, spending and time on one screen. Local-first, no accounts, no tracking."
-weight: 1
 aliases: ["/projects/atlas/"]
 ---
 
