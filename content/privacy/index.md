@@ -1,5 +1,5 @@
 ---
-title: "Privacy Policy — Kestra"
+title: "Privacy Policy — Kassi"
 date: 2026-06-14
 lastmod: 2026-07-25
 draft: false
@@ -8,37 +8,37 @@ layout: "page"
 
 ## Overview
 
-Kestra is a personal life dashboard built on one principle: your data belongs to you. Everything you enter into Kestra stays on your device. We do not collect, store, or transmit your personal data to any server we operate.
+Kassi is a personal life dashboard built on one principle: your data belongs to you. Everything you enter into Kassi stays on your device. We do not collect, store, or transmit your personal data to any server we operate.
 
 There are no accounts, no analytics, no crash reporting, no advertising identifiers and no tracking of any kind. The developer receives no data about you or your usage.
 
-## What Data Kestra Uses
+## What Data Kassi Uses
 
-With your explicit permission, Kestra may access the following — only on your device:
+With your explicit permission, Kassi may access the following — only on your device:
 
 - **Health data** (steps, heart rate, sleep, calories) — read from Apple Health, never sent anywhere
-- **Location** — used for local weather, to find nearby restaurants when you log a meal, and to geotag a purchase so you can see your spending on a map. Coordinates are stored only on your device, and Kestra never tracks your location in the background
-- **Microphone** — used only while you are actively dictating a meal or a purchase. Audio is never recorded, stored or transmitted by Kestra
-- **Speech recognition** — your spoken description is transcribed using Apple's speech recognition. Where your device supports on-device recognition, Kestra requests it, so the audio need not leave your phone. Only the resulting text is kept, as part of the entry you created
+- **Location** — used for local weather, to find nearby restaurants when you log a meal, and to geotag a purchase so you can see your spending on a map. Coordinates are stored only on your device, and Kassi never tracks your location in the background
+- **Microphone** — used only while you are actively dictating a meal or a purchase. Audio is never recorded, stored or transmitted by Kassi
+- **Speech recognition** — your spoken description is transcribed using Apple's speech recognition. Where your device supports on-device recognition, Kassi requests it, so the audio need not leave your phone. Only the resulting text is kept, as part of the entry you created
 - **Camera** — only when you scan a meal for macro analysis
 - **Photo library** — only when you choose to analyse a meal photo
 - **Face ID** — only to unlock the in-app password vault, via Apple's secure APIs
 
-None of this data is collected by Kestra or its developer.
+None of this data is collected by Kassi or its developer.
 
 ## Financial Data
 
-If you connect a brokerage account (e.g. Trading 212), your API credentials are stored exclusively in your device's encrypted Keychain. They are never sent to or stored on any server operated by Kestra.
+If you connect a brokerage account (e.g. Trading 212), your API credentials are stored exclusively in your device's encrypted Keychain. They are never sent to or stored on any server operated by Kassi.
 
 Portfolio figures, spending records and statement analysis are computed and stored on your device only.
 
 ## Personal Server (Optional)
 
-Kestra supports an optional personal server for advanced features (Obsidian sync, AI briefing, WHOOP, Earnings Radar). This is a server you own and operate — Kestra does not provide or manage it, and the developer has no access to it or visibility of what passes through it.
+Kassi supports an optional personal server for advanced features (Obsidian sync, AI briefing, WHOOP, Earnings Radar). This is a server you own and operate — Kassi does not provide or manage it, and the developer has no access to it or visibility of what passes through it.
 
 ## Third-Party Services
 
-Kestra can read from services you choose to connect. In each case the request goes **directly from your device** to that service, using credentials you supply. Your data is not routed through the developer at any point.
+Kassi can read from services you choose to connect. In each case the request goes **directly from your device** to that service, using credentials you supply. Your data is not routed through the developer at any point.
 
 - **Open-Meteo** (weather) — open-source, no account required, no personal data sent
 - **Trading 212** — portfolio positions and cash balance
@@ -53,7 +53,7 @@ Kestra can read from services you choose to connect. In each case the request go
 - **Apple Maps** — nearby venue lookup when logging a meal or purchase
 - Any **AI provider** you configure with your own key
 
-Each service has its own privacy policy governing what it does with the request. Kestra works fully offline; widgets that need a key or a server will say so.
+Each service has its own privacy policy governing what it does with the request. Kassi works fully offline; widgets that need a key or a server will say so.
 
 We use no advertising networks, analytics SDKs, or tracking frameworks of any kind.
 
@@ -61,17 +61,17 @@ We use no advertising networks, analytics SDKs, or tracking frameworks of any ki
 
 All data is stored locally using iOS standard storage. Sensitive credentials use the iOS Keychain with `WhenUnlockedThisDeviceOnly` protection — encrypted at rest, never included in unencrypted backups.
 
-Because your data is local, deleting the app deletes your data. There is no backup held by the developer and no way for us to recover it. Kestra data is included in your normal iPhone backup, so iCloud Backup or a computer backup will carry it to a new device.
+Because your data is local, deleting the app deletes your data. There is no backup held by the developer and no way for us to recover it. Kassi data is included in your normal iPhone backup, so iCloud Backup or a computer backup will carry it to a new device.
 
 ## Purchases
 
-Kestra Pro is an optional one-off in-app purchase, sold through Apple's In-App Purchase system. Apple processes the payment — the developer never sees your card details, billing address or Apple Account information.
+Kassi Pro is an optional one-off in-app purchase, sold through Apple's In-App Purchase system. Apple processes the payment — the developer never sees your card details, billing address or Apple Account information.
 
-Kestra stores only a local flag recording that the purchase exists, and verifies it against Apple's receipt system. Refunds are handled by Apple, not by us.
+Kassi stores only a local flag recording that the purchase exists, and verifies it against Apple's receipt system. Refunds are handled by Apple, not by us.
 
 ## Children
 
-Kestra is not directed at children under 13 and does not knowingly collect information from children.
+Kassi is not directed at children under 13 and does not knowingly collect information from children.
 
 ## Your Rights
 

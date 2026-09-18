@@ -1,19 +1,19 @@
 ---
-title: "Kestra"
+title: "Kassi"
 date: 2026-07-31
 draft: false
 tags: ["ios", "swift", "app", "productivity", "fintech", "privacy"]
 description: "A private personal dashboard for iPhone — money, health, training, spending and time on one screen. Local-first, no accounts, no tracking."
-aliases: ["/projects/atlas/"]
+aliases: ["/projects/atlas/", "/projects/kestra/"]
 ---
 
-![Kestra icon](/images/kestra-icon.png)
+![Kassi icon](/images/kassi-icon.png)
 
-## What Kestra Is
+## What Kassi Is
 
-Kestra is a native SwiftUI app that replaces the dozen apps you check each morning with one screen you build yourself. Money, health, training, food, spending, parcels, trains, calendar and weather — arranged into pages from a library of over forty widgets.
+Kassi is a native SwiftUI app that replaces the dozen apps you check each morning with one screen you build yourself. Money, health, training, food, spending, parcels, trains, calendar and weather — arranged into pages from a library of over forty widgets.
 
-The thesis is that most screen time is fragmentation. Ten apps, ten feeds, ten sets of notifications. Kestra collapses them into a single glanceable surface with no feed and nothing to scroll — you check it, get what you need, and put the phone down.
+The thesis is that most screen time is fragmentation. Ten apps, ten feeds, ten sets of notifications. Kassi collapses them into a single glanceable surface with no feed and nothing to scroll — you check it, get what you need, and put the phone down.
 
 ## Built Local-First
 
@@ -35,7 +35,9 @@ Everything is a widget, and users assemble their own app:
 
 ## Features Worth Calling Out
 
-**The Logger.** Press the iPhone Action Button, speak, and Kestra works out what you meant. *"Spent £20 at Tesco"* files to spending and deducts from the right pot. *"I ate porridge for breakfast"* becomes macros. *"Did legs, RPE 8"* becomes a training session. *"I have an idea…"* goes to notes, and on to Obsidian. Routing is rules-based rather than a model call — deterministic, instant, works offline, and testable.
+**The Logger.** Press the iPhone Action Button, speak, and Kassi works out what you meant. *"Spent £20 at Tesco"* files to spending and deducts from the right pot. *"I ate porridge for breakfast"* becomes macros. *"Did legs, RPE 8"* becomes a training session. *"I have an idea…"* goes to notes, and on to Obsidian. Routing is rules-based rather than a model call — deterministic, instant, works offline, and testable.
+
+**Try before you connect anything.** First launch offers sample data instead of an empty grid: every widget fills with realistic numbers so the app is legible before a single API key is entered. One toggle in Settings wipes it back to a clean install. It also solves the App Store reviewer problem — nothing to look at with no accounts to sign into.
 
 **Earnings Radar.** A nightly job pulls official filings from the SEC's EDGAR system, scores fundamentals in Python, and writes a briefing on the three strongest companies reporting soon — with an analyst you can question. Every figure is computed deterministically; the language model only writes prose over numbers already verified, so it cannot invent a statistic.
 

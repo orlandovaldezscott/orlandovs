@@ -23,35 +23,35 @@
       <description>A custom-designed static portfolio site built with Hugo and deployed on Cloudflare Pages.</description>
     </item>
     <item>
-      <title>Kestra</title>
-      <link>https://orlandovs.pages.dev/projects/kestra/</link>
+      <title>Kassi</title>
+      <link>https://orlandovs.pages.dev/projects/kassi/</link>
       <pubDate>Fri, 31 Jul 2026 00:00:00 +0000</pubDate>
-      <guid>https://orlandovs.pages.dev/projects/kestra/</guid>
+      <guid>https://orlandovs.pages.dev/projects/kassi/</guid>
       <description>A private personal dashboard for iPhone — money, health, training, spending and time on one screen. Local-first, no accounts, no tracking.</description>
     </item>
     <item>
-      <title>Support — Kestra</title>
+      <title>Support — Kassi</title>
       <link>https://orlandovs.pages.dev/support/</link>
       <pubDate>Sat, 25 Jul 2026 00:00:00 +0000</pubDate>
       <guid>https://orlandovs.pages.dev/support/</guid>
       <description>&lt;h2 id=&#34;getting-help&#34;&gt;Getting Help&lt;/h2&gt;
-&lt;p&gt;Kestra is made by one person. There&amp;rsquo;s no support team, no ticketing system and no chatbot — emails come straight to me.&lt;/p&gt;
+&lt;p&gt;Kassi is made by one person. There&amp;rsquo;s no support team, no ticketing system and no chatbot — emails come straight to me.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;&lt;a href=&#34;mailto:orlandovs1@hotmail.com&#34;&gt;orlandovs1@hotmail.com&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Please include your iPhone model, your iOS version, and the Kestra version from &lt;strong&gt;Settings → Changelog&lt;/strong&gt;. It makes problems far quicker to find. Expect a reply within a few days.&lt;/p&gt;
+&lt;p&gt;Please include your iPhone model, your iOS version, and the Kassi version from &lt;strong&gt;Settings → Changelog&lt;/strong&gt;. It makes problems far quicker to find. Expect a reply within a few days.&lt;/p&gt;
 &lt;h2 id=&#34;common-questions&#34;&gt;Common Questions&lt;/h2&gt;
 &lt;h3 id=&#34;where-is-my-data-stored&#34;&gt;Where is my data stored?&lt;/h3&gt;
-&lt;p&gt;On your iPhone. Kestra has no accounts and no servers of mine — nothing is uploaded, and no analytics or tracking of any kind is collected. API keys are held in the iOS Keychain, encrypted by the system. See the &lt;a href=&#34;https://orlandovs.pages.dev/privacy/&#34;&gt;privacy policy&lt;/a&gt; for detail.&lt;/p&gt;</description>
+&lt;p&gt;On your iPhone. Kassi has no accounts and no servers of mine — nothing is uploaded, and no analytics or tracking of any kind is collected. API keys are held in the iOS Keychain, encrypted by the system. See the &lt;a href=&#34;https://orlandovs.pages.dev/privacy/&#34;&gt;privacy policy&lt;/a&gt; for detail.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Privacy Policy — Kestra</title>
+      <title>Privacy Policy — Kassi</title>
       <link>https://orlandovs.pages.dev/privacy/</link>
       <pubDate>Sun, 14 Jun 2026 00:00:00 +0000</pubDate>
       <guid>https://orlandovs.pages.dev/privacy/</guid>
       <description>&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
-&lt;p&gt;Kestra is a personal life dashboard built on one principle: your data belongs to you. Everything you enter into Kestra stays on your device. We do not collect, store, or transmit your personal data to any server we operate.&lt;/p&gt;
+&lt;p&gt;Kassi is a personal life dashboard built on one principle: your data belongs to you. Everything you enter into Kassi stays on your device. We do not collect, store, or transmit your personal data to any server we operate.&lt;/p&gt;
 &lt;p&gt;There are no accounts, no analytics, no crash reporting, no advertising identifiers and no tracking of any kind. The developer receives no data about you or your usage.&lt;/p&gt;
-&lt;h2 id=&#34;what-data-kestra-uses&#34;&gt;What Data Kestra Uses&lt;/h2&gt;
-&lt;p&gt;With your explicit permission, Kestra may access the following — only on your device:&lt;/p&gt;</description>
+&lt;h2 id=&#34;what-data-kassi-uses&#34;&gt;What Data Kassi Uses&lt;/h2&gt;
+&lt;p&gt;With your explicit permission, Kassi may access the following — only on your device:&lt;/p&gt;</description>
     </item>
     <item>
       <title>Daedelus — Building a Personal OS</title>
