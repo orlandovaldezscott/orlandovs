@@ -50,13 +50,19 @@ A lot. In rough order of importance:
 
 ## Where It Is Now
 
-As of June 2026, Taciturn runs 24/7 on a DigitalOcean VPS in London — no longer dependent on the laptop being open. All-time P&L stands at approximately £7,166 across 889 closed trades since February 2025.
+Taciturn runs 24/7 on a DigitalOcean VPS in London — no longer dependent on the laptop being open. It trades on a demo account while the strategy is still being refined; it formed my Extended Project Qualification, and development is ongoing.
 
-The active signal stack uses volume-weighted momentum crossovers (vol_momentum_bull/bear) gated through an H1 EMA trend filter, alongside MACD histogram signals and several candlestick-based patterns. The volume threshold requires 1.2x average volume to confirm a signal, filtering out low-conviction moves. Settings-based SL/TP override all ATR calculations — whatever is set in the dashboard is final on every order.
+The current focus is risk: every trade now carries a fixed take-profit and a tight hard stop, so each change to the signal stack can be judged on clean, comparable results. The active signals use volume-weighted momentum crossovers gated through an H1 EMA trend filter, alongside MACD histogram signals and a small set of candlestick patterns.
 
-The infrastructure now includes a real-time web dashboard, a geopolitical news terminal, a Neural Link RAG memory system, and an analytics layer — all exposed via Cloudflare Tunnel at taciturn.uk.
+The infrastructure includes a real-time web dashboard, a geopolitical news terminal, a Neural Link RAG memory system and an automated agent layer (daily reports, log monitoring and a strategy guard) — all exposed via Cloudflare Tunnel at taciturn.uk.
 
-The goal remains consistent demo profitability before deploying real capital.
+## Abbadon — the Machine-Learning Gate
+
+Abbadon is a LightGBM model that sits between Taciturn's signals and the broker. Every signal is scored before an order is placed, and low-confidence setups are blocked.
+
+It ran in **shadow mode** first — logging which trades it *would* have blocked while Taciturn traded normally — so its judgement could be checked against real outcomes before it was trusted with any decisions. It went live in September 2026.
+
+The principle is the same as the rest of the project: nothing controls trades until the evidence says it should.
 
 ---
 

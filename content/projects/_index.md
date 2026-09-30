@@ -5,4 +5,4 @@ draft: false
 tags: []
 ---
 
-Three active projects — algorithmic trading, materials research, and a personal OS that replaced 20+ apps. Plus a few tools built along the way.
+What I'm building now — algorithmic trading, machine learning on weather and commodities, iPhone apps, a Roblox game and independent research. Plus a few tools built along the way.
