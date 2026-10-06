@@ -5,4 +5,4 @@ draft: false
 tags: []
 ---
 
-What I'm building now — algorithmic trading, machine learning on weather and commodities, iPhone apps, a Roblox game and independent research. Plus a few tools built along the way.
+What I'm building now — algorithmic trading, machine learning on weather and commodities, iPhone apps, a game and independent research. Plus a few tools built along the way.

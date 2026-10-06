@@ -52,11 +52,26 @@ footer{padding:3rem 4rem;border-top:1px solid var(--border);display:flex;justify
 .hero-overline{animation-delay:0.1s}.hero-bio{animation-delay:0.25s}.hero-cta{animation-delay:0.4s}
 .project-item{animation:fadeUp 0.7s ease both}
 .project-item:nth-child(1){animation-delay:0.3s}.project-item:nth-child(2){animation-delay:0.45s}
-@media(max-width:768px){nav{padding:1.2rem 1.5rem;grid-template-columns:1fr auto}.nav-left{display:none}.nav-centre{font-size:0.95rem}.theme-btn{font-size:0.65rem;padding:0.3rem 0.55rem}.hero-top{padding:3rem 1.5rem 2.5rem}.hero-bio{font-size:1.1rem}.projects{grid-template-columns:1fr}.project-item{padding:2rem 1.5rem;border-right:none;border-bottom:1px solid var(--border)}.project-item:last-child{border-bottom:none}.section{padding:3rem 1.5rem}.posts-grid{grid-template-columns:1fr}.post-item{border-right:none;border-bottom:1px solid var(--border)}.post-item:last-child{border-bottom:none}footer{gap:1.5rem;flex-direction:column;text-align:center;padding:2rem 1.5rem}.footer-links{justify-content:center}.page-header{padding:6rem 1.5rem 3rem!important;grid-template-columns:1fr!important;gap:2rem!important}.project-row{grid-template-columns:3rem 1fr;gap:1rem;padding:2rem 1.5rem}.project-row .project-desc,.project-row .project-tag{display:none}.post-row{grid-template-columns:1fr;gap:0.5rem;padding:2rem 1.5rem}.content{padding:3rem 1.5rem}.content-grid{grid-template-columns:1fr}.content-col{padding:2rem 1.5rem}.content-col:first-child{border-right:none;border-bottom:1px solid var(--border)}.working-grid{grid-template-columns:1fr}.work-item{border-right:none;border-bottom:1px solid var(--border)}.work-item:last-child{border-bottom:none}.page-title{font-size:2.2rem!important}}</style>
+@media(max-width:768px){nav{padding:1.2rem 1.5rem;grid-template-columns:1fr auto}.nav-left{display:none}.nav-centre{font-size:0.95rem}.theme-btn{font-size:0.65rem;padding:0.3rem 0.55rem}.hero-top{padding:3rem 1.5rem 2.5rem}.hero-bio{font-size:1.1rem}.projects{grid-template-columns:1fr}.project-item{padding:2rem 1.5rem;border-right:none;border-bottom:1px solid var(--border)}.project-item:last-child{border-bottom:none}.section{padding:3rem 1.5rem}.posts-grid{grid-template-columns:1fr}.post-item{border-right:none;border-bottom:1px solid var(--border)}.post-item:last-child{border-bottom:none}footer{gap:1.5rem;flex-direction:column;text-align:center;padding:2rem 1.5rem}.footer-links{justify-content:center}.page-header{padding:6rem 1.5rem 3rem!important;grid-template-columns:1fr!important;gap:2rem!important}.project-row{grid-template-columns:3rem 1fr;gap:1rem;padding:2rem 1.5rem}.project-row .project-desc,.project-row .project-tag{display:none}.post-row{grid-template-columns:1fr;gap:0.5rem;padding:2rem 1.5rem}.content{padding:3rem 1.5rem}.content-grid{grid-template-columns:1fr}.content-col{padding:2rem 1.5rem}.content-col:first-child{border-right:none;border-bottom:1px solid var(--border)}.working-grid{grid-template-columns:1fr}.work-item{border-right:none;border-bottom:1px solid var(--border)}.work-item:last-child{border-bottom:none}.page-title{font-size:2.2rem!important}}.plinks{display:grid;grid-template-columns:repeat(3,1fr)}
+.plink{position:relative;display:flex;flex-direction:column;gap:0.7rem;padding:2.8rem 3rem;border-right:1px solid var(--border);border-bottom:1px solid var(--border);text-decoration:none;color:var(--ink);transition:background 0.3s;opacity:0;transform:translateY(16px);animation:plinkIn 0.7s cubic-bezier(.2,.7,.2,1) forwards}
+.plink:nth-child(3n){border-right:none}
+.plink:nth-child(n+2){animation-delay:.06s}.plink:nth-child(n+4){animation-delay:.14s}.plink:nth-child(n+7){animation-delay:.22s}.plink:nth-child(n+10){animation-delay:.3s}
+@keyframes plinkIn{to{opacity:1;transform:none}}
+.plink:hover{background:rgba(184,150,90,0.07)}
+.plink-num{font-family:'DM Mono',monospace;font-size:0.65rem;color:var(--gold);letter-spacing:0.12em}
+.plink-title{font-size:1.9rem;font-weight:400;letter-spacing:-0.01em;line-height:1.1;transition:color 0.2s}
+.plink:hover .plink-title{color:var(--gold)}
+.plink-sub{font-family:'DM Mono',monospace;font-size:0.68rem;font-weight:300;letter-spacing:0.14em;text-transform:uppercase;color:var(--mid)}
+.plink-arrow{position:absolute;right:2.5rem;top:2.6rem;color:var(--gold);opacity:0;transform:translateX(-8px);transition:opacity 0.25s,transform 0.25s}
+.plink:hover .plink-arrow{opacity:1;transform:none}
+@media(max-width:1000px){.plinks{grid-template-columns:1fr 1fr}.plink:nth-child(3n){border-right:1px solid var(--border)}.plink:nth-child(2n){border-right:none}}
+@media(max-width:768px){.plinks{grid-template-columns:1fr}.plink{padding:1.8rem 1.5rem;border-right:none!important}.plink-title{font-size:1.5rem}.plink-arrow{opacity:1;transform:none;right:1.5rem;top:1.8rem}}
+@media(prefers-reduced-motion:reduce){.plink{animation:none;opacity:1;transform:none}}
+</style>
 </head>
 <body>
 <nav>
-  <div class="nav-left"><a href="/projects/">Projects</a><a href="/posts/">Writing</a></div>
+  <div class="nav-left"><a href="/projects/">Projects</a><a href="/posts/">Writing</a><a href="/timeline/">Timeline</a></div>
   <a href="/" class="nav-centre">Orlando Valdes-Scott</a>
   <div class="nav-right"><a href="/about/">About</a><a href="/contact/">Contact</a><button class="theme-btn" onclick="toggleTheme()">◐ Theme</button></div>
 </nav>
@@ -64,26 +79,27 @@ footer{padding:3rem 4rem;border-top:1px solid var(--border);display:flex;justify
   <div class="hero-top">
     <div class="hero-overline">Portfolio — London, UK — 2026</div>
     <p class="hero-bio">Building systems at the intersection of code, markets, and science. Algorithmic trading, materials research, and whatever comes next.</p>
-    <a href="/projects/" class="hero-cta">View projects</a>
+    <a href="/projects/" class="hero-cta">View projects</a><a href="/timeline/" class="hero-cta" style="margin-left:2.5rem">Timeline</a>
   </div>
-  <div class="projects">
-    <div class="project-item" onclick="location.href='/projects/taciturn/'" style="cursor:pointer">
-      <span class="project-num">01</span>
-      <h2 class="project-title">Taciturn</h2>
-      <p class="project-desc">Autonomous algorithmic trading engine for gold and silver spot forex. Built in Python, running 24/7 on a London VPS with multi-signal detection, automatic risk management, and a live public dashboard.</p>
-      <span class="project-tag">Live</span>
-    </div>
-    <div class="project-item" onclick="location.href='/projects/carbon-nanotubes/'" style="cursor:pointer">
-      <h2 class="project-title">Carbon Nanotubes</h2>
-      <p class="project-desc">Research into the mechanical and electrical properties of CNTs. Exploring the gap between theoretical performance and practical bulk applications.</p>
-      <span class="project-tag">Research</span>
-    </div>
+  <div class="plinks">
+    <a class="plink" href="/projects/taciturn/"><span class="plink-num">01</span><h2 class="plink-title">Taciturn</h2><span class="plink-sub">Algorithmic Trading</span><span class="plink-arrow">→</span></a>
+    <a class="plink" href="/projects/alladin/"><span class="plink-num">02</span><h2 class="plink-title">Alladin</h2><span class="plink-sub">Weather-driven Commodities</span><span class="plink-arrow">→</span></a>
+    <a class="plink" href="/projects/kassi/"><span class="plink-num">03</span><h2 class="plink-title">Kassi</h2><span class="plink-sub">iOS · Personal Dashboard</span><span class="plink-arrow">→</span></a>
+    <a class="plink" href="/projects/sections/"><span class="plink-num">04</span><h2 class="plink-title">Sections</h2><span class="plink-sub">Carousel &amp; Story Editor</span><span class="plink-arrow">→</span></a>
+    <a class="plink" href="/projects/london-fallen/"><span class="plink-num">05</span><h2 class="plink-title">London Fallen</h2><span class="plink-sub">Survival Game · In Progress</span><span class="plink-arrow">→</span></a>
+    <a class="plink" href="/projects/daedelus/"><span class="plink-num">06</span><h2 class="plink-title">Daedelus</h2><span class="plink-sub">Personal OS</span><span class="plink-arrow">→</span></a>
+    <a class="plink" href="/projects/muriel/"><span class="plink-num">07</span><h2 class="plink-title">Muriel</h2><span class="plink-sub">Agentic Passport System</span><span class="plink-arrow">→</span></a>
+    <a class="plink" href="/projects/neural-link/"><span class="plink-num">08</span><h2 class="plink-title">Neural Link</h2><span class="plink-sub">RAG Memory System</span><span class="plink-arrow">→</span></a>
+    <a class="plink" href="/projects/news-centre/"><span class="plink-num">09</span><h2 class="plink-title">News Centre</h2><span class="plink-sub">Geopolitical Terminal</span><span class="plink-arrow">→</span></a>
+    <a class="plink" href="/projects/carbon-nanotubes/"><span class="plink-num">10</span><h2 class="plink-title">Carbon Nanotubes</h2><span class="plink-sub">Materials Research</span><span class="plink-arrow">→</span></a>
+    <a class="plink" href="/projects/portfolio/"><span class="plink-num">11</span><h2 class="plink-title">This Portfolio</h2><span class="plink-sub">Hugo · Cloudflare Pages</span><span class="plink-arrow">→</span></a>
+    <a class="plink" href="/timeline/"><span class="plink-num">—</span><h2 class="plink-title"><em>Timeline</em></h2><span class="plink-sub">Build log · 2026</span><span class="plink-arrow">→</span></a>
   </div>
 </section>
 <section style="padding:2rem 4rem;border-top:1px solid var(--border)">
   <div style="display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap">
     <span style="font-family:'DM Mono',monospace;font-size:0.62rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold)">Latest Activity</span>
-    <span style="font-family:'DM Mono',monospace;font-size:0.72rem;color:var(--mid)">22 May 2026 — Daedelus v1.2 — open positions, persistent cache, onboarding + profile card</span>
+    <span style="font-family:'DM Mono',monospace;font-size:0.72rem;color:var(--mid)">6 Oct 2026 — New timeline page — <a href="/timeline/" style="color:var(--ink)">see the full build log</a></span>
   </div>
 </section>
 <section class="section">

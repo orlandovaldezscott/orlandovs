@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Timeline — Orlando Valdes-Scott</title>
+<meta name="description" content="A dated timeline of everything Orlando Valdes-Scott has built since January 2026.">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{--cream:#f5f0e8;--ink:#1a1612;--gold:#b8965a;--rust:#8b3a2a;--mid:#6b6259;--border:rgba(26,22,18,0.1);--nav-bg:rgba(245,240,232,0.92)}
+[data-theme="dark"]{--cream:#111009;--ink:#e8e2d8;--gold:#c9a96e;--rust:#c4614a;--mid:#8a8078;--border:rgba(232,226,216,0.1);--nav-bg:rgba(17,16,9,0.92)}
+html{font-size:16px;scroll-behavior:smooth}
+body{background:var(--cream);color:var(--ink);font-family:'Cormorant Garamond',Georgia,serif;min-height:100vh;overflow-x:hidden;transition:background 0.3s,color 0.3s}
+nav{position:fixed;top:0;left:0;right:0;padding:1.8rem 4rem;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;z-index:100;background:var(--nav-bg);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+.nav-left{display:flex;gap:3rem;justify-content:flex-start;align-items:center}
+.nav-centre{font-size:1.05rem;font-weight:400;letter-spacing:0.08em;color:var(--ink);white-space:nowrap;text-decoration:none}
+.nav-right{display:flex;gap:3rem;justify-content:flex-end;align-items:center}
+.nav-left a,.nav-right a{font-size:0.78rem;font-family:'DM Mono',monospace;font-weight:300;letter-spacing:0.12em;text-transform:uppercase;color:var(--mid);text-decoration:none;transition:color 0.2s}
+.nav-left a:hover,.nav-right a:hover,.nav-left a.active{color:var(--ink)}
+.theme-btn{background:none;border:1px solid var(--border);color:var(--mid);font-family:'DM Mono',monospace;font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;padding:0.35rem 0.7rem;cursor:pointer;transition:all 0.2s;border-radius:2px}
+.theme-btn:hover{color:var(--ink);border-color:var(--gold)}
+
+.page-header{padding:10rem 4rem 4rem;text-align:center;border-bottom:1px solid var(--border)}
+.page-overline{font-family:'DM Mono',monospace;font-size:0.68rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:1.5rem}
+.page-title{font-size:clamp(2.5rem,5vw,4rem);font-weight:300;letter-spacing:-0.02em;line-height:1.1;margin-bottom:1.5rem}
+.page-desc{font-size:1.2rem;font-weight:300;font-style:italic;color:var(--mid);line-height:1.75;max-width:52ch;margin:0 auto}
+.page-overline,.page-title,.page-desc,.stats{opacity:0;transform:translateY(18px);animation:rise .9s cubic-bezier(.2,.7,.2,1) forwards}
+.page-title{animation-delay:.12s}.page-desc{animation-delay:.24s}.stats{animation-delay:.36s}
+@keyframes rise{to{opacity:1;transform:none}}
+.stats{display:flex;justify-content:center;gap:4rem;margin-top:3rem;flex-wrap:wrap}
+.stat b{display:block;font-size:2.6rem;font-weight:300;font-variant-numeric:tabular-nums;line-height:1}
+.stat small{font-family:'DM Mono',monospace;font-size:0.65rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--mid)}
+
+.filters{position:sticky;top:4.9rem;z-index:50;background:var(--nav-bg);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0.9rem 1.5rem}
+.chips{display:flex;gap:2.2rem;justify-content:center;overflow-x:auto;scrollbar-width:none}
+.chips::-webkit-scrollbar{display:none}
+.chip{flex:none;background:none;border:none;border-bottom:1px solid transparent;padding-bottom:0.25rem;font-family:'DM Mono',monospace;font-size:0.7rem;font-weight:300;letter-spacing:0.15em;text-transform:uppercase;color:var(--mid);cursor:pointer;transition:color .2s,border-color .2s}
+.chip:hover{color:var(--ink)}
+.chip.on{color:var(--ink);border-color:var(--gold)}
+
+.tl{position:relative;max-width:1100px;margin:0 auto;padding:3rem 1.5rem 6rem}
+.rail,.fill{position:absolute;left:50%;top:0;width:1px}
+.rail{bottom:0;background:var(--border)}
+.fill{height:0;background:var(--gold)}
+.month{position:relative;z-index:2;width:max-content;margin:3rem auto 2rem;padding:0.4rem 1rem;background:var(--cream);border:1px solid var(--border);border-radius:2px;font-family:'DM Mono',monospace;font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);transition:background 0.3s}
+.ev{position:relative;width:50%;padding:0 3.5rem 2.5rem 0;text-align:right;opacity:0;transform:translateX(-36px);transition:opacity .8s,transform .8s cubic-bezier(.2,.7,.2,1)}
+.ev.r{margin-left:50%;padding:0 0 2.5rem 3.5rem;text-align:left;transform:translateX(36px)}
+.ev.in{opacity:1;transform:none}
+.ev.hide{display:none}
+.dot{position:absolute;top:0.55rem;right:-4px;width:9px;height:9px;border-radius:50%;background:var(--cream);border:1px solid var(--gold);z-index:2;transform:scale(0);transition:transform .5s .25s,background .3s}
+.ev.r .dot{right:auto;left:-5px}
+.ev.in .dot{transform:scale(1)}
+.ev:hover .dot{background:var(--gold)}
+.ev::before{content:'';position:absolute;top:calc(0.55rem + 4px);right:5px;width:0;height:1px;background:var(--border);transition:width .6s .35s}
+.ev.r::before{right:auto;left:5px}
+.ev.in::before{width:2.4rem}
+.meta{font-family:'DM Mono',monospace;font-size:0.65rem;font-weight:300;letter-spacing:0.15em;text-transform:uppercase;color:var(--mid);margin-bottom:0.6rem}
+.meta .tag{color:var(--gold)}
+.meta .sep{margin:0 0.6em;opacity:.5}
+.ev h3{font-size:1.75rem;font-weight:400;letter-spacing:-0.01em;line-height:1.15;margin-bottom:0.5rem;transition:color .2s}
+.ev:hover h3{color:var(--gold)}
+.ev p{font-size:1.05rem;font-weight:300;color:var(--mid);line-height:1.7;max-width:44ch;display:inline-block;transition:color 0.3s}
+.ev.next h3{font-style:italic;font-weight:300}
+.ev.next .dot{border-style:dashed;animation:pulse 2.4s infinite}
+.ev.next .tag{color:var(--rust)}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 transparent}50%{box-shadow:0 0 0 7px var(--border)}}
+
+footer{display:flex;justify-content:space-between;align-items:center;padding:2.5rem 4rem;border-top:1px solid var(--border)}
+.footer-links{display:flex;gap:2rem}
+.footer-links a,.footer-copy{font-family:'DM Mono',monospace;font-size:0.68rem;font-weight:300;letter-spacing:0.12em;text-transform:uppercase;color:var(--mid);text-decoration:none;transition:color .2s}
+.footer-links a:hover{color:var(--ink)}
+
+@media(max-width:768px){
+  nav{padding:1.2rem 1.5rem;grid-template-columns:1fr auto}.nav-left{display:none}.nav-centre{font-size:0.95rem}.theme-btn{font-size:0.65rem;padding:0.3rem 0.55rem}
+  .page-header{padding:7rem 1.5rem 3rem}.page-title{font-size:2.2rem}.stats{gap:2rem}.stat b{font-size:2rem}
+  .filters{top:3.6rem}.chips{justify-content:flex-start;gap:1.5rem}
+  .rail,.fill{left:1.5rem}
+  .month{margin-left:1.6rem}
+  .ev,.ev.r{width:100%;margin-left:0;padding:0 0 2.2rem 2.2rem;text-align:left;transform:translateY(26px)}
+  .dot,.ev.r .dot{left:-4px;right:auto}
+  .ev::before,.ev.r::before{left:5px;right:auto}
+  .ev.in::before{width:1.3rem}
+  .ev h3{font-size:1.45rem}
+  footer{gap:1.5rem;flex-direction:column;text-align:center;padding:2rem 1.5rem}.footer-links{justify-content:center}
+}
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  .page-overline,.page-title,.page-desc,.stats,.ev{opacity:1;transform:none}
+  .dot{transform:scale(1)}.ev::before{width:2.4rem}
+}
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-left"><a href="/projects/">Projects</a><a href="/posts/">Writing</a><a href="/timeline/" class="active">Timeline</a></div>
+  <a href="/" class="nav-centre">Orlando Valdes-Scott</a>
+  <div class="nav-right"><a href="/about/">About</a><a href="/contact/">Contact</a><button class="theme-btn" onclick="toggleTheme()">◐ Theme</button></div>
+</nav>
+
+<div class="page-header">
+  <div class="page-overline">Build log — 2026</div>
+  <h1 class="page-title">Timeline</h1>
+  <p class="page-desc">Everything I've shipped since writing my first line of code in January 2026, and what comes next.</p>
+  <div class="stats">
+    <div class="stat"><b data-n="12">0</b><small>Projects</small></div>
+    <div class="stat"><b data-n="200" data-s="+">0</b><small>Commits</small></div>
+    <div class="stat"><b data-n="10">0</b><small>Months</small></div>
+  </div>
+</div>
+
+<div class="filters"><div class="chips" id="chips"></div></div>
+
+<div class="tl" id="tl"><div class="rail"></div><div class="fill" id="fill"></div></div>
+
+<footer>
+  <div class="footer-links"><a href="https://github.com/orlandovaldezscott">GitHub</a><a href="https://www.linkedin.com/in/orlandovaldezscott">LinkedIn</a><a href="/about/">About</a><a href="/contact/">Contact</a></div>
+  <span class="footer-copy">© 2026 Orlando Valdes-Scott</span>
+  <div class="footer-links"><a href="/posts/">Writing</a><a href="/projects/">Projects</a></div>
+</footer>
+
+<script>
+function toggleTheme(){const h=document.documentElement;const t=h.getAttribute('data-theme')==='dark'?'light':'dark';h.setAttribute('data-theme',t);try{localStorage.setItem('theme',t)}catch(e){}}
+(function(){try{const t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}})();
+
+// Edit this list to change the timeline.
+// d = date (YYYY-MM or YYYY-MM-DD), c = category, approx = hide the day, next = upcoming, g = group heading for undated items.
+const CATS={trading:"Trading",apps:"Apps",ai:"AI",web:"Web",research:"Research",venture:"Venture"};
+const EVENTS=[
+ {d:"2026-01",c:"trading",t:"Taciturn begins",p:"Started with no coding experience. A simple price terminal that became a paper trading bot for gold and silver ETFs, running on a MacBook Air."},
+ {d:"2026-03",c:"trading",t:"Strategy overhaul",p:"A heavy loss on GLD forced a rethink: VWAP reversion with weighted signal scoring replaced raw pattern matching."},
+ {d:"2026-03-17",c:"trading",t:"Taciturn v1.0",p:"First commit of a working state. Daily automatic snapshots of the codebase start here."},
+ {d:"2026-03-28",c:"web",t:"Portfolio site live",p:"This site: Hugo, custom layouts, deployed on Cloudflare Pages."},
+ {d:"2026-03-29",c:"research",t:"Carbon nanotubes research",p:"Began a research article on CNT applications in medicine, NEMS and automotive engineering."},
+ {d:"2026-04-05",c:"ai",t:"Panto",p:"A local AI assistant on Flask and Ollama that works offline and keeps its own memory in plain markdown."},
+ {d:"2026-04",approx:1,c:"trading",t:"Alpaca to OANDA",p:"Rewrote every broker call in a 3,000-line app to trade spot gold and silver 23 hours a day instead of US hours only."},
+ {d:"2026-04-09",c:"web",t:"Listen button and public dashboard",p:"Added text-to-speech to posts and a visitor login to the live Taciturn dashboard."},
+ {d:"2026-04-13",c:"web",t:"News Terminal",p:"Geopolitical news dashboard: live RSS feeds on a Leaflet world map with urgent-keyword alerts."},
+ {d:"2026-04-19",c:"ai",t:"Neural Link",p:"RAG system over my Obsidian vault using ChromaDB, so I can query my own project notes."},
+ {d:"2026-04-23",c:"trading",t:"VPS migration complete",p:"Taciturn, the dashboard and the news terminal moved to a Linux VPS behind Cloudflare tunnels. Running 24/7, independent of my laptop."},
+ {d:"2026-04-26",c:"trading",t:"Backtest-driven strategy v6",p:"Backtested every pattern on M1 and M5 candles and kept only the signals that held up."},
+ {d:"2026-05-01",c:"trading",t:"Taciturn becomes my EPQ",p:"Started the project log for an Extended Project Qualification built around the system."},
+ {d:"2026-05-03",c:"apps",t:"London Fallen",p:"First session on a survival game: a South Kensington street, movement, 12 guns, loot and inventory."},
+ {d:"2026-05-13",c:"apps",t:"Daedelus",p:"Personal life OS for Mac and iPhone with React, Tauri 2 and Capacitor. Six versions in nine days."},
+ {d:"2026-05-22",c:"venture",t:"Head of Entrepreneurship plan",p:"Drafted the plan for my entrepreneurship role at Bryanston: weekly sessions and a speaker calendar."},
+ {d:"2026-05-28",c:"ai",t:"Muriel concept",p:"Wrote up a passport and identity system for AI agents: signed identities, permissions and an audit trail."},
+ {d:"2026-05-30",approx:1,c:"ai",t:"Neural Link moves to the cloud",p:"Moved from local Ollama to the Groq API on the VPS, plus an iOS app that streams answers from it."},
+ {d:"2026-06-11",c:"trading",t:"Abbadon in shadow mode",p:"A LightGBM model trained on Taciturn's own trade history, scoring every signal without acting on it yet."},
+ {d:"2026-06-12",c:"apps",t:"Atlas: first commit",p:"A private iPhone dashboard for money, health, training and time. This later became Kassi."},
+ {d:"2026-06-29",c:"research",t:"EPQ write-up",p:"Essay, six-paper literature review and a plain-English briefing for the presentation."},
+ {d:"2026-07-25",c:"apps",t:"Atlas v1.7",p:"Full redesign, StoreKit Pro, demo mode, earnings radar, 12 themes and a voice logger."},
+ {d:"2026-07-31",c:"apps",t:"Rebrand to Kestra",p:"New name, bundle ID, icon and landing page."},
+ {d:"2026-08-03",c:"apps",t:"Sections",p:"Started a carousel and story editor for iPhone, iPad and Mac."},
+ {d:"2026-09",c:"trading",t:"Abbadon goes live",p:"The ML signal gate left shadow mode and started filtering real trade decisions."},
+ {d:"2026-09-18",c:"apps",t:"Kestra becomes Kassi",p:"Final name. Site, privacy policy and support pages updated to match."},
+ {d:"2026-09-21",c:"trading",t:"Alladin",p:"Built in a day: a model that predicts 20-day direction for nine commodity futures from growing-region weather and El Niño. Paper trading live."},
+ {d:"2026-09-22",c:"venture",t:"Bry Entrepreneurs",p:"Pupil-run apparel brand at Bryanston: lounge pants, supplier talks and a Shopify store."},
+ {d:"2026-10-02",c:"apps",t:"Kassi launch build",p:"Seventeen commits in two days: home screen widgets, on-device camera meal scan, iPad and landscape layouts, desk mode and a launch kit."},
+ {d:"2026-10-05",c:"apps",t:"Balances widget",p:"Mac desktop widget showing my Solana wallet and Trading 212 ISA with a 24-hour equity chart."},
+
+ {d:"2026-11",next:1,c:"apps",t:"Kassi TestFlight beta",p:"Public beta two to three weeks before launch, for bug reports and first testimonials."},
+ {d:"2026-11",next:1,c:"venture",t:"Bry Entrepreneurs: designs and stock",p:"Logo and designs signed off, supplier order placed, marketing to pupils and Old Bryanstonians."},
+ {d:"2026-11-19",next:1,c:"venture",t:"Whole-school speaker evening",p:"Guest talk for the whole school as part of the entrepreneurship programme."},
+ {d:"2026-11",next:1,c:"apps",t:"Kassi on the App Store",p:"Release once Apple Developer enrolment clears, with a Product Hunt launch on the same day."},
+ {d:"2026-12",next:1,c:"venture",t:"Bry Entrepreneurs opens",p:"First sales, timed for Christmas."},
+ {g:"Planned",next:1,c:"ai",t:"Muriel prototype",p:"Passport issuer, gate middleware and revocation store: the first working version of the agent identity layer."},
+ {g:"Planned",next:1,c:"web",t:"3D portfolio",p:"A walk-through version of this site in React Three Fiber, with each project as an exhibit."},
+ {g:"Planned",next:1,c:"apps",t:"London Fallen: the wider map",p:"A low-poly London layout, zombie AI and a crate system with a loot table."},
+ {g:"Planned",next:1,c:"apps",t:"Car value tracker",p:"Photograph a car, identify it and track its price history."},
+ {g:"Planned",next:1,c:"apps",t:"Kassi after launch",p:"Apple Health fixes, Spotify sign-in, an email widget and bank statement imports beyond Trading 212."},
+ {g:"Planned",next:1,c:"web",t:"YouTube channel",p:"Build-in-public videos on the projects above."}
+];
+
+const M=["January","February","March","April","May","June","July","August","September","October","November","December"];
+const tl=document.getElementById("tl"),fill=document.getElementById("fill"),chips=document.getElementById("chips");
+const fmt=e=>{if(e.g)return e.g;const[y,m,d]=e.d.split("-");return(d&&!e.approx?+d+" ":"")+M[m-1].slice(0,3)+" "+y};
+
+let last="",side=0;
+EVENTS.forEach(e=>{
+  const key=e.g||e.d.slice(0,7);
+  if(key!==last){
+    last=key;
+    const h=document.createElement("div");h.className="month";h.dataset.m=key;
+    h.textContent=e.g?e.g:(e.next?"Upcoming · ":"")+M[+key.slice(5)-1]+" "+key.slice(0,4);
+    tl.appendChild(h);
+  }
+  const el=document.createElement("article");
+  el.className="ev"+(side++%2?" r":"")+(e.next?" next":"");
+  el.dataset.c=e.c;el.dataset.m=key;
+  el.innerHTML='<span class="dot"></span><div class="meta"><span class="tag"></span><span class="sep">/</span><time></time></div><h3></h3><p></p>';
+  el.querySelector(".tag").textContent=CATS[e.c];
+  el.querySelector("time").textContent=fmt(e);
+  el.querySelector("h3").textContent=e.t;
+  el.querySelector("p").textContent=e.p;
+  tl.appendChild(el);
+});
+
+// reveal on scroll
+const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add("in");io.unobserve(x.target)}}),{threshold:.2});
+document.querySelectorAll(".ev").forEach(e=>io.observe(e));
+
+// gold progress line
+const prog=()=>{const r=tl.getBoundingClientRect();fill.style.height=Math.max(0,Math.min(r.height,innerHeight*.6-r.top))+"px"};
+addEventListener("scroll",prog,{passive:true});addEventListener("resize",prog);prog();
+
+// filters
+const mk=(k,label)=>{const b=document.createElement("button");b.className="chip"+(k==="all"?" on":"");b.textContent=label;
+  b.onclick=()=>{chips.querySelectorAll(".chip").forEach(c=>c.classList.remove("on"));b.classList.add("on");
+    let i=0;document.querySelectorAll(".ev").forEach(e=>{const show=k==="all"||e.dataset.c===k;e.classList.toggle("hide",!show);
+      if(show){e.classList.toggle("r",i++%2===1);e.classList.remove("in");void e.offsetWidth;io.observe(e)}});
+    document.querySelectorAll(".month").forEach(m=>{m.style.display=[...document.querySelectorAll(".ev:not(.hide)")].some(e=>e.dataset.m===m.dataset.m)?"":"none"});
+    prog()};
+  chips.appendChild(b)};
+mk("all","All");Object.entries(CATS).forEach(([k,v])=>mk(k,v));
+
+// count-up stats
+document.querySelectorAll(".stat b").forEach(b=>{const n=+b.dataset.n,s=b.dataset.s||"",t0=performance.now()+600;
+  if(matchMedia("(prefers-reduced-motion:reduce)").matches){b.textContent=n+s;return}
+  const step=t=>{const p=Math.min(1,Math.max(0,(t-t0)/1200));b.textContent=Math.round(n*(1-Math.pow(1-p,3)))+(p===1?s:"");if(p<1)requestAnimationFrame(step)};
+  requestAnimationFrame(step)});
+</script>
+</body>
+</html>

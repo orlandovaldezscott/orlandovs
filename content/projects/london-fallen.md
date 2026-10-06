@@ -2,8 +2,8 @@
 title: "London Fallen — Work in Progress"
 date: 2026-09-15
 draft: false
-tags: ["game","roblox","lua","work-in-progress"]
-description: "An open-world PvE and PvP survival game set in a fallen London, built in Roblox. Work in progress."
+tags: ["game","lua","work-in-progress"]
+description: "An open-world PvE and PvP survival game set in a fallen London. Work in progress."
 ---
 
 > **Status: work in progress.**
