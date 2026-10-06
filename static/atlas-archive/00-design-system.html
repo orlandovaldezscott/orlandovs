@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Atlas — Design System</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0B0B0B; --paper:#F2F0EA; --acid:#C8FF2E; --mute:#6B6B66;
+    --red:#FF5C47; --green:#4CAF7D; --hair:rgba(242,240,234,.12);
+    --serif:'Instrument Serif',Georgia,serif;
+    --mono:ui-monospace,'SF Mono',Menlo,monospace;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--ink);color:var(--paper);font-family:var(--mono);
+       -webkit-font-smoothing:antialiased;line-height:1.6}
+  .wrap{max-width:860px;margin:0 auto;padding:60px 28px 80px}
+  h1{font-family:var(--serif);font-weight:400;font-size:66px;line-height:.94}
+  h1 em{font-style:normal;color:var(--acid)}
+  h2{font-family:var(--serif);font-weight:400;font-size:32px;margin-bottom:16px}
+  .lab{font-size:10px;letter-spacing:1.2px;text-transform:uppercase;color:var(--mute);margin-bottom:18px}
+  section{padding:40px 0;border-top:1px solid var(--hair)}
+  p{font-size:13px;color:rgba(242,240,234,.82);margin-bottom:12px}
+  li{font-size:13px;color:rgba(242,240,234,.82);margin-bottom:8px}
+  ul{padding-left:18px;margin-bottom:14px}
+  code{background:rgba(242,240,234,.08);padding:2px 6px;font-size:12px}
+
+  .swatches{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px}
+  .sw{border:1px solid var(--hair)}
+  .sw .chip{height:80px}
+  .sw .meta{padding:10px}
+  .sw .nm{font-size:11px;font-weight:600}
+  .sw .hex{font-size:10px;color:var(--mute);margin-top:3px}
+  .sw .use{font-size:9px;color:rgba(107,107,102,.7);margin-top:5px;line-height:1.5}
+
+  .typerow{border-top:1px solid rgba(242,240,234,.07);padding:18px 0;
+           display:flex;align-items:baseline;gap:20px;flex-wrap:wrap}
+  .typerow .spec{font-size:9px;letter-spacing:.8px;color:var(--mute);width:190px;flex:none}
+
+  .rules{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .rule-card{border:1px solid var(--hair);padding:18px}
+  .rule-card .y{font-size:10px;letter-spacing:1px;color:var(--acid);margin-bottom:8px}
+  .rule-card .n{font-size:10px;letter-spacing:1px;color:var(--red);margin-bottom:8px}
+  .rule-card p{font-size:11px;margin:0}
+
+  .shapes{display:flex;gap:14px;flex-wrap:wrap;align-items:flex-end;margin:18px 0}
+  .shapes figure{text-align:center}
+  .shapes figcaption{font-size:8px;letter-spacing:.6px;color:var(--mute);margin-top:8px}
+  svg{display:block}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="lab">Atlas — Design System</div>
+  <h1>Built, not<br><em>decorated.</em></h1>
+  <p style="margin-top:20px;max-width:56ch">
+    Atlas looks like a well-set financial newspaper crossed with a terminal.
+    Editorial serif for anything human, monospace for anything measured, and
+    nothing rounded anywhere. This page is the reference for extending it &mdash;
+    including the mascot.
+  </p>
+
+  <section>
+    <div class="lab">01 — Palette</div>
+    <h2>Six colours, used sparingly</h2>
+    <div class="swatches">
+      <div class="sw"><div class="chip" style="background:#0B0B0B;border-bottom:1px solid var(--hair)"></div>
+        <div class="meta"><div class="nm">Ink</div><div class="hex">#0B0B0B</div>
+        <div class="use">Canvas. Near-black, never pure black.</div></div></div>
+      <div class="sw"><div class="chip" style="background:#F2F0EA"></div>
+        <div class="meta"><div class="nm">Paper</div><div class="hex">#F2F0EA</div>
+        <div class="use">Text and inverted blocks. Warm — deliberately not #FFFFFF.</div></div></div>
+      <div class="sw"><div class="chip" style="background:#C8FF2E"></div>
+        <div class="meta"><div class="nm">Acid</div><div class="hex">#C8FF2E</div>
+        <div class="use">The signature. One accent per screen, never decorative.</div></div></div>
+      <div class="sw"><div class="chip" style="background:#6B6B66"></div>
+        <div class="meta"><div class="nm">Mute</div><div class="hex">#6B6B66</div>
+        <div class="use">Labels, captions, secondary data.</div></div></div>
+      <div class="sw"><div class="chip" style="background:#FF5C47"></div>
+        <div class="meta"><div class="nm">Negative</div><div class="hex">#FF5C47</div>
+        <div class="use">Losses, errors, destructive actions only.</div></div></div>
+      <div class="sw"><div class="chip" style="background:#4CAF7D"></div>
+        <div class="meta"><div class="nm">Positive</div><div class="hex">#4CAF7D</div>
+        <div class="use">Gains. Muted so it never competes with acid.</div></div></div>
+    </div>
+    <p style="margin-top:18px;font-size:11px;color:var(--mute)">
+      Hairlines are <code>rgba(242,240,234,0.12)</code>. Lifted surfaces are
+      <code>rgba(242,240,234,0.08)</code>. There are no drop shadows and no gradients,
+      except a subtle angular one inside progress rings.
+    </p>
+  </section>
+
+  <section>
+    <div class="lab">02 — Typography</div>
+    <h2>Serif for people, mono for numbers</h2>
+    <div class="typerow">
+      <span class="spec">INSTRUMENT SERIF · 52PX · 92% LEADING</span>
+      <span style="font-family:var(--serif);font-size:52px;line-height:.92">Good morning</span>
+    </div>
+    <div class="typerow">
+      <span class="spec">INSTRUMENT SERIF · 21PX</span>
+      <span style="font-family:var(--serif);font-size:21px">Gym &mdash; push day</span>
+    </div>
+    <div class="typerow">
+      <span class="spec">GEIST MONO MEDIUM · 10PX · 1.2PX TRACKING</span>
+      <span style="font-size:10px;letter-spacing:1.2px">01 — WEATHER</span>
+    </div>
+    <div class="typerow">
+      <span class="spec">GEIST MONO · TABULAR</span>
+      <span style="font-size:22px;font-variant-numeric:tabular-nums">£14,283.40</span>
+    </div>
+    <p style="margin-top:16px;font-size:11px;color:var(--mute)">
+      Never SF Pro. Numerals are always tabular so columns align. Labels are always
+      uppercase and tracked. Body copy barely exists &mdash; if something needs a
+      paragraph it usually needs redesigning.
+    </p>
+  </section>
+
+  <section>
+    <div class="lab">03 — Form language</div>
+    <h2>Zero radius, everywhere</h2>
+    <div class="rules">
+      <div class="rule-card">
+        <div class="y">DO</div>
+        <p>Hard edges. Mitred joins. Straight lines wherever one will do.
+           Flat fills. 1px hairlines instead of borders or shadows.</p>
+      </div>
+      <div class="rule-card">
+        <div class="n">DON'T</div>
+        <p>Rounded corners, pills, capsules, soft shadows, gradients,
+           glassmorphism, or anything that looks like a default iOS control.</p>
+      </div>
+      <div class="rule-card">
+        <div class="y">DO</div>
+        <p>Treat data as texture &mdash; grids of squares, bar columns,
+           dot matrices, thin full-bleed rails.</p>
+      </div>
+      <div class="rule-card">
+        <div class="n">DON'T</div>
+        <p>Use illustration, mascbots, emoji, or decorative iconography
+           where a shape or a number would carry the meaning.</p>
+      </div>
+    </div>
+
+    <p style="margin-top:22px">The chess pieces are the clearest expression of this:
+       drawn as geometry, not glyphs.</p>
+    <div class="shapes">
+      <figure>
+        <svg width="52" height="52" viewBox="0 0 1 1">
+          <path d="M.18.92 L.82.92 L.76.80 L.24.80 Z M.34.80 L.40.48 L.60.48 L.66.80 Z"
+                fill="none" stroke="#C8FF2E" stroke-width=".045"/>
+          <rect x=".38" y=".26" width=".24" height=".20"
+                fill="none" stroke="#C8FF2E" stroke-width=".045"/>
+        </svg><figcaption>PAWN</figcaption>
+      </figure>
+      <figure>
+        <svg width="52" height="52" viewBox="0 0 1 1">
+          <path d="M.18.92 L.82.92 L.76.80 L.24.80 Z M.30.80 L.33.40 L.67.40 L.70.80 Z"
+                fill="#C8FF2E"/>
+          <rect x=".28" y=".18" width=".12" height=".22" fill="#C8FF2E"/>
+          <rect x=".44" y=".18" width=".12" height=".22" fill="#C8FF2E"/>
+          <rect x=".60" y=".18" width=".12" height=".22" fill="#C8FF2E"/>
+        </svg><figcaption>ROOK</figcaption>
+      </figure>
+      <figure>
+        <svg width="52" height="52" viewBox="0 0 1 1">
+          <path d="M.18.92 L.82.92 L.76.80 L.24.80 Z
+                   M.28.80 L.34.44 L.66.44 L.72.80 Z
+                   M.22.42 L.30.16 L.40.34 L.50.10 L.60.34 L.70.16 L.78.42 Z"
+                fill="#C8FF2E"/>
+        </svg><figcaption>QUEEN</figcaption>
+      </figure>
+      <figure>
+        <svg width="52" height="52" viewBox="0 0 1 1">
+          <path d="M.18.92 L.82.92 L.76.80 L.24.80 Z
+                   M.30.80 L.32.52 L.22.40 L.34.20 L.46.14 L.52.24 L.70.30 L.72.52 L.68.80 Z
+                   M.52.24 L.58.10 L.64.26 Z"
+                fill="none" stroke="#C8FF2E" stroke-width=".045" stroke-linejoin="miter"/>
+        </svg><figcaption>KNIGHT</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section>
+    <div class="lab">04 — Mascot brief</div>
+    <h2>Assemble it, don't draw it</h2>
+    <p>
+      The identity is geometric and anti-decorative. A soft, rounded, friendly
+      creature would fight everything above &mdash; it would look bolted on.
+      What fits is something that reads as <em>constructed</em>.
+    </p>
+    <ul>
+      <li>Built from <strong>squares, rectangles and triangles only</strong>. No curves, no rounded corners.</li>
+      <li><strong>Acid on ink</strong>, or a paper outline with acid detail. Two colours maximum.</li>
+      <li>Should look like it could be drawn with a ruler and set square.</li>
+      <li>Flat. No shading, no gradients, no highlights.</li>
+      <li>Belongs on graph paper, not in a children's book.</li>
+      <li>Works at 16px as a favicon and at 1024px as an app icon.</li>
+    </ul>
+    <p style="margin-top:14px">
+      Reference points that fit the language: the knight above, a stacked cairn,
+      an angular constellation, a surveyor's mark, a folded paper form. Something
+      with the character of an instrument rather than a pet.
+    </p>
+    <p style="color:var(--mute);font-size:11px">
+      Test: if it can't be described as <em>assembled</em> rather than
+      <em>drawn</em>, it's probably wrong for Atlas.
+    </p>
+  </section>
+
+  <section>
+    <div class="lab">05 — Voice</div>
+    <h2>Plain, British, unhurried</h2>
+    <ul>
+      <li>British English. &ldquo;Organise&rdquo;, &ldquo;colour&rdquo;, &ldquo;£&rdquo;.</li>
+      <li>Say the thing plainly. No exclamation marks, no &ldquo;Oops!&rdquo;, no &ldquo;Awesome!&rdquo;</li>
+      <li>Empty states explain what to do, not that something is missing.</li>
+      <li>Estimates are labelled as estimates. Ranges, not false precision.</li>
+      <li>Never claim certainty the data doesn't support.</li>
+    </ul>
+  </section>
+
+</div>
+</body>
+</html>

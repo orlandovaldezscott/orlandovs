@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Atlas — Welcome &amp; Logger</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="atlas.css">
+<style>
+  .full{padding:56px 28px 40px;height:800px;display:flex;flex-direction:column;position:relative}
+  .grad{position:absolute;inset:0;background:linear-gradient(180deg,
+        rgba(200,255,46,.18) 0%, transparent 45%, rgba(200,255,46,.06) 100%);pointer-events:none}
+  .z{position:relative;z-index:1;display:flex;flex-direction:column;height:100%}
+  .wordmark{font-size:64px}
+  .tagline{font-size:30px;color:var(--acid);margin-top:6px;line-height:1}
+  .blurb{font-size:11px;color:var(--mute);line-height:1.7;margin-top:22px}
+  .btn{background:var(--paper);color:var(--ink);text-align:center;padding:17px 0;
+       font-size:11px;letter-spacing:1.6px;font-weight:500}
+  .choice{border:1px solid var(--hair);padding:18px;margin-bottom:10px}
+  .choice.on{border-color:rgba(200,255,46,.6)}
+  .choice .h{font-family:var(--serif);font-size:22px}
+  .choice.on .h{color:var(--acid)}
+  .choice .d{font-size:9px;color:rgba(107,107,102,.8);line-height:1.6;margin-top:6px}
+
+  /* recording overlay */
+  .rec{background:rgba(11,11,11,.94);height:800px;padding:24px;display:flex;flex-direction:column}
+  .recbar{display:flex;justify-content:space-between;align-items:center}
+  .cancel{font-size:9px;letter-spacing:1.2px;color:var(--mute)}
+  .live{display:flex;align-items:center;gap:6px;font-size:9px;letter-spacing:1.4px;color:var(--red)}
+  .live i{width:7px;height:7px;border-radius:50%;background:var(--red);
+          animation:pulse 1.2s ease-in-out infinite}
+  @keyframes pulse{0%,100%{opacity:1}50%{opacity:.25}}
+  .transcript{font-family:var(--serif);font-size:34px;text-align:center;flex:1;
+              display:flex;align-items:center;justify-content:center;padding:0 10px}
+  .wave{display:flex;align-items:center;gap:4px;height:46px;margin-bottom:34px}
+  .wave i{flex:1;background:var(--acid)}
+  .stop{background:var(--acid);color:var(--ink);text-align:center;padding:18px 0;
+        font-size:11px;letter-spacing:1.6px;font-weight:500}
+
+  /* confirmation */
+  .conf{align-items:center;justify-content:center;text-align:center}
+  .ring{width:108px;height:108px;border:2px solid var(--acid);border-radius:50%;
+        display:flex;align-items:center;justify-content:center;margin:0 auto 22px}
+  .tick{font-size:44px;color:var(--acid);line-height:1}
+  .logged{font-family:var(--serif);font-size:34px}
+  .dest{font-size:10px;letter-spacing:1.2px;color:var(--acid);margin-top:6px}
+</style>
+</head>
+<body>
+
+<!-- Welcome -->
+<div class="phone">
+  <div class="full">
+    <div class="grad"></div>
+    <div class="z">
+      <div style="flex:1"></div>
+      <div class="wordmark display">Atlas</div>
+      <div class="tagline display">Everything, in<br>one place.</div>
+      <div class="blurb">
+        Your money, health, training, parcels and time &mdash; assembled from sources
+        you control. No account. No tracking. Your data stays on your device.
+      </div>
+      <div style="flex:1"></div>
+      <div class="btn">BEGIN</div>
+    </div>
+  </div>
+</div>
+
+<!-- Sample vs empty -->
+<div class="phone">
+  <div class="full">
+    <div class="grad"></div>
+    <div class="z">
+      <div style="flex:1"></div>
+      <div class="display" style="font-size:40px;line-height:1.02;margin-bottom:28px">
+        How would you<br>like to start?
+      </div>
+      <div class="choice on">
+        <div class="h">Explore with sample data</div>
+        <div class="d">Every widget filled in so you can see how Atlas works.
+          Clear it whenever you like.</div>
+      </div>
+      <div class="choice">
+        <div class="h">Start empty</div>
+        <div class="d">A blank slate. Connect your own sources as you go.</div>
+      </div>
+      <div style="flex:1"></div>
+      <div style="font-size:9px;color:rgba(107,107,102,.6);line-height:1.6">
+        Atlas works fully offline. Widgets that need a key or a server will say so.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Logger listening -->
+<div class="phone">
+  <div class="rec">
+    <div class="recbar">
+      <span class="cancel">CANCEL</span>
+      <span class="live"><i></i>RECORDING</span>
+    </div>
+    <div class="transcript">a fiver at the Red Lion</div>
+    <div class="wave" id="wave"></div>
+    <div class="stop">&#9632;&nbsp;&nbsp;STOP &amp; LOG</div>
+  </div>
+</div>
+
+<!-- Logger confirmation -->
+<div class="phone">
+  <div class="rec conf" style="justify-content:center">
+    <div>
+      <div class="ring"><span class="tick">&check;</span></div>
+      <div class="logged display">Logged</div>
+      <div class="dest">SPENDING &middot; £5.00 AT THE RED LION</div>
+    </div>
+  </div>
+</div>
+
+<script>
+// travelling sine waveform, same shape the app draws
+const wave = document.getElementById('wave');
+for (let i = 0; i < 28; i++) {
+  const bar = document.createElement('i');
+  const h = 6 + Math.abs(Math.sin(i * 0.55)) * 34;
+  bar.style.height = h + 'px';
+  bar.style.opacity = 0.55 + Math.abs(Math.sin(i * 0.55)) * 0.45;
+  wave.appendChild(bar);
+}
+</script>
+</body>
+</html>

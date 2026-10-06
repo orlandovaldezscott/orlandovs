@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Atlas — Life</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0B0B0B; --paper:#F2F0EA; --acid:#C8FF2E; --mute:#6B6B66;
+    --red:#FF5C47; --hair:rgba(242,240,234,.12); --lift:rgba(242,240,234,.08);
+    --serif:'Instrument Serif',Georgia,serif;
+    --mono:ui-monospace,'SF Mono',Menlo,monospace;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:#1a1a1a;font-family:var(--mono);display:flex;justify-content:center;
+       padding:40px 20px;-webkit-font-smoothing:antialiased}
+  .phone{width:390px;background:var(--ink);color:var(--paper);
+         border-radius:44px;padding:0 0 0;overflow:hidden;position:relative;
+         box-shadow:0 30px 80px rgba(0,0,0,.6)}
+  .screen{padding:56px 20px 110px}
+
+  /* type scale */
+  .display{font-family:var(--serif);font-weight:400;line-height:.92}
+  .label{font-size:10px;letter-spacing:1.2px;text-transform:uppercase;color:var(--mute)}
+  .num{font-variant-numeric:tabular-nums}
+
+  /* section header: 01 — WEATHER + context right */
+  .sec{display:flex;align-items:baseline;justify-content:space-between;
+       font-size:10px;letter-spacing:1.2px;text-transform:uppercase;color:var(--mute)}
+  .sec .ctx{color:rgba(107,107,102,.7)}
+  .rule{height:1px;background:var(--hair);margin:22px 0}
+
+  /* top bar */
+  .top{display:flex;justify-content:flex-end;margin-bottom:26px}
+  .burger{width:38px;height:38px;border:1px solid var(--hair);display:flex;
+          align-items:center;justify-content:center;font-size:15px;color:rgba(242,240,234,.75)}
+
+  /* greeting */
+  .hero{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:6px}
+  .hero .greet{font-size:52px}
+  .hero .greet .name{color:var(--acid)}
+  .hero .clock{text-align:right}
+  .hero .clock .t{font-size:22px;font-weight:500}
+  .hero .clock .d{font-size:9px;letter-spacing:1.2px;color:var(--mute);margin-top:5px}
+  .hero .clock .bar{width:22px;height:2px;background:var(--acid);margin-left:auto;margin-top:6px}
+
+  /* weather */
+  .wx-main{display:flex;justify-content:space-between;align-items:flex-start;margin:14px 0}
+  .wx-temp{font-size:52px}
+  .wx-side{text-align:right;font-size:10px}
+  .wx-side .cond{color:rgba(242,240,234,.85);letter-spacing:.5px}
+  .wx-side .sub{color:rgba(107,107,102,.8);margin-top:4px;font-size:9px}
+  .hours{display:flex;gap:0;overflow:hidden;margin-top:6px}
+  .hr{width:36px;flex:none;text-align:center}
+  .hr .h{font-size:8px;color:rgba(107,107,102,.8)}
+  .hr .i{font-size:13px;margin:5px 0;color:rgba(242,240,234,.75)}
+  .hr .r{font-size:7px;color:rgba(107,107,102,.6)}
+  .hr .t{font-size:10px;font-weight:600;margin-top:3px}
+  .hr.now .h,.hr.now .i{color:var(--acid)}
+  .hr.now .h{font-weight:600}
+
+  /* body stats */
+  .stats{display:flex;gap:0;margin:14px 0 12px}
+  .stat{flex:1}
+  .stat .v{font-family:var(--serif);font-size:26px}
+  .stat .v.acid{color:var(--acid)}
+  .stat .l{font-size:7px;letter-spacing:.8px;color:rgba(107,107,102,.85);margin-top:5px}
+  .rail{height:3px;background:var(--lift);position:relative}
+  .rail i{position:absolute;inset:0 auto 0 0;background:var(--acid)}
+
+  /* agenda */
+  .ev{display:flex;align-items:center;gap:14px;padding:9px 0}
+  .ev .tm{font-size:11px;font-weight:500;color:rgba(107,107,102,.9)}
+  .ev.first .tm{color:var(--acid)}
+  .ev .ti{font-family:var(--serif);font-size:20px;flex:1}
+  .ev .dot{width:5px;height:5px;background:rgba(107,107,102,.4)}
+  .ev.first .dot{background:var(--acid)}
+  .hairline{height:1px;background:rgba(242,240,234,.07)}
+
+  /* tasks */
+  .task{display:flex;align-items:center;gap:10px;padding:8px 0}
+  .box{width:11px;height:11px;border:1px solid rgba(107,107,102,.55)}
+  .box.on{background:var(--acid);border-color:var(--acid)}
+  .task .tx{font-size:10px;letter-spacing:.4px;text-transform:uppercase;color:rgba(242,240,234,.85)}
+  .task.done .tx{color:rgba(107,107,102,.5);text-decoration:line-through}
+
+  /* tab bar */
+  .tabs{position:absolute;left:40px;right:40px;bottom:22px;background:var(--paper);
+        display:flex}
+  .tabs div{flex:1;text-align:center;padding:14px 0;font-size:9px;letter-spacing:1.4px;
+            color:rgba(11,11,11,.35)}
+  .tabs div.on{color:var(--ink);font-weight:500}
+</style>
+</head>
+<body>
+<div class="phone">
+  <div class="screen">
+
+    <div class="top"><div class="burger">≡</div></div>
+
+    <div class="hero">
+      <div class="greet display">Good<br>morning,<br><span class="name">Orlando</span></div>
+      <div class="clock">
+        <div class="t num">08:14</div>
+        <div class="d">SATURDAY</div>
+        <div class="d">26 JUL 2026</div>
+        <div class="bar"></div>
+      </div>
+    </div>
+
+    <div class="rule"></div>
+
+    <div class="sec"><span>01 — Weather</span><span class="ctx">London</span></div>
+    <div class="wx-main">
+      <div class="wx-temp display">14°</div>
+      <div class="wx-side">
+        <div class="cond">LIGHT RAIN</div>
+        <div class="sub">HIGH 17  ·  LOW 11</div>
+        <div class="sub">RAIN 60%</div>
+      </div>
+    </div>
+    <div class="sec" style="font-size:7px"><span>Hour by hour</span><span class="ctx">18 hours · swipe</span></div>
+    <div class="hours">
+      <div class="hr now"><div class="h">NOW</div><div class="i">☂</div><div class="r">60%</div><div class="t num">14°</div></div>
+      <div class="hr"><div class="h">09</div><div class="i">☂</div><div class="r">55%</div><div class="t num">14°</div></div>
+      <div class="hr"><div class="h">10</div><div class="i">☁</div><div class="r">30%</div><div class="t num">15°</div></div>
+      <div class="hr"><div class="h">11</div><div class="i">☁</div><div class="r">20%</div><div class="t num">16°</div></div>
+      <div class="hr"><div class="h">12</div><div class="i">⛅</div><div class="r"></div><div class="t num">17°</div></div>
+      <div class="hr"><div class="h">13</div><div class="i">☀</div><div class="r"></div><div class="t num">17°</div></div>
+      <div class="hr"><div class="h">14</div><div class="i">☀</div><div class="r"></div><div class="t num">17°</div></div>
+      <div class="hr"><div class="h">15</div><div class="i">⛅</div><div class="r"></div><div class="t num">16°</div></div>
+      <div class="hr"><div class="h">16</div><div class="i">☁</div><div class="r">15%</div><div class="t num">15°</div></div>
+    </div>
+
+    <div class="rule"></div>
+
+    <div class="sec"><span>02 — Body</span><span class="ctx">Health</span></div>
+    <div class="stats">
+      <div class="stat"><div class="v acid num">8,412</div><div class="l">STEPS</div></div>
+      <div class="stat"><div class="v num">62</div><div class="l">BPM</div></div>
+      <div class="stat"><div class="v num">7H12</div><div class="l">SLEEP</div></div>
+      <div class="stat"><div class="v num">489</div><div class="l">KCAL</div></div>
+    </div>
+    <div class="rail"><i style="width:84%"></i></div>
+
+    <div class="rule"></div>
+
+    <div class="sec"><span>03 — Agenda</span><span class="ctx">3 events</span></div>
+    <div style="margin-top:10px">
+      <div class="ev first"><span class="tm num">09:30</span><span class="ti">Gym — push day</span><span class="dot"></span></div>
+      <div class="hairline"></div>
+      <div class="ev"><span class="tm num">13:00</span><span class="ti">Lunch with Dad</span><span class="dot"></span></div>
+      <div class="hairline"></div>
+      <div class="ev"><span class="tm num">19:45</span><span class="ti">Chess league</span><span class="dot"></span></div>
+    </div>
+
+    <div class="rule"></div>
+
+    <div class="sec"><span>04 — Tasks</span><span class="ctx" style="color:var(--acid)">1 / 3 done</span></div>
+    <div style="margin-top:8px">
+      <div class="task"><span class="box"></span><span class="tx">Book dentist</span></div>
+      <div class="task"><span class="box"></span><span class="tx">Renew travel insurance</span></div>
+      <div class="task done"><span class="box on"></span><span class="tx">Pay council tax</span></div>
+    </div>
+
+  </div>
+
+  <div class="tabs">
+    <div class="on">LIFE</div><div>BUSINESS</div><div>FINANCE</div>
+  </div>
+</div>
+</body>
+</html>

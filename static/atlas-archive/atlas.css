@@ -1,0 +1,54 @@
+:root{
+  --ink:#0B0B0B; --paper:#F2F0EA; --acid:#C8FF2E; --mute:#6B6B66;
+  --red:#FF5C47; --green:#4CAF7D;
+  --hair:rgba(242,240,234,.12); --lift:rgba(242,240,234,.08);
+  --serif:'Instrument Serif',Georgia,serif;
+  --mono:ui-monospace,'SF Mono',Menlo,monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#1a1a1a;font-family:var(--mono);display:flex;justify-content:center;
+     flex-wrap:wrap;gap:30px;padding:40px 20px;-webkit-font-smoothing:antialiased}
+.phone{width:390px;background:var(--ink);color:var(--paper);border-radius:44px;
+       overflow:hidden;position:relative;box-shadow:0 30px 80px rgba(0,0,0,.6)}
+.screen{padding:56px 20px 110px}
+
+.display{font-family:var(--serif);font-weight:400;line-height:.92}
+.num{font-variant-numeric:tabular-nums}
+
+/* numbered section header, context right-aligned */
+.sec{display:flex;align-items:baseline;justify-content:space-between;
+     font-size:10px;letter-spacing:1.2px;text-transform:uppercase;color:var(--mute)}
+.sec .ctx{color:rgba(107,107,102,.7)}
+.rule{height:1px;background:var(--hair);margin:22px 0}
+.hairline{height:1px;background:rgba(242,240,234,.07)}
+
+.top{display:flex;justify-content:flex-end;margin-bottom:26px}
+.burger{width:38px;height:38px;border:1px solid var(--hair);display:flex;
+        align-items:center;justify-content:center;font-size:15px;color:rgba(242,240,234,.75)}
+.title{font-size:46px;margin-bottom:22px}
+
+/* stat columns */
+.stats{display:flex;margin:14px 0 12px}
+.stat{flex:1}
+.stat .v{font-family:var(--serif);font-size:26px}
+.stat .v.acid{color:var(--acid)}
+.stat .l{font-size:7px;letter-spacing:.8px;color:rgba(107,107,102,.85);margin-top:5px}
+
+/* full-bleed progress rail */
+.rail{height:3px;background:var(--lift);position:relative}
+.rail i{position:absolute;inset:0 auto 0 0;background:var(--acid)}
+
+/* square checkbox rows */
+.task{display:flex;align-items:center;gap:10px;padding:8px 0}
+.box{width:11px;height:11px;border:1px solid rgba(107,107,102,.55)}
+.box.on{background:var(--acid);border-color:var(--acid)}
+.task .tx{font-size:10px;letter-spacing:.4px;text-transform:uppercase;color:rgba(242,240,234,.85)}
+.task.done .tx{color:rgba(107,107,102,.5);text-decoration:line-through}
+
+/* inverted floating tab bar */
+.tabs{position:absolute;left:40px;right:40px;bottom:22px;background:var(--paper);display:flex}
+.tabs div{flex:1;text-align:center;padding:14px 0;font-size:9px;letter-spacing:1.4px;
+          color:rgba(11,11,11,.35)}
+.tabs div.on{color:var(--ink);font-weight:500}
+
+.caption{font-size:7px;letter-spacing:.6px;color:rgba(107,107,102,.5);margin-top:8px}

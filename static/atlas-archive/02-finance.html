@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Atlas — Finance</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="atlas.css">
+<style>
+  .big{font-size:56px;margin:8px 0 6px}
+  .delta{display:flex;gap:8px;align-items:baseline;font-size:11px}
+  .delta .up{color:var(--acid);font-weight:600}
+  .delta .sub{color:var(--mute);font-size:9px}
+  .split{display:flex;gap:2px;height:4px;margin:20px 0 10px}
+  .legend{display:flex}
+  .legend div{flex:1}
+  .legend .p{font-size:11px;font-weight:600}
+  .legend .l{font-size:7px;letter-spacing:.6px;color:rgba(107,107,102,.75);margin-top:3px}
+  .matrix{display:flex;flex-direction:column;gap:3px;margin:14px 0 10px}
+  .mrow{display:flex;gap:3px}
+  .mrow i{flex:1;height:7px}
+  .alloc{display:flex;gap:14px;font-size:9px;color:rgba(107,107,102,.8)}
+  .alloc b{color:rgba(242,240,234,.8);font-weight:500}
+  .pos{display:flex;align-items:center;gap:10px;padding:11px 0}
+  .pos .tk{font-size:14px;font-weight:600;width:58px}
+  .pos .vl{font-family:var(--serif);font-size:21px;flex:1;text-align:right}
+  .pos .pc{font-size:10px;width:60px;text-align:right}
+  .pos .pc.up{color:var(--acid)}
+  .pos .pc.dn{color:var(--red)}
+  .pickhead{display:flex;align-items:baseline;gap:8px}
+  .pickhead .tk{font-size:13px;font-weight:600}
+  .held{font-size:7px;letter-spacing:.8px;background:var(--acid);color:var(--ink);padding:2px 5px;font-weight:600}
+  .sp{flex:1}
+  .prob .v{font-size:11px;font-weight:600;color:var(--acid);display:block;text-align:right}
+  .prob .l{font-size:6px;letter-spacing:.4px;color:rgba(107,107,102,.6)}
+  .score{font-family:var(--serif);font-size:26px;color:var(--acid)}
+  .pickmeta{display:flex;font-size:9px;color:rgba(107,107,102,.6);margin:6px 0}
+  .pickmeta .nm{flex:1}
+  .pickmeta .dt{color:rgba(200,255,46,.85)}
+  .scorerail{height:2px;background:var(--lift);position:relative;margin-bottom:10px}
+  .scorerail i{position:absolute;inset:0 auto 0 0;background:var(--acid)}
+  .metrics{display:flex}
+  .metrics div{flex:1}
+  .metrics .v{font-size:11px;font-weight:600;color:rgba(242,240,234,.85)}
+  .metrics .l{font-size:6.5px;letter-spacing:.5px;color:rgba(107,107,102,.55);margin-top:3px}
+</style>
+</head>
+<body>
+<div class="phone">
+  <div class="screen">
+
+    <div class="top"><div class="burger">≡</div></div>
+    <div class="title display">Finance</div>
+
+    <div class="sec"><span>Net worth</span><span class="ctx">GBP</span></div>
+    <div class="big display num">£14,283.40</div>
+    <div class="delta">
+      <span class="up num">▲ £412.80</span>
+      <span class="sub num">+2.97%  30D</span>
+    </div>
+    <div class="split">
+      <i style="flex:52;background:var(--acid)"></i>
+      <i style="flex:23;background:rgba(242,240,234,.55)"></i>
+      <i style="flex:17;background:rgba(242,240,234,.32)"></i>
+      <i style="flex:8;background:rgba(242,240,234,.16)"></i>
+    </div>
+    <div class="legend">
+      <div><div class="p num">52%</div><div class="l">T212</div></div>
+      <div><div class="p num">23%</div><div class="l">BANK</div></div>
+      <div><div class="p num">17%</div><div class="l">CASH</div></div>
+      <div><div class="p num">8%</div><div class="l">T212 CASH</div></div>
+    </div>
+
+    <div class="rule"></div>
+
+    <div class="sec"><span>01 — Portfolio</span><span class="ctx">Trading 212</span></div>
+    <div class="matrix" id="mx"></div>
+    <div class="alloc">
+      <span><b>NVDA</b> 32%</span><span><b>AAPL</b> 24%</span>
+      <span><b>MSFT</b> 15%</span><span><b>OTHER</b> 29%</span>
+    </div>
+
+    <div style="margin-top:8px">
+      <div class="pos"><span class="tk num">NVDA</span><span class="vl num">£2,664.00</span><span class="pc up num">+44.8%</span></div>
+      <div class="hairline"></div>
+      <div class="pos"><span class="tk num">AAPL</span><span class="vl num">£1,998.12</span><span class="pc up num">+31.5%</span></div>
+      <div class="hairline"></div>
+      <div class="pos"><span class="tk num">VUAG</span><span class="vl num">£1,063.20</span><span class="pc up num">+8.5%</span></div>
+      <div class="hairline"></div>
+      <div class="pos"><span class="tk num">AMD</span><span class="vl num">£648.30</span><span class="pc dn num">&minus;10.0%</span></div>
+    </div>
+
+    <div class="rule"></div>
+
+    <div class="sec"><span>02 — Earnings radar</span><span class="ctx">26 Jul 03:00</span></div>
+    <div style="padding:10px 0">
+      <div class="pickhead">
+        <span class="tk num">NVDA</span><span class="held">HELD</span><span class="sp"></span>
+        <span class="prob"><span class="v num">79%</span><span class="l">RISE CHANCE</span></span>
+        <span class="score num">96</span>
+      </div>
+      <div class="pickmeta"><span class="nm">NVIDIA CORP</span><span class="dt num">2026-08-19</span></div>
+      <div class="scorerail"><i style="width:96%"></i></div>
+      <div class="metrics">
+        <div><div class="v num">+85%</div><div class="l">REVENUE YOY</div></div>
+        <div><div class="v num">+211%</div><div class="l">PROFIT YOY</div></div>
+        <div><div class="v num">75%</div><div class="l">GROSS MARGIN</div></div>
+      </div>
+      <div class="caption">RISE CHANCE IS A TREND-STRENGTH ESTIMATE, NOT A FORECAST</div>
+    </div>
+
+  </div>
+  <div class="tabs"><div>LIFE</div><div>BUSINESS</div><div class="on">FINANCE</div></div>
+</div>
+
+<script>
+// 20x4 allocation matrix — weights mirror the legend above
+const weights = [
+  [14, 'var(--acid)'],
+  [11, 'rgba(242,240,234,.75)'],
+  [7,  'rgba(242,240,234,.5)'],
+  [5,  'rgba(242,240,234,.32)'],
+  [43, 'rgba(242,240,234,.14)'],
+];
+const cells = [];
+weights.forEach(([n, c]) => { for (let i = 0; i < n; i++) cells.push(c); });
+while (cells.length < 80) cells.push('rgba(242,240,234,.14)');
+const mx = document.getElementById('mx');
+for (let r = 0; r < 4; r++) {
+  const row = document.createElement('div');
+  row.className = 'mrow';
+  for (let c = 0; c < 20; c++) {
+    const i = document.createElement('i');
+    i.style.background = cells[r * 20 + c];
+    row.appendChild(i);
+  }
+  mx.appendChild(row);
+}
+</script>
+</body>
+</html>

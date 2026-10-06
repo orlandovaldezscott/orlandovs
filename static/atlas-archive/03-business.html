@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Atlas — Business</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="atlas.css">
+<style>
+  .hero{font-size:60px;margin-bottom:6px}
+  .hero em{font-style:italic;color:var(--acid)}
+  .parcel{padding-bottom:7px}
+  .prow{display:flex;align-items:baseline;gap:8px}
+  .prow .nm{font-family:var(--serif);font-size:21px;flex:1}
+  .prow .st{font-size:9px;letter-spacing:.6px;color:var(--acid)}
+  .prow .st.done{color:rgba(107,107,102,.5)}
+  .prail{height:2px;background:var(--lift);position:relative;margin:6px 0 5px}
+  .prail i{position:absolute;inset:0 auto 0 0}
+  .carrier{font-size:8px;letter-spacing:.6px;color:rgba(107,107,102,.45)}
+  .notebox{border:1px solid var(--hair);padding:16px;margin-top:4px}
+  .notebox .ph{font-family:var(--serif);font-size:20px;color:rgba(107,107,102,.4)}
+  .notefoot{display:flex;justify-content:space-between;align-items:center;margin-top:52px}
+  .notefoot .path{font-size:8px;letter-spacing:.5px;color:rgba(107,107,102,.35)}
+  .notefoot .save{font-size:9px;letter-spacing:1px;color:var(--acid);font-weight:500}
+  .logrow{display:flex;align-items:flex-start;gap:10px;padding:7px 0}
+  .logrow .ic{font-size:10px;color:rgba(200,255,46,.8);width:16px}
+  .logrow .mid{flex:1}
+  .logrow .sum{font-family:var(--serif);font-size:17px}
+  .logrow .said{font-size:7px;color:rgba(107,107,102,.45);margin-top:2px}
+  .logrow .tm{font-size:9px;color:rgba(107,107,102,.6)}
+  .counts{display:flex;gap:6px;margin:10px 0}
+  .counts div{flex:1;text-align:center;padding:9px 0;border:1px solid var(--hair)}
+  .counts div.on{background:var(--acid);border-color:var(--acid);color:var(--ink)}
+  .counts .n{font-size:13px;font-weight:600}
+  .counts .l{font-size:6.5px;letter-spacing:.5px;color:rgba(107,107,102,.6);margin-top:3px}
+  .counts div.on .l{color:rgba(11,11,11,.7)}
+</style>
+</head>
+<body>
+<div class="phone">
+  <div class="screen">
+
+    <div class="top"><div class="burger">≡</div></div>
+    <div class="hero display">In<br><em>transit</em></div>
+
+    <div class="rule"></div>
+
+    <div class="sec"><span>01 — Parcels</span><span class="ctx">17Track · 196 left</span></div>
+    <div style="margin-top:12px">
+      <div class="parcel">
+        <div class="prow"><span class="nm">Buck Mason</span><span class="st">IN TRANSIT</span></div>
+        <div class="prail"><i style="width:62%;background:var(--acid)"></i></div>
+        <div class="carrier">DHL</div>
+      </div>
+      <div class="parcel" style="margin-top:14px">
+        <div class="prow"><span class="nm">Corona</span><span class="st">OUT FOR DELIVERY</span></div>
+        <div class="prail"><i style="width:85%;background:var(--acid)"></i></div>
+        <div class="carrier">ROYAL MAIL</div>
+      </div>
+      <div class="parcel" style="margin-top:14px">
+        <div class="prow"><span class="nm">On Clouds</span><span class="st done">DELIVERED</span></div>
+        <div class="prail"><i style="width:100%;background:rgba(107,107,102,.4)"></i></div>
+        <div class="carrier">ROYAL MAIL</div>
+      </div>
+    </div>
+
+    <div class="rule"></div>
+
+    <div class="sec"><span>02 — Logbook</span><span class="ctx">4 today</span></div>
+    <div class="counts">
+      <div class="on"><div class="n num">2</div><div class="l">SPENDING</div></div>
+      <div><div class="n num">1</div><div class="l">FOOD</div></div>
+      <div><div class="n num">1</div><div class="l">TRAINING</div></div>
+      <div><div class="n num">1</div><div class="l">NOTE</div></div>
+    </div>
+    <div class="hairline"></div>
+    <div style="margin-top:6px">
+      <div class="logrow">
+        <span class="ic">£</span>
+        <span class="mid"><div class="sum">£5.00 at The Swan</div><div class="said">"a fiver at the swan"</div></span>
+        <span class="tm num">20:14</span>
+      </div>
+      <div class="logrow">
+        <span class="ic">◷</span>
+        <span class="mid"><div class="sum">Gym — legs · 60m · RPE 8</div><div class="said">"did legs at the gym for an hour"</div></span>
+        <span class="tm num">18:02</span>
+      </div>
+      <div class="logrow">
+        <span class="ic">▤</span>
+        <span class="mid"><div class="sum">Widget that tracks reading</div><div class="said">"idea for a widget that tracks reading"</div></span>
+        <span class="tm num">11:30</span>
+      </div>
+      <div class="logrow">
+        <span class="ic">◔</span>
+        <span class="mid"><div class="sum">260 kcal</div><div class="said">"i had porridge for breakfast"</div></span>
+        <span class="tm num">08:12</span>
+      </div>
+    </div>
+
+    <div class="rule"></div>
+
+    <div class="sec"><span>03 — Notes</span><span class="ctx">&rarr; Obsidian</span></div>
+    <div class="notebox">
+      <div class="ph">Write something&hellip;</div>
+      <div class="notefoot">
+        <span class="path">PROJECTS/ATLAS/NOTES</span>
+        <span class="save">SAVE &crarr;</span>
+      </div>
+    </div>
+
+    <div class="rule"></div>
+
+    <div class="sec"><span>04 — Tasks</span><span class="ctx">1 / 3 done</span></div>
+    <div style="margin-top:8px">
+      <div class="task"><span class="box"></span><span class="tx">Call accountant</span></div>
+      <div class="task"><span class="box"></span><span class="tx">Invoice #0142</span></div>
+      <div class="task done"><span class="box on"></span><span class="tx">Renew domain</span></div>
+    </div>
+
+  </div>
+  <div class="tabs"><div>LIFE</div><div class="on">BUSINESS</div><div>FINANCE</div></div>
+</div>
+</body>
+</html>
