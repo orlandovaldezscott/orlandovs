@@ -148,24 +148,7 @@ In April I showed the system to two people who have worked in markets for nearly
 | Winning most trades but losing money | Found and fixed the real cause |
 | Side projects took time | They built wider skills and each solved a real problem |
 
-## 10. Results
-
-All figures are practice money, taken from my server and the broker on 23 September 2026.
-
-| Measure | Result |
-|---|---|
-| Trades (March to September) | 2,438 |
-| Win rate | 61.7% |
-| Average win | £14.63 |
-| Average loss | £26.98 |
-| Profit factor | 0.87 (below 1 means losing overall) |
-| Broker's profit or loss | -£11,409 |
-| Best month | April: 80.9% won, +£1,674 |
-| Silver only | 125 trades, 84% won, +£342 |
-
-My dashboard showed a profit of £6,382 because it included results carried over from earlier testing on Alpaca, so the broker's figure is the honest one. Only April, straight after my risk fix, was clearly profitable. Discovering this was uncomfortable, but it is exactly what I had been warned about and what the research predicts.
-
-### Alladin
+## 10. Alladin
 
 On 21 September I built Alladin with Claude. Instead of chart patterns, it looks at rainfall, temperature, droughts and frost where nine crops and fuels are grown, plus the El Niño (ONI) pattern, and predicts where their prices will go over the next month.
 
