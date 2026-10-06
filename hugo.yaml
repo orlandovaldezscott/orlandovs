@@ -39,9 +39,9 @@ params:
 
   assets:
     disableHLJS: false
-    favicon: "favicon.png"
-    favicon16x16: "favicon.png"
-    favicon32x32: "favicon.png"
+    favicon: "ovs.png"
+    favicon16x16: "ovs.png"
+    favicon32x32: "ovs.png"
 
   homeInfoParams:
     Title: "Orlando Valdes-Scott"
