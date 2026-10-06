@@ -1,4 +1,11 @@
 ---
+group: markets
+order: 2
+short: "Alladin"
+sub: "Weather-driven Commodities"
+started: "Sep 2026"
+blurb: "A LightGBM model that predicts 20-day direction for nine commodity futures from growing-region weather and El Niño."
+badge: "Paper Trading"
 title: "Alladin — Trading Commodities on the Weather"
 date: 2026-09-21
 draft: false

@@ -1,4 +1,11 @@
 ---
+group: research
+order: 1
+short: "Muriel"
+sub: "Agentic Passport System"
+started: "May 2026"
+blurb: "Identity and verification infrastructure for AI agents. Signed passports, a gate that verifies every API call and a tamper-proof audit trail."
+badge: "In Development"
 title: "Muriel — Building a Passport System for AI Agents"
 date: 2026-05-01
 draft: false

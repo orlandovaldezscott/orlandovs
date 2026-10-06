@@ -1,4 +1,11 @@
 ---
+group: research
+order: 4
+short: "Carbon Nanotubes"
+sub: "Materials Research"
+started: "Mar 2026"
+blurb: "Independent research into carbon nanotube applications in medicine."
+badge: "Research"
 title: "Carbon Nanotubes"
 date: 2026-03-29
 draft: false

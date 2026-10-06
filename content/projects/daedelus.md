@@ -1,4 +1,11 @@
 ---
+group: apps
+order: 4
+short: "Daedelus"
+sub: "Personal OS"
+started: "May 2026"
+blurb: "A native Mac and iPhone app bringing trading, portfolio, fitness and notes into one dashboard."
+badge: "Live"
 title: "Daedelus — Building a Personal OS"
 date: 2026-05-22
 draft: false

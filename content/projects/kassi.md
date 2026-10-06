@@ -1,4 +1,11 @@
 ---
+group: apps
+order: 1
+short: "Kassi"
+sub: "iOS · Personal Dashboard"
+started: "Jun 2026"
+blurb: "A private personal dashboard for iPhone and iPad. Money, health, training, spending and time on one screen."
+badge: "Pre-launch"
 title: "Kassi"
 date: 2026-07-31
 draft: false

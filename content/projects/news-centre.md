@@ -1,4 +1,11 @@
 ---
+group: research
+order: 3
+short: "News Centre"
+sub: "Geopolitical Terminal"
+started: "Apr 2026"
+blurb: "Live RSS feeds on an interactive world map with urgent-keyword alerts."
+badge: "Live"
 title: "News Centre "
 date: 2026-04-13
 draft: false

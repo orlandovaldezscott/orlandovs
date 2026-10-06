@@ -1,4 +1,11 @@
 ---
+group: research
+order: 2
+short: "Neural Link"
+sub: "RAG Memory System"
+started: "Apr 2026"
+blurb: "A RAG system over my Obsidian vault, so I can query my own project knowledge."
+badge: "Live"
 title: "Neural Link — A RAG Memory System for Project Knowledge"
 date: 2026-04-19
 draft: false

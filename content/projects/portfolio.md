@@ -1,4 +1,11 @@
 ---
+group: research
+order: 5
+short: "This Portfolio"
+sub: "Hugo · Cloudflare Pages"
+started: "Mar 2026"
+blurb: "A custom-designed static site built with Hugo and deployed on Cloudflare Pages."
+badge: "Live"
 title: "This Portfolio"
 date: 2026-03-31
 draft: false

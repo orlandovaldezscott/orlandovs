@@ -1,4 +1,11 @@
 ---
+group: apps
+order: 3
+short: "London Fallen"
+sub: "Survival Game"
+started: "May 2026"
+blurb: "An open-world PvE and PvP survival game set in a fallen London."
+badge: "In Progress"
 title: "London Fallen — Work in Progress"
 date: 2026-09-15
 draft: false

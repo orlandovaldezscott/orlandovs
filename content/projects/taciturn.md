@@ -1,4 +1,11 @@
 ---
+group: markets
+order: 1
+short: "Taciturn"
+sub: "Algorithmic Trading"
+started: "Jan 2026"
+blurb: "Autonomous trading engine for XAU/USD and XAG/USD spot forex. Multi-signal detection, hourly trend filtering and the Abbadon machine-learning gate."
+badge: "Demo"
 title: "Building Taciturn — What I've Learned Building an Algo Trading System From Scratch"
 date: 2026-03-28
 draft: false
