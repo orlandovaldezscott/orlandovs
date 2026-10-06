@@ -22,6 +22,14 @@ Kassi is a native SwiftUI app that replaces the dozen apps you check each mornin
 
 The thesis is that most screen time is fragmentation. Ten apps, ten feeds, ten sets of notifications. Kassi collapses them into a single glanceable surface with no feed and nothing to scroll — you check it, get what you need, and put the phone down.
 
+<div style="display:flex;gap:1rem;overflow-x:auto;padding-bottom:1rem;margin:2rem 0">
+<img src="/kassi-shots/08-personal.png" alt="Kassi home screen" loading="lazy" style="flex:none;width:260px;border-radius:28px" />
+<img src="/kassi-shots/03-finance.png" alt="Kassi Finance screen" loading="lazy" style="flex:none;width:260px;border-radius:28px" />
+<img src="/kassi-shots/04-money.png" alt="Kassi Money screen" loading="lazy" style="flex:none;width:260px;border-radius:28px" />
+<img src="/kassi-shots/02-health.png" alt="Kassi Health screen" loading="lazy" style="flex:none;width:260px;border-radius:28px" />
+<img src="/kassi-shots/11-wellbeing.png" alt="Kassi Wellbeing screen" loading="lazy" style="flex:none;width:260px;border-radius:28px" />
+</div>
+
 ## Built Local-First
 
 The architectural decision that shapes everything else: **there is no server.**

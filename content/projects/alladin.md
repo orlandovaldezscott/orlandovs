@@ -1,6 +1,6 @@
 ---
 group: markets
-order: 2
+order: 1
 short: "Alladin"
 sub: "Weather-driven Commodities"
 started: "Sep 2026"

@@ -1,6 +1,6 @@
 ---
 group: markets
-order: 1
+order: 2
 short: "Taciturn"
 sub: "Algorithmic Trading"
 started: "Jan 2026"
@@ -11,6 +11,8 @@ date: 2026-03-28
 draft: false
 tags: ["trading","python","reflection"]
 ---
+
+> **Shelved, September 2026.** This page is kept as a record of what I built and learnt.
 
 ## Where It Started
 
@@ -36,7 +38,7 @@ The project grew in phases. Each one introduced a new broker, a new strategy, or
 
 **v4 (OANDA, spot forex)** — Migrated entirely to OANDA for XAU/USD and XAG/USD spot forex. Rebuilt the signal stack around indicator-based approaches: volume-weighted momentum crossovers, MACD histogram signals, pure indicator models. Added a trend filter that checks the hourly EMA slope before every trade — if the trend is flat or against you, it blocks entry.
 
-**v5 (current)** — Multiple signals running in parallel, risk management with broker-level stop losses on every order, a full web dashboard, and Pushover notifications. The system runs continuously, manages its own cooldowns, and halts itself if daily losses exceed a threshold.
+**v5 (final)** — Multiple signals running in parallel, risk management with broker-level stop losses on every order, a full web dashboard, and Pushover notifications. The system ran continuously, managed its own cooldowns, and halted itself if daily losses exceeded a threshold.
 
 
 
@@ -57,9 +59,9 @@ A lot. In rough order of importance:
 
 ## Where It Is Now
 
-Taciturn runs 24/7 on a DigitalOcean VPS in London — no longer dependent on the laptop being open. It trades on a demo account while the strategy is still being refined; it formed my Extended Project Qualification, and development is ongoing.
+**Taciturn is shelved.** It ran 24/7 on a DigitalOcean VPS in London, trading a demo account, and formed my Extended Project Qualification. I stopped it in September 2026 to put the time into [Alladin](/projects/alladin/).
 
-The current focus is risk: every trade now carries a fixed take-profit and a tight hard stop, so each change to the signal stack can be judged on clean, comparable results. The active signals use volume-weighted momentum crossovers gated through an H1 EMA trend filter, alongside MACD histogram signals and a small set of candlestick patterns.
+The final focus was risk: every trade carried a fixed take-profit and a tight hard stop, so each change to the signal stack could be judged on clean, comparable results. The last active signals used volume-weighted momentum crossovers gated through an H1 EMA trend filter, alongside MACD histogram signals and a small set of candlestick patterns.
 
 The infrastructure includes a real-time web dashboard, a geopolitical news terminal, a Neural Link RAG memory system and an automated agent layer (daily reports, log monitoring and a strategy guard) — all exposed via Cloudflare Tunnel at taciturn.uk.
 
