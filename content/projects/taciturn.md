@@ -70,17 +70,3 @@ Abbadon is a LightGBM model that sits between Taciturn's signals and the broker.
 It ran in **shadow mode** first — logging which trades it *would* have blocked while Taciturn traded normally — so its judgement could be checked against real outcomes before it was trusted with any decisions. It went live in September 2026.
 
 The principle is the same as the rest of the project: nothing controls trades until the evidence says it should.
-
----
-
-## Live Dashboard
-
-<div style="margin:2rem 0;padding:1.5rem 2rem;border:1px solid rgba(26,22,18,0.15);border-radius:4px;display:inline-block;width:100%;box-sizing:border-box">
-  <p style="font-family:'DM Mono',monospace;font-size:0.72rem;letter-spacing:0.18em;text-transform:uppercase;margin-bottom:1rem;color:#b8965a">Visitor Access</p>
-  <p style="margin-bottom:0.75rem">You can view the Taciturn dashboard live. Use the credentials below — click to copy.</p>
-  <div style="display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:1.2rem">
-    <span onclick="navigator.clipboard.writeText('visitor');this.textContent='✓ Copied';setTimeout(()=>this.textContent='visitor',1500)" style="font-family:'DM Mono',monospace;font-size:0.8rem;padding:0.4rem 0.8rem;border:1px solid rgba(26,22,18,0.2);border-radius:2px;cursor:pointer;user-select:none" title="Click to copy username">visitor</span>
-    <span onclick="navigator.clipboard.writeText('pecan26');this.textContent='✓ Copied';setTimeout(()=>this.textContent='pecan26',1500)" style="font-family:'DM Mono',monospace;font-size:0.8rem;padding:0.4rem 0.8rem;border:1px solid rgba(26,22,18,0.2);border-radius:2px;cursor:pointer;user-select:none" title="Click to copy password">pecan26</span>
-  </div>
-  <a href="https://dashboard.taciturn.uk/login" target="_blank" style="font-family:'DM Mono',monospace;font-size:0.72rem;letter-spacing:0.12em;text-transform:uppercase;color:#b8965a;text-decoration:none">→ Open Dashboard</a>
-</div>
