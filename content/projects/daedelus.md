@@ -1,20 +1,43 @@
 ---
 group: apps
 order: 4
-short: "Daedelus"
+short: "Daedelus / Atlas"
 sub: "Personal OS"
 started: "May 2026"
-blurb: "A native Mac and iPhone app bringing trading, portfolio, fitness and notes into one dashboard."
+blurb: "The personal OS for Mac and iPhone that was rebuilt as Atlas, and later became Kassi."
 badge: "Shelved"
-title: "Daedelus — Building a Personal OS"
+title: "Daedelus & Atlas"
 date: 2026-05-22
 draft: false
 tags: ["react","ios","tauri","personal","dashboard"]
-status: "Live"
 category: "Personal OS"
 summary: "A native Mac and iPhone app that replaces 20+ apps — trading dashboard, T212 portfolio, fitness tracker, CRM mind map, and more. All on a self-hosted VPS."
+aliases: ["/projects/atlas/"]
 ---
 
+<div style="display:flex;gap:1.5rem;align-items:center;margin:1rem 0 2rem">
+<img src="/daedelus-archive/wing-icon.png" alt="Daedelus app icon: a white wing on black" style="width:140px;border-radius:32px" />
+<img src="/atlas-archive/icon-v17.png" alt="Atlas app icon: a blue wireframe globe on black" style="width:140px;border-radius:32px" />
+</div>
+
+Daedelus and Atlas were the same idea under two names: one place to see my whole day. Daedelus came first, in May 2026, built with web tools and wrapped as a Mac and iPhone app. In June I rebuilt it natively in Swift and called it Atlas. Atlas was later renamed and is now [Kassi](/projects/kassi/).
+
+## What Daedelus Looked Like
+
+<img src="/daedelus-archive/wallpaper-mac.svg" alt="Daedelus wallpaper: glowing wings above the word Daedelus" style="max-width:100%;border-radius:12px;margin:1.5rem 0" />
+
+<div style="display:flex;gap:1rem;flex-wrap:wrap;align-items:flex-start;margin:1.5rem 0">
+<img src="/daedelus-archive/iphone-personal.png" alt="Daedelus on iPhone: the Personal tab with mood, body stats and tabs for Life, Business, Personal and Finance" style="width:300px;max-width:100%;border-radius:24px" />
+<img src="/daedelus-archive/wallpaper-iphone.svg" alt="Daedelus iPhone wallpaper" style="width:300px;max-width:100%;border-radius:24px" />
+</div>
+
+The iPhone screenshot is from 15 May 2026. The wing icon came with v0.3, and the wallpapers were made for the Mac and iPhone a few days later.
+
+## What Atlas Looked Like
+
+The logo became a wireframe globe. An atlas holds the whole world in one book, and the app was meant to hold my whole day on one screen. The first Atlas had three pages called Life, Business and Finance, where everything was a widget. Its later designs are on the [Kassi page](/projects/kassi/).
+
+---
 ## What Is Daedelus
 
 Daedelus is a personal life operating system. A native app on both Mac (Tauri) and iPhone (Capacitor) that replaces 20+ apps I was using across trading, finance, fitness, health, and life management — all running on my own VPS, under my own control.
@@ -108,7 +131,7 @@ Workout tracker with exercise library, set/rep/weight logging, PR detection, res
 
 ---
 
-## Still Building
+## What Was Planned
 
 - Apple Health integration (requires paid developer account)
 - DIY biometric bracelet — ESP32-C3 + MAX30102 + MPU6050 in a 3D printed housing, posting directly to the VPS. Bypasses Apple entirely.

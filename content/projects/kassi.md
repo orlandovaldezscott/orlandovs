@@ -58,6 +58,22 @@ A deliberately anti-default visual language: **Instrument Serif** for display ty
 
 Personalisation is extensive: 18 themes, 24 accent colours or any custom colour, four typography styles, three layout densities and a bounded text-size scale.
 
+### The original screens
+
+These are the design references from the July 2026 redesign, when the app was still called Atlas. The rule was "built, not decorated". Scroll sideways.
+
+<div style="display:flex;gap:1rem;overflow-x:auto;padding-bottom:1rem;margin:2rem 0">
+<iframe src="/atlas-archive/04-welcome-logger.html" title="Welcome and logger screens" loading="lazy" style="flex:none;width:430px;height:900px;border:0;border-radius:6px;background:#1a1a1a"></iframe>
+<iframe src="/atlas-archive/01-life.html" title="Life page" loading="lazy" style="flex:none;width:430px;height:900px;border:0;border-radius:6px;background:#1a1a1a"></iframe>
+<iframe src="/atlas-archive/02-finance.html" title="Finance page" loading="lazy" style="flex:none;width:430px;height:900px;border:0;border-radius:6px;background:#1a1a1a"></iframe>
+<iframe src="/atlas-archive/03-business.html" title="Business page" loading="lazy" style="flex:none;width:430px;height:900px;border:0;border-radius:6px;background:#1a1a1a"></iframe>
+</div>
+
+### More from the archive
+
+- [The design system](/atlas-archive/00-design-system.html): palette, type and rules.
+- [The original landing page](/atlas-archive/landing.html) from July 2026.
+
 ## How It's Built
 
 - **SwiftUI**, no third-party dependencies
