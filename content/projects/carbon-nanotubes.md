@@ -5,7 +5,7 @@ short: "Carbon Nanotubes"
 sub: "Materials Research"
 started: "Mar 2026"
 blurb: "Independent research into carbon nanotube applications in medicine."
-badge: "Research"
+badge: "In Development"
 title: "Carbon Nanotubes"
 date: 2026-03-29
 draft: false

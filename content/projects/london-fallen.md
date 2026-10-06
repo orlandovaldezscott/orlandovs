@@ -5,12 +5,12 @@ short: "London Fallen"
 sub: "Survival Game"
 started: "May 2026"
 blurb: "An open-world PvE and PvP survival game set in a fallen London."
-badge: "In Progress"
-title: "London Fallen — Work in Progress"
+badge: "Shelved"
+title: "London Fallen"
 date: 2026-09-15
 draft: false
 tags: ["game","lua","work-in-progress"]
-description: "An open-world PvE and PvP survival game set in a fallen London. Work in progress."
+description: "An open-world PvE and PvP survival game set in a fallen London."
 ---
 
 > **Status: work in progress.**

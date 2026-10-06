@@ -1,9 +1,9 @@
 ---
-title: "I Built a Trading Bot With AI. It Won 62% of Its Trades and Still Lost Money."
+title: "I Built a Trading Bot With AI in Eight Months. Here's What It Could and Couldn't Do."
 date: 2026-09-23
 draft: false
 tags: ["trading","ai","python","research"]
-description: "Eight months, 2,438 trades and no coding background. What AI could do for a trading system, and what it couldn't."
+description: "Eight months and no coding background. What AI could do for a trading system, and what it couldn't."
 ---
 
 *To what extent can artificial intelligence be used to build a technical analysis trading system that predicts short-term price movements in commodity markets?*
@@ -120,21 +120,21 @@ The final version sizes each trade by how much the market is moving, so every lo
 
 ### Something I could not do at the start
 
-In April I checked every trade and found the system had won 85% of the time but still lost £612. The average win was £18 and the average loss £84. At that ratio you need to win 82.5% of trades just to break even. At the start I did not understand how that was possible; now I can explain it, work it out by hand, and fix it. I also learnt to run software on a remote server, read error logs and save every version of my code.
+In April I checked every trade and found the system was winning 85% of its trades, but the average win was £18 and the average loss £84. At that ratio you need to win 82.5% of trades just to break even. At the start I did not understand how that was possible; now I can explain it, work it out by hand, and fix it. I also learnt to run software on a remote server, read error logs and save every version of my code.
 
 ### Testing and fixing problems
 
 | Problem | How I found it | Fix |
 |---|---|---|
 | Profit was counted twice | Dashboard total did not match the broker | Removed the duplicate |
-| Winning 85% but losing money | Checked every trade | Sized trades by market movement |
+| Wins far smaller than losses | Checked every trade | Sized trades by market movement |
 | Patterns that worked on daily charts failed on 5-minute charts | Retested on the chart I actually traded | Only test on the timeframe I trade |
 | AI filter never checked silver | Its log only contained gold | Moved the check earlier |
-| Dashboard showed profit, broker showed loss | Compared both directly | Treat the broker as the true figure |
+| Dashboard and broker figures did not match | Compared both directly | Treat the broker as the true figure |
 
 ## 8. Advice from people in the industry
 
-In April I showed the system to two people who have worked in markets for nearly 30 years, including running a hedge fund. At the time my dashboard showed a win rate of around 70% and about £6,500 profit. They told me to show the risk I was taking next to the profit, especially because borrowed money (leverage) makes each trade much bigger than it looks. They told me to study my losing trades rather than my win rate, and to use existing AI models well rather than try to build new ones. They were right on every point.
+In April I showed the system to two people who have worked in markets for nearly 30 years, including running a hedge fund. At the time my dashboard showed a win rate of around 70% and a healthy profit. They told me to show the risk I was taking next to the profit, especially because borrowed money (leverage) makes each trade much bigger than it looks. They told me to study my losing trades rather than my win rate, and to use existing AI models well rather than try to build new ones. They were right on every point.
 
 ## 9. Challenges
 
@@ -145,7 +145,7 @@ In April I showed the system to two people who have worked in markets for nearly
 | Changed platform several times | Learnt why you should choose carefully and stay |
 | Trades stopped when my laptop slept | Moved to a £4 a month server that never stops |
 | Tests that looked excellent failed live | Only trust fair tests on the right data |
-| Winning most trades but losing money | Found and fixed the real cause |
+| Losses bigger than wins | Found and fixed the real cause |
 | Side projects took time | They built wider skills and each solved a real problem |
 
 ## 10. Alladin
@@ -164,7 +164,7 @@ Weather clearly improved the results, but returns since 2023 are weak and only f
 
 AI can be used to a very large extent to **build** a trading system. With no coding background I built a live, always-on system with risk controls, testing tools, a website and two AI models in eight months, for a few pounds a month.
 
-It can only be used to a limited extent to **predict** short-term prices from charts. Taciturn won most of its trades, but its losses were nearly twice the size of its wins, so it lost money overall. Abbadon helped on silver but not gold. This agrees with Fama (1970), Marshall et al. (2006) and Park and Irwin (2007): AI can make pattern-spotting faster and more disciplined, but it cannot find an edge that is not there.
+It can only be used to a limited extent to **predict** short-term prices from charts. Taciturn won most of its trades, but its losses were nearly twice the size of its wins, so a high win rate was not enough. Abbadon helped on silver but not gold. This agrees with Fama (1970), Marshall et al. (2006) and Park and Irwin (2007): AI can make pattern-spotting faster and more disciplined, but it cannot find an edge that is not there.
 
 AI looks more promising when given information that charts do not contain, such as weather, but Alladin is not yet proven. Overall, the edge has to come from better information and risk control, not AI alone.
 

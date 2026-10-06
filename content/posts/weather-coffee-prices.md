@@ -12,7 +12,7 @@ That is what Alladin does. It is the model I built after Taciturn, and it works 
 
 ## Why not charts
 
-Taciturn traded gold and silver by reading chart patterns. It won most of its trades and still lost money, which is what the research says should happen: everyone can see the same chart, so there is not much left to find in it.
+Taciturn traded gold and silver by reading chart patterns. It won most of its trades, but chart patterns alone were not enough of an edge, which is what the research says should happen: everyone can see the same chart, so there is not much left to find in it.
 
 Weather is different. It is not in the price chart. A dry month in Iowa or a hot spell in Ghana is real information about how much of something will exist in a few months. The idea is not mine. In 1984 an economist called Richard Roll showed that Florida weather moves orange juice prices. I just wanted to test it myself, on more markets.
 

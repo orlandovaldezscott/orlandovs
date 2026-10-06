@@ -5,7 +5,7 @@ short: "Sections"
 sub: "Carousel & Story Editor"
 started: "Aug 2026"
 blurb: "A universal iPhone, iPad and Mac app for building multi-slide carousels, collages and stories."
-badge: "In Development"
+badge: "Shelved"
 title: "Sections — Carousel & Story Editor"
 date: 2026-09-01
 draft: false
