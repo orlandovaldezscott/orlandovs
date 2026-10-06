@@ -41,6 +41,7 @@ nav{position:fixed;top:0;left:0;right:0;padding:1.8rem 4rem;display:grid;grid-te
 footer{padding:3rem 4rem;border-top:1px solid var(--border);display:flex;justify-content:center;align-items:center;gap:5rem}
 .footer-copy{font-size:0.78rem;font-family:'DM Mono',monospace;letter-spacing:0.08em;color:var(--mid)}
 .footer-links{display:flex;gap:3rem}
+@media(min-width:769px){footer .footer-links{flex:1}footer .footer-links:first-child{justify-content:flex-end}}
 .footer-links a{font-family:'DM Mono',monospace;font-size:0.75rem;letter-spacing:0.08em;color:var(--mid);text-decoration:none;transition:color 0.2s}
 .footer-links a:hover{color:var(--gold)}
 @keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}

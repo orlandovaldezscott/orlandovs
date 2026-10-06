@@ -38,6 +38,7 @@ nav{position:fixed;top:0;left:0;right:0;padding:1.8rem 4rem;display:grid;grid-te
 footer{padding:3rem 4rem;border-top:1px solid var(--border);display:flex;justify-content:center;align-items:center;gap:5rem}
 .footer-copy{font-size:0.78rem;font-family:'DM Mono',monospace;letter-spacing:0.08em;color:var(--mid)}
 .footer-links{display:flex;gap:3rem}
+@media(min-width:769px){footer .footer-links{flex:1}footer .footer-links:first-child{justify-content:flex-end}}
 .footer-links a{font-family:'DM Mono',monospace;font-size:0.75rem;letter-spacing:0.08em;color:var(--mid);text-decoration:none;transition:color 0.2s}
 .footer-links a:hover{color:var(--gold)}
 @keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
@@ -75,9 +76,9 @@ footer{padding:3rem 4rem;border-top:1px solid var(--border);display:flex;justify
   </div>
 </div>
 <footer>
-  <div class="footer-links"><a href="https://github.com/orlandovaldezscott">GitHub</a><a href="https://www.linkedin.com/feed/update/urn:li:activity:7440132280007741440/?originTrackingId=KLwMhyKm4OeU%2FMlsZ6nnGg%3D%3D">LinkedIn</a><a href="/about/">About</a></div>
+  <div class="footer-links"><a href="https://github.com/orlandovaldezscott">GitHub</a><a href="https://www.linkedin.com/in/orlandovaldezscott">LinkedIn</a><a href="/about/">About</a></div>
   <span class="footer-copy">© 2026 Orlando Valdes-Scott</span>
-  <div class="footer-links"><a href="/posts/">Writing</a><a href="/projects/">Projects</a></div>
+  <div class="footer-links"><a href="/posts/">Writing</a><a href="/projects/">Projects</a><a href="/contact/">Contact</a></div>
 </footer>
 <script>
 function toggleTheme(){const h=document.documentElement;const t=h.getAttribute('data-theme')==='dark'?'light':'dark';h.setAttribute('data-theme',t);localStorage.setItem('theme',t)}
