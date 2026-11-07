@@ -6,8 +6,22 @@
     <description>Recent content in Posts on Orlando Valdes-Scott</description>
     <generator>Hugo</generator>
     <language>en-gb</language>
-    <lastBuildDate>Sat, 28 Mar 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 06 Oct 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://orlandovs.pages.dev/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Can the Weather Predict Coffee Prices?</title>
+      <link>https://orlandovs.pages.dev/posts/weather-coffee-prices/</link>
+      <pubDate>Tue, 06 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>https://orlandovs.pages.dev/posts/weather-coffee-prices/</guid>
+      <description>Alladin explained without the code: what it looks at, how I tested it, and why I still don&amp;#39;t trust it yet.</description>
+    </item>
+    <item>
+      <title>I Built a Trading Bot With AI in Eight Months. Here&#39;s What It Could and Couldn&#39;t Do.</title>
+      <link>https://orlandovs.pages.dev/posts/trading-bot-with-ai/</link>
+      <pubDate>Wed, 23 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>https://orlandovs.pages.dev/posts/trading-bot-with-ai/</guid>
+      <description>Eight months and no coding background. What AI could do for a trading system, and what it couldn&amp;#39;t.</description>
+    </item>
     <item>
       <title>Building Taciturn — What I&#39;ve Learned Building an Algo Trading System From Scratch</title>
       <link>https://orlandovs.pages.dev/posts/main/</link>
