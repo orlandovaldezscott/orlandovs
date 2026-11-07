@@ -51,7 +51,6 @@ Kassi can read from services you choose to connect. In each case the request goe
 - **National Rail data** — live train departures
 - **OpenSky Network** — nearby aircraft
 - **Apple Maps** — nearby venue lookup when logging a meal or purchase
-- Any **AI provider** you configure with your own key
 
 Each service has its own privacy policy governing what it does with the request. Kassi works fully offline; widgets that need a key or a server will say so.
 
@@ -62,6 +61,25 @@ We use no advertising networks, analytics SDKs, or tracking frameworks of any ki
 All data is stored locally using iOS standard storage. Sensitive credentials use the iOS Keychain with `WhenUnlockedThisDeviceOnly` protection — encrypted at rest, never included in unencrypted backups.
 
 Because your data is local, deleting the app deletes your data. There is no backup held by the developer and no way for us to recover it. Kassi data is included in your normal iPhone backup, so iCloud Backup or a computer backup will carry it to a new device.
+
+## AI Features (Optional)
+
+Kassi does not use any third-party AI service and has no AI server of its own.
+
+The AI daily briefing and AI meal estimates only work if you set up your own server
+under **Settings → Personal Server** and turn on **Allow AI features**. Both are off by
+default, and nothing is sent until you turn them on.
+
+When on, Kassi sends the following to **your own server only**, to generate the text:
+
+- **Daily briefing** — your first name, today's portfolio change, calendar events,
+  recent training sessions, this month's spending total, parcels due and the weather
+- **Meal estimates** — the meal description you typed or dictated, and the venue name
+  if you chose one
+
+How that data is processed and stored is decided by the server you control. Kassi and
+its developer never receive it. Turn **Allow AI features** off at any time to stop all
+sending immediately.
 
 ## Purchases
 
@@ -86,4 +104,4 @@ Under UK GDPR you retain your statutory rights, but in practice there is no data
 Questions: orlandovs1@hotmail.com
 
 ---
-*Last updated: 25 July 2026 — Privacy policy URL for App Store Connect: https://orlandovs.pages.dev/privacy/*
+*Last updated: 7 November 2026 — Privacy policy URL for App Store Connect: https://orlandovs.pages.dev/privacy/*

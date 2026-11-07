@@ -5,7 +5,7 @@ short: "Kassi"
 sub: "iOS · Personal Dashboard"
 started: "Jun 2026"
 blurb: "A private personal dashboard for iPhone and iPad. Money, health, training, spending and time on one screen."
-badge: "Pre-launch"
+badge: "In App Review"
 title: "Kassi"
 date: 2026-07-31
 draft: false
@@ -93,6 +93,6 @@ These are the design references from the July 2026 redesign, when the app was st
 
 ## Status
 
-Feature-complete and in daily use, preparing for App Store submission. Free to use, with an optional £4.99 one-off unlock for the features that cost real money to run.
+Submitted to the App Store in October 2026. First review (November) flagged the in-app purchase setup and AI data consent; both fixed: AI features are now opt-in, Earnings Radar is generated once nightly and served to every user from one file, and build 1.0 (3) is being resubmitted. Free to use, with an optional £4.99 one-off unlock for the features that cost real money to run.
 
 Built solo, in Swift.

@@ -29,7 +29,7 @@ Some widgets read from services you already use — Trading 212, WHOOP, 17TRACK 
 
 ### What does Kassi Pro include?
 
-A one-off purchase — not a subscription — unlocking Earnings Radar, the AI daily briefing, all seven themes and push notifications. Everything else stays free permanently, including the full portfolio, health, spending, training and parcel tracking.
+A one-off purchase — not a subscription — unlocking Earnings Radar, the AI daily briefing, all 18 themes and push notifications. Everything else stays free permanently, including the full portfolio, health, spending, training and parcel tracking.
 
 ### I paid but Pro isn't showing
 
