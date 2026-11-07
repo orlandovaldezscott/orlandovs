@@ -66,9 +66,11 @@ Because your data is local, deleting the app deletes your data. There is no back
 
 Kassi does not use any third-party AI service and has no AI server of its own.
 
-The AI daily briefing and AI meal estimates only work if you set up your own server
-under **Settings → Personal Server** and turn on **Allow AI features**. Both are off by
-default, and nothing is sent until you turn them on.
+On supported devices, the AI daily briefing is written by Apple's on-device model.
+It runs entirely on your iPhone; nothing is sent anywhere.
+
+Optionally, you can also use your own server under **Settings → Personal Server** by
+turning on **Allow AI features** (off by default). Nothing is sent until you do.
 
 When on, Kassi sends the following to **your own server only**, to generate the text:
 
