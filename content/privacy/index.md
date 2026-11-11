@@ -62,26 +62,20 @@ All data is stored locally using iOS standard storage. Sensitive credentials use
 
 Because your data is local, deleting the app deletes your data. There is no backup held by the developer and no way for us to recover it. Kassi data is included in your normal iPhone backup, so iCloud Backup or a computer backup will carry it to a new device.
 
-## AI Features (Optional)
+## AI Features
 
-Kassi does not use any third-party AI service and has no AI server of its own.
+Kassi does not use any third-party AI service and has no AI server.
 
-On supported devices, the AI daily briefing is written by Apple's on-device model.
-It runs entirely on your iPhone; nothing is sent anywhere.
+The daily briefing, meal estimates and recording summaries are written by Apple's
+on-device model, on iPhones that support Apple Intelligence. It runs entirely on your
+iPhone; nothing is sent anywhere. On other iPhones, Kassi writes the same things with
+simple built-in rules instead.
 
-Optionally, you can also use your own server under **Settings → Personal Server** by
-turning on **Allow AI features** (off by default). Nothing is sent until you do.
+## Recordings and Statements
 
-When on, Kassi sends the following to **your own server only**, to generate the text:
-
-- **Daily briefing** — your first name, today's portfolio change, calendar events,
-  recent training sessions, this month's spending total, parcels due and the weather
-- **Meal estimates** — the meal description you typed or dictated, and the venue name
-  if you chose one
-
-How that data is processed and stored is decided by the server you control. Kassi and
-its developer never receive it. Turn **Allow AI features** off at any time to stop all
-sending immediately.
+Recordings and voice notes keep their audio inside Kassi on your iPhone. They are never
+uploaded. Bank statements you upload, photograph or scan are read on your iPhone and
+are not stored or sent anywhere.
 
 ## Purchases
 
@@ -103,7 +97,7 @@ Under UK GDPR you retain your statutory rights, but in practice there is no data
 
 ## Contact
 
-Questions: orlandovs1@hotmail.com
+Questions: hello@kassi.co.uk
 
 ---
 *Last updated: 7 November 2026 — Privacy policy URL for App Store Connect: https://orlandovs.pages.dev/privacy/*
