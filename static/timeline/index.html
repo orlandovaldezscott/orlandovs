@@ -52,7 +52,8 @@ nav{position:fixed;top:0;left:0;right:0;padding:1.8rem 4rem;display:grid;grid-te
 .dot{position:absolute;top:0.55rem;right:0;width:10px;height:10px;border-radius:50%;background:var(--cream);border:1px solid var(--gold);z-index:2;--x:50%;transform:translateX(var(--x)) scale(0);transition:transform .5s .25s,background .3s}
 .ev.r .dot{right:auto;left:0;--x:-50%}
 .ev.in .dot{transform:translateX(var(--x)) scale(1)}
-.ev:hover .dot{background:var(--gold)}
+.ev:hover .dot,.ev.lit .dot{background:var(--gold)}
+.ev.lit::before{background:var(--gold)}
 .ev::before{content:'';position:absolute;top:calc(0.55rem + 4px);right:5px;width:0;height:1px;background:var(--border);transition:width .6s .35s}
 .ev.r::before{right:auto;left:5px}
 .ev.in::before{width:2.4rem}
@@ -201,7 +202,8 @@ const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.targ
 document.querySelectorAll(".ev").forEach(e=>io.observe(e));
 
 // gold progress line
-const prog=()=>{const r=tl.getBoundingClientRect();fill.style.height=Math.max(0,Math.min(r.height,innerHeight*.6-r.top))+"px"};
+const prog=()=>{const r=tl.getBoundingClientRect(),h=Math.max(0,Math.min(r.height,innerHeight*.6-r.top));fill.style.height=h+"px";
+  document.querySelectorAll(".ev:not(.hide) .dot").forEach(d=>{const y=d.getBoundingClientRect().top+5-r.top;d.parentElement.classList.toggle("lit",y<=h)})};
 addEventListener("scroll",prog,{passive:true});addEventListener("resize",prog);prog();
 
 // filters
