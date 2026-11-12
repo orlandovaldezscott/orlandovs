@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Research on Orlando Valdes-Scott</title>
-    <link>https://orlandovs.pages.dev/tags/research/</link>
+    <link>http://localhost:1313/tags/research/</link>
     <description>Recent content in Research on Orlando Valdes-Scott</description>
     <generator>Hugo</generator>
     <language>en-gb</language>
     <lastBuildDate>Wed, 23 Sep 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://orlandovs.pages.dev/tags/research/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/research/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Carbon Nanotubes</title>
-      <link>https://orlandovs.pages.dev/projects/carbon-nanotubes/</link>
+      <link>http://localhost:1313/projects/carbon-nanotubes/</link>
       <pubDate>Sun, 29 Mar 2026 00:00:00 +0000</pubDate>
-      <guid>https://orlandovs.pages.dev/projects/carbon-nanotubes/</guid>
+      <guid>http://localhost:1313/projects/carbon-nanotubes/</guid>
       <description>Research into carbon nanotube applications in medicine — production challenges, therapeutic delivery, and comparison with nanoparticle approaches.</description>
     </item>
     <item>
       <title>I Built a Trading Bot With AI in Eight Months. Here&#39;s What It Could and Couldn&#39;t Do.</title>
-      <link>https://orlandovs.pages.dev/posts/trading-bot-with-ai/</link>
+      <link>http://localhost:1313/posts/trading-bot-with-ai/</link>
       <pubDate>Wed, 23 Sep 2026 00:00:00 +0000</pubDate>
-      <guid>https://orlandovs.pages.dev/posts/trading-bot-with-ai/</guid>
+      <guid>http://localhost:1313/posts/trading-bot-with-ai/</guid>
       <description>Eight months and no coding background. What AI could do for a trading system, and what it couldn&amp;#39;t.</description>
     </item>
   </channel>
