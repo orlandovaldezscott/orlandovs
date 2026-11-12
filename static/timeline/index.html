@@ -41,7 +41,7 @@ nav{position:fixed;top:0;left:0;right:0;padding:1.8rem 4rem;display:grid;grid-te
 .chip.on{color:var(--ink);border-color:var(--gold)}
 
 .tl{position:relative;max-width:1100px;margin:0 auto;padding:3rem 1.5rem 6rem}
-.rail,.fill{position:absolute;left:50%;top:0;width:1px}
+.rail,.fill{position:absolute;left:50%;top:0;width:1px;transform:translateX(-50%)}
 .rail{bottom:0;background:var(--border)}
 .fill{height:0;background:var(--gold)}
 .month{position:relative;z-index:2;width:max-content;margin:3rem auto 2rem;padding:0.4rem 1rem;background:var(--cream);border:1px solid var(--border);border-radius:2px;font-family:'DM Mono',monospace;font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);transition:background 0.3s}
@@ -49,9 +49,9 @@ nav{position:fixed;top:0;left:0;right:0;padding:1.8rem 4rem;display:grid;grid-te
 .ev.r{margin-left:50%;padding:0 0 2.5rem 3.5rem;text-align:left;transform:translateX(36px)}
 .ev.in{opacity:1;transform:none}
 .ev.hide{display:none}
-.dot{position:absolute;top:0.55rem;right:-4px;width:9px;height:9px;border-radius:50%;background:var(--cream);border:1px solid var(--gold);z-index:2;transform:scale(0);transition:transform .5s .25s,background .3s}
-.ev.r .dot{right:auto;left:-5px}
-.ev.in .dot{transform:scale(1)}
+.dot{position:absolute;top:0.55rem;right:0;width:10px;height:10px;border-radius:50%;background:var(--cream);border:1px solid var(--gold);z-index:2;--x:50%;transform:translateX(var(--x)) scale(0);transition:transform .5s .25s,background .3s}
+.ev.r .dot{right:auto;left:0;--x:-50%}
+.ev.in .dot{transform:translateX(var(--x)) scale(1)}
 .ev:hover .dot{background:var(--gold)}
 .ev::before{content:'';position:absolute;top:calc(0.55rem + 4px);right:5px;width:0;height:1px;background:var(--border);transition:width .6s .35s}
 .ev.r::before{right:auto;left:5px}
@@ -79,7 +79,7 @@ footer{display:flex;justify-content:space-between;align-items:center;padding:2.5
   .rail,.fill{left:1.5rem}
   .month{margin-left:1.6rem}
   .ev,.ev.r{width:100%;margin-left:0;padding:0 0 2.2rem 2.2rem;text-align:left;transform:translateY(26px)}
-  .dot,.ev.r .dot{left:-4px;right:auto}
+  .dot,.ev.r .dot{left:0;right:auto;--x:-50%}
   .ev::before,.ev.r::before{left:5px;right:auto}
   .ev.in::before{width:1.3rem}
   .ev h3{font-size:1.45rem}
@@ -88,7 +88,7 @@ footer{display:flex;justify-content:space-between;align-items:center;padding:2.5
 @media(prefers-reduced-motion:reduce){
   *{animation:none!important;transition:none!important}
   .page-overline,.page-title,.page-desc,.stats,.ev{opacity:1;transform:none}
-  .dot{transform:scale(1)}.ev::before{width:2.4rem}
+  .dot{transform:translateX(var(--x)) scale(1)}.ev::before{width:2.4rem}
 }
 </style>
 </head>
